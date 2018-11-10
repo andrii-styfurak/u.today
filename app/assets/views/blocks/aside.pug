@@ -1,0 +1,56 @@
+aside.aside-block
+  section.card
+    .card__title 🔥 Hot Stories
+
+    .card__body
+      each hot in hots
+        article.aside-story
+          .aside-story__img-wrapper
+            img.hot-story__img(src="https://dummyimage.com/40x40/d8dbde/aaa")
+
+          .aside-story__body
+            a.aside-story__link(href="#!")= hot
+
+            .aside-story__info
+              time.aside-story__time 12:25AM
+              .aside-story__comments 256
+              a.aside-story__share(href="#!")
+
+    .card__footer
+      a.btn.btn--arrow-right(href="#!") See all
+
+  section.card.card--no-padding
+    .adv-aside
+
+  section.card
+    .card__title 👓 Topics of current interest
+
+    .card__body
+      .btns-spacer
+        each tag in tags
+          a.btn.btn--tag(href="#!")= tag
+
+  section.card
+    .card__title 🗓 Upcoming events
+
+    .card__body
+      each event in events
+        article.aside-story.aside-story--events
+          .aside-story__body
+            a.aside-story__link(href="#!")= event
+
+            .aside-story__info
+              time.aside-story__time Oct 31, 2018
+              .aside-story__text Las Vegas, USA
+
+    .card__footer
+      a.btn.btn--arrow-right(href="#!") See all
+
+  section.card
+    .card__title ✉ Got no time? Subscribe!
+
+    .card__body
+      form(action="#" method="get")
+        .input
+          input.input__elem(type="text" placeholder="Email" required)
+          .input__error E-mail can’t contain symbols

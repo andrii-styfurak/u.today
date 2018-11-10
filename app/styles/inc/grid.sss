@@ -1,0 +1,32 @@
+.container
+  max-width: $container-sm-px
+  margin: * auto
+  padding: * 1rem
+
+@media $md
+  .container
+    max-width: $container-md-px
+
+@media $lg
+  .container
+    max-width: $container-lg-px
+
+@media $xl
+  .container
+    max-width: $container-xl-px
+
+.page-container
+  background: #fff
+  padding: * 3rem
+  max-width: @xl calc($container-xl-px + 8rem)
+
+.content-container
+  box: space-between
+  padding: 2rem *
+
+.main-block
+  max-width: 736px
+
+.aside-block
+  max-width: 320px
+  margin-top: -9px

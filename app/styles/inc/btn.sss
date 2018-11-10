@@ -1,0 +1,47 @@
+.btn
+  text: $text-caps none
+  height: 2rem
+  padding: * .6rem
+  border-radius: 2px
+  border: $border
+  display: inline-flex
+  align-items: center
+  cursor: pointer
+  font-family: $font
+  outline: 0
+  cursor: pointer
+  user-select: none
+
+  &--light
+    margin: 0
+    padding: 0
+    outline: 0
+    border: 0
+    background: transparent
+    cursor: pointer
+
+  &--tag
+    text: $body-small normal none none
+    background: $neutral-100
+    border-color: $neutral-100
+
+  &:hover
+    border-color: $accent-1-medium
+
+  &:active
+    border-color: $accent-1-medium
+
+  &--arrow-down, &--arrow-right
+    &:after
+      content: ""
+      display: block
+
+  &--arrow-down:after
+    background: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
+    size: 18px 24px
+
+  &--arrow-right:after
+    background: svg-load("icons/triangle_right.svg", fill: $pseudo-neutral-900)
+    size: 17px 24px
+    margin-left: 0.9em
+

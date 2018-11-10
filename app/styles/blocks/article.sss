@@ -1,0 +1,70 @@
+.article
+
+  &__info
+    box: center
+    margin-bottom: 1.3rem
+
+  &__panel
+    box: center
+    margin-bottom: 2rem
+
+  &__category, &__author, &__date
+    text: $body-tiny
+    margin-right: 1.3rem
+
+  &__category
+    text-decoration: none
+
+  &__date
+    cursor: default
+
+  &__author
+    text-decoration: none
+    box: center
+
+    &-img
+      display: block
+      border-radius: 2px
+      margin-right: .5rem
+
+  &__title
+    margin-top: 0
+    margin-bottom: .8rem
+
+    &-mark
+      text: $body-tiny
+      text: $pseudo-neutral-900
+      margin-left: .4rem
+
+  &__mark
+    text: $text-large
+    margin: 0 * 1.4rem
+
+  &__views, &__comments, &__bookmark
+    text: $body-tiny
+    margin-right: 1.9rem
+    box: center
+
+  &__comments
+    text-decoration: none
+
+  &__views
+    cursor: default
+
+  &__views:before, &__comments:before, &__bookmark:before
+    content: ""
+    display: block
+    size: 24px
+    margin-right: .6rem
+
+  &__views:before
+    background: svg-load("icons/eye.svg" fill: $pseudo-neutral-200)
+
+  &__comments:before
+    background: svg-load("icons/comment.svg" fill: $pseudo-neutral-200)
+
+  &__bookmark:before
+    background: svg-load("icons/bookmark.svg" fill: $pseudo-neutral-200)
+
+  &__img, img
+    display: block

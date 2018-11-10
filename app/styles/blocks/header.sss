@@ -1,0 +1,73 @@
+.header
+
+  &__container
+    box: center space-between
+    padding: 2rem * 2.5rem
+    position: relative
+
+  &__logo
+    display: block
+    background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) left top / contain
+    size: 176px 33px
+
+  &__social
+    width: 161px
+    position: absolute null null 5px 16px
+
+  &__nav
+    margin-bottom: calc(-2.5rem)
+    margin-top: 1px
+    margin-left: 9px
+    border-bottom: $border
+
+    &-list
+      list-style: none
+      margin: 0
+      padding: 0
+      box: center
+
+    &-item
+      position: relative
+
+      &:hover, &--active
+        &:after
+          content: ""
+          height: 4px
+          position: absolute null 0 -1px 0
+          background: $pseudo-neutral-900
+
+      & + &
+        margin-left: 1.5rem
+
+      &--arrow
+        &:hover:after
+          right: 24px
+
+        &:after
+          right: 24px
+
+        ^^&-link:after
+          content: ""
+          display: block
+          background: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900) center
+          size: 24px 12px
+
+    &-link
+      text: $text-caps none
+      box: center
+      padding-bottom: 2.5rem
+
+  &__panel
+    box: center
+
+  &__search
+    background: svg-load("icons/search.svg", fill: $pseudo-neutral-900) no-repeat center
+    size: 32px
+    margin-right: 1.5rem
+
+  &__account
+    margin-right: 1.5rem
+
+    &-img
+      display: block
+      border-radius: 2px

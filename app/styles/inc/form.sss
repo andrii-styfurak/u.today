@@ -1,0 +1,35 @@
+.input
+
+  &__elem
+    border: $border
+    border-radius: 2px
+    padding: 0.5rem 1rem
+    outline: 0
+    text: $body-small
+    font-family: $font
+    width: 100%
+
+    &::placeholder
+      text: $pseudo-neutral-400
+
+    &:hover
+      border-color: $accent-1-light
+
+    &:focus
+      border-color: $accent-1-medium
+
+    &:valid
+      border-color: $pseudo-neutral-300
+
+  &__error
+    text: $body-tiny
+    text: $accent-2-medium
+
+  &--error
+    ^&__elem
+      border-color: #FF0F00
+      text: #FF0F00
+
+      &::placeholder
+        text: #FF0F00
+

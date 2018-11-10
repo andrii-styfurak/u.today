@@ -1,0 +1,71 @@
+.aside-story
+  box: left
+  padding-bottom: .9rem
+
+  &:first-child
+    padding-top: 3px
+
+  &:last-child
+    padding-bottom: 0
+
+  & + &
+    padding-top: 1.4rem
+    border-top: 1px solid $pseudo-neutral-50
+
+  &--events
+    padding-bottom: 1.4rem
+
+    &:first-child
+      padding-top: 0
+      margin-top: -5px
+
+    & + &
+      padding-top: 0
+      border-top: 0
+
+  &__img
+    border: $border
+    border-radius: 2px
+    size: 38px
+    display: block
+
+    &-wrapper
+      size: 38px
+      background: $pseudo-neutral-50
+      border-radius: 2px
+      margin-right: 1.1rem
+
+  &__info
+    box: center
+
+  &__body
+    margin-top: -6px
+
+  &__link
+    text: $body-small
+    text-decoration: none
+    display: block
+
+  &__info
+    margin-top: .1em
+
+  &__time, &__comments, &__text
+    text: $body-tiny
+    margin-right: 1.6em
+
+  &__comments
+    box: center
+
+    &:before
+      content: ""
+      display: block
+      background: svg-load("icons/comment.svg" fill: $pseudo-neutral-400) center / contain
+      size: 11px
+      margin-right: .3em
+
+  &__share:before
+    content: ""
+    display: block
+    background: svg-load("icons/share.svg" fill: $pseudo-neutral-400) center / contain
+    size: 11px
+    margin-right: .3em
