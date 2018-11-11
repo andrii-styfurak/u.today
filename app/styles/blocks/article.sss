@@ -8,24 +8,16 @@
     box: center
     margin-bottom: 2rem
 
-  &__category, &__author, &__date
-    text: $body-tiny
-    margin-right: 1.3rem
-
-  &__category
-    text-decoration: none
-
-  &__date
-    cursor: default
-
-  &__author
-    text-decoration: none
-    box: center
-
-    &-img
-      display: block
+    &--border
+      border: $border
       border-radius: 2px
-      margin-right: .5rem
+      min-height: 48px
+      padding: * 1.1rem
+
+    &-separator
+      border-right: $border
+      height: 46px
+      margin: * 1.1rem
 
   &__title
     margin-top: 0
@@ -37,34 +29,94 @@
       margin-left: .4rem
 
   &__mark
-    text: $text-large
+    text: $body-large
     margin: 0 * 1.4rem
-
-  &__views, &__comments, &__bookmark
-    text: $body-tiny
-    margin-right: 1.9rem
-    box: center
-
-  &__comments
-    text-decoration: none
-
-  &__views
-    cursor: default
-
-  &__views:before, &__comments:before, &__bookmark:before
-    content: ""
-    display: block
-    size: 24px
-    margin-right: .6rem
-
-  &__views:before
-    background: svg-load("icons/eye.svg" fill: $pseudo-neutral-200)
-
-  &__comments:before
-    background: svg-load("icons/comment.svg" fill: $pseudo-neutral-200)
-
-  &__bookmark:before
-    background: svg-load("icons/bookmark.svg" fill: $pseudo-neutral-200)
 
   &__img, img
     display: block
+
+  &__contents
+    margin: 3rem *
+
+    &-title
+      text: $header-tiny
+      margin-bottom: 1rem
+
+    &-list
+      @extend .list-reset
+
+    &-item
+      box: center
+
+      & + &
+        margin-top: .8rem
+
+      &:before
+        content: ""
+        display: block
+        background: svg-load("icons/triangle_down.svg" fill: $pseudo-neutral-100)
+        size: 24px
+        margin-right: .5rem
+
+  &__related
+    background: $neutral-100
+    padding: 2rem
+    margin: 3rem *
+    box: left
+
+    &-title
+      text: $header-tiny
+      margin-bottom: 1rem
+
+    &-link
+      text: $body-large
+      padding-right: 2rem
+
+    &-panel
+      margin-top: .5rem
+      box: center
+
+  &__subscribe
+    border: $border
+    border-radius: 2px
+    padding: 2rem
+    margin: 3rem *
+    box: left
+
+    &-col
+      & + &
+        margin-left: 2rem
+
+    &-title
+      text: $header-tiny
+      margin-bottom: 1.3rem
+
+    &-form
+      margin-bottom: 1rem
+
+    &-input
+      width: 309px
+
+  &__fact
+    background: $neutral-100
+    padding: 2rem
+    margin: 3rem *
+
+    &-title
+      text: $header-large center
+      margin-bottom: 2rem
+
+    &-text
+      text: $body-large center
+
+  &__tags
+    margin-bottom: 1.5rem
+
+  &__rating
+    box: center
+
+    &-value
+      text: $header-small
+      text: $status-positive
+      margin: * .4rem
+      

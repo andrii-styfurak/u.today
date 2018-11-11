@@ -1,0 +1,85 @@
+.humble
+  text: $body-tiny
+  text-decoration: none
+  margin-right: 1.3rem
+  display: inline-flex
+  align-items: center
+  cursor: default
+  background: transparent
+  border: 0
+  padding: 0
+  outline: 0
+  user-select: none
+  height: 24px
+
+  &--link,
+  &--comments,
+  &--bookmark,
+  &--share
+    cursor: pointer
+
+    &:hover
+      text: $accent-1-medium
+
+    &:active
+      text: $accent-1-dark
+
+  &--views,
+  &--comments,
+  &--bookmark,
+  &--share
+    &:before
+      content: ""
+      display: block
+      size: 24px
+      margin-right: .6rem
+      background-size: contain
+
+  &--views
+    &:before
+      background-image: svg-load("icons/eye.svg" fill: $pseudo-neutral-200)
+
+  &--comments
+    &:before
+      background-image: svg-load("icons/comment.svg" fill: $pseudo-neutral-200)
+
+    &:hover:before
+      background-image: svg-load("icons/comment.svg" fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/comment.svg" fill: $accent-1-dark)
+
+  &--bookmark
+    &:before
+      background-image: svg-load("icons/bookmark.svg" fill: $pseudo-neutral-200)
+
+    &:hover:before
+      background-image: svg-load("icons/bookmark.svg" fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/bookmark.svg" fill: $accent-1-dark)
+
+  &--share
+    &:before
+      background-image: svg-load("icons/share.svg" fill: $pseudo-neutral-200)
+
+    &:hover:before
+      background-image: svg-load("icons/share.svg" fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/share.svg" fill: $accent-1-dark)
+
+  &--tiny
+    margin-right: 1rem
+
+    &:before
+      size: 12px
+      margin-right: 0.4rem
+
+  &--single-icon:before
+    margin-right: 0
+
+  &__img
+    display: block
+    border-radius: 2px
+    margin-right: .5rem

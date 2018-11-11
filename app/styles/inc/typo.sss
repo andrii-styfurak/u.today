@@ -5,6 +5,7 @@ body
 
 h1, h2, h3, h4, h5
   font-weight: 600
+  margin-top: 0
 
 h1
   text: 17px 1.41 @sm 22px 1.45 @md 31px 1.55
@@ -20,3 +21,78 @@ h4
 
 h5
   text: 14px 1.4
+
+p
+  text: $article-standart
+  font-family: $font-article
+  margin: 0 0 2rem
+
+p + p
+  margin-top: -1rem
+
+.text-tiny
+  text: $body-tiny
+
+  a
+    text: $body-tiny
+
+    &:hover
+      text: $pseudo-neutral-900
+
+.link-text
+  text: $accent-1-medium
+  border-bottom: 1px solid $accent-1-medium
+  text-decoration: none
+
+  &:hover
+    text: $accent-1-light
+    border-color: $accent-1-light
+
+  &:active
+    text: $accent-1-dark
+    border-color: $accent-1-dark
+
+  &:visited
+    text: $accent-1-alt
+    border-color: $accent-1-alt
+
+.link-pseudo
+  text: $pseudo-neutral-900
+  border-bottom: 1px dashed $pseudo-neutral-400
+  text-decoration: none
+
+  &:hover
+    text: $accent-1-medium
+    border-color: $accent-1-medium
+
+  &:active
+    text: $accent-1-dark
+    border-color: $accent-1-dark
+
+.link-plain
+  text: $pseudo-neutral-900
+  border-color: $pseudo-neutral-900
+  text-decoration: none
+
+  &:hover
+    text: $accent-1-medium
+    border-color: $accent-1-medium
+
+.list
+  margin: 2rem 0
+  padding: 0 0 0 1rem
+  list-style: none
+
+  &__item
+    text: $article-standart
+    font-family: $font-article
+    position: relative
+
+    & + &
+      margin-top: 1.5rem
+
+    &:before
+      content: "•"
+      display: block
+      position: absolute
+      left: -1rem

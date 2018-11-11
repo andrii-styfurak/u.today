@@ -1,9 +1,19 @@
+.form
+  &--row
+    box:
+
+    .input
+      margin-right: 1rem
+      margin-bottom: 0
+
 .input
+  margin-bottom: 1rem
 
   &__elem
     border: $border
     border-radius: 2px
-    padding: 0.5rem 1rem
+    padding: 0 1rem
+    min-height: 40px
     outline: 0
     text: $body-small
     font-family: $font
@@ -21,15 +31,19 @@
     &:valid
       border-color: $pseudo-neutral-300
 
+    &:disabled
+      background: $neutral-100
+      border-color: $pseudo-neutral-100
+
   &__error
     text: $body-tiny
     text: $accent-2-medium
+    display: none
+    margin-bottom: -.5rem
 
   &--error
     ^&__elem
-      border-color: #FF0F00
-      text: #FF0F00
+      border-color: $accent-2-medium
 
-      &::placeholder
-        text: #FF0F00
-
+    ^&__error
+      display: block

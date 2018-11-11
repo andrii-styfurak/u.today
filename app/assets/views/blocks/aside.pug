@@ -12,9 +12,9 @@ aside.aside-block
             a.aside-story__link(href="#!")= hot
 
             .aside-story__info
-              time.aside-story__time 12:25AM
-              .aside-story__comments 256
-              a.aside-story__share(href="#!")
+              time.humble.humble--tiny 12:25AM
+              a.humble.humble--comments.humble--tiny(href="#!") 256
+              button.humble.humble--share.humble--tiny.humble--single-icon
 
     .card__footer
       a.btn.btn--arrow-right(href="#!") See all
@@ -28,7 +28,7 @@ aside.aside-block
     .card__body
       .btns-spacer
         each tag in tags
-          a.btn.btn--tag(href="#!")= tag
+          a.btn.btn--hash-tag(href="#!")= tag
 
   section.card
     .card__title 🗓 Upcoming events
@@ -40,8 +40,8 @@ aside.aside-block
             a.aside-story__link(href="#!")= event
 
             .aside-story__info
-              time.aside-story__time Oct 31, 2018
-              .aside-story__text Las Vegas, USA
+              time.humble.humble--tiny Oct 31, 2018
+              .humble.humble--tiny Las Vegas, USA
 
     .card__footer
       a.btn.btn--arrow-right(href="#!") See all
@@ -50,7 +50,12 @@ aside.aside-block
     .card__title ✉ Got no time? Subscribe!
 
     .card__body
-      form(action="#" method="get")
+      form.form--col(action="#" method="get")
         .input
-          input.input__elem(type="text" placeholder="Email" required)
-          .input__error E-mail can’t contain symbols
+          input.input__elem(type="text" name="email" placeholder="Email" required)
+
+        .input
+          button.btn.btn--input(type="submit") Subscribe
+
+      .text-tiny By pressing the “Subscribe button” you agree with our 
+          a(href="#!") Privacy Policy

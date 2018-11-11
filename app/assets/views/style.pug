@@ -3,12 +3,124 @@ extends layouts/layout.pug
 block title
   title Style | u.today
 
-  .container
-    aside(style="max-width: 550px")
+block content
+  .style__container.container
+    section.style__elem
+      pre.style__code h1-h5
       h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
       h2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
       h3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
       h4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
       h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
 
-block content
+    section.style__elem
+      pre.style__code
+        |.input.input--error
+        |    input.input__elem
+        |    .input__error
+
+      form(action="#" method="get")
+        .input.input--error
+          input.input__elem(type="text" placeholder="Email" required value="user@gmail.com#")
+          .input__error E-mail can’t contain symbols
+
+        .input
+          input.input__elem(type="text" placeholder="Email" required)
+          .input__error E-mail can’t contain symbols
+
+        .input
+          input.input__elem(type="text" placeholder="Email" required value="user@gmail.com")
+          .input__error E-mail can’t contain symbols
+
+        .input
+          input.input__elem(type="text" placeholder="Email" disabled required)
+          .input__error E-mail can’t contain symbols
+
+        input(type="text" placeholder="Email")
+
+    section.style__elem
+      pre.style__code
+        | .btns-spacer
+        |   .btn
+        |   .btn--arrow-right
+        |   .btn--arrow-down
+        |   .btn--hash-tag
+        |   .btn--disabled
+
+      .btns-spacer
+        button.btn button.btn
+        a.btn(href="#!") a.btn
+        button.btn.btn--light(href="#!") light
+        button.btn.btn--arrow-right arrow
+        button.btn.btn--arrow-down arrow
+        button.btn.btn--hash-tag #HashTag
+        button.btn(disabled) button disabled
+        button.btn.btn--arrow-right(disabled) button disabled
+        a.btn.btn--disabled(href="#!") a disabled
+        a.btn.btn--arrow-right.btn--disabled(href="#!") a disabled
+
+    section.style__elem
+      pre.style__code
+        | .link-text
+        | .link-pseudo
+        | .link-plain
+
+      h1 Lorem 
+        a.link-text(href="#!") link-text
+        |  amet 
+        a.link-pseudo(href="#!") link-pseudo
+        |  adipisicing 
+        a.link-plain(href="#!") link-plain
+
+      h2 Lorem 
+        a.link-text(href="#!") link-text
+        |  amet 
+        a.link-pseudo(href="#!") link-pseudo
+        |  adipisicing 
+        a.link-plain(href="#!") link-plain
+
+      h3 Lorem 
+        a.link-text(href="#!") link-text
+        |  amet 
+        a.link-pseudo(href="#!") link-pseudo
+        |  adipisicing 
+        a.link-plain(href="#!") link-plain
+
+      .links-spacer
+        a.link-text(href="#!") link-text
+        a.link-pseudo(href="#!") link-pseudo
+        a.link-plain(href="#!") link-plain
+
+
+    section.style__elem
+      pre.style__code
+        | .humble
+        | .humble--link
+        | .humble--views
+        | .humble--comments
+        | .humble--bookmark
+        | .humble--tiny
+        | .humble--single-icon
+
+      .article__panel
+        a.humble.humble--link(href="#!") ⭐ Featured
+        a.humble.humble--link(href="#!")
+          img.humble__img(src="https://dummyimage.com/24x24/d8dbde/aaa")
+          | Konstantin Konstanovich
+        time.humble Oct 31, 11:25AM (updated)
+        time.humble Nov 07
+
+      .article__panel
+        .humble.humble--views 123.5k views
+        a.humble.humble--comments(href="#!") 256 comments
+        button.humble.humble--bookmark Add to bookmarks
+
+      .article__panel
+        .humble.humble--views.humble--tiny 123.5k views
+        a.humble.humble--comments.humble--tiny(href="#!") 256 comments
+        button.humble.humble--share.humble--tiny Share
+
+      .article__panel
+        button.humble.humble--bookmark.humble--single-icon
+        .humble.humble--comments.humble--single-icon
+        button.humble.humble--share.humble--single-icon
