@@ -1,5 +1,7 @@
 .social
-  box: center space-between
+  display: inline-flex
+  align-items: center
+  justify-content: space-between
 
   &--border
     border: $border
@@ -10,6 +12,10 @@
 
       & + ^^&__link
         border-left: $border
+
+  &--wide
+    ^&__link
+      width: 4.5rem
 
   &__link
     size: 1.5rem
@@ -51,3 +57,30 @@
 
       &:active
         background-image: svg-load("icons/social/email.svg" fill: $pseudo-neutral-900)
+
+    &--yt
+      background-image: svg-load("icons/social/youtube.svg" fill: $pseudo-neutral-100)
+
+      &:hover
+        background-image: svg-load("icons/social/youtube.svg" fill: $accent-1-medium)
+
+      &:active
+        background-image: svg-load("icons/social/youtube.svg" fill: $pseudo-neutral-900)
+
+    &--rd
+      background-image: svg-load("icons/social/reddit.svg" fill: $pseudo-neutral-100)
+
+      &:hover
+        background-image: svg-load("icons/social/reddit.svg" fill: $accent-1-medium)
+
+      &:active
+        background-image: svg-load("icons/social/reddit.svg" fill: $pseudo-neutral-900)
+
+    &--rs
+      background-image: svg-load("icons/social/rss.svg" fill: $pseudo-neutral-100)
+
+      &:hover
+        background-image: svg-load("icons/social/rss.svg" fill: $accent-1-medium)
+
+      &:active
+        background-image: svg-load("icons/social/rss.svg" fill: $pseudo-neutral-900)

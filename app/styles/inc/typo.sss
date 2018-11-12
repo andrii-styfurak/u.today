@@ -22,14 +22,6 @@ h4
 h5
   text: 14px 1.4
 
-p
-  text: $article-standart
-  font-family: $font-article
-  margin: 0 0 2rem
-
-p + p
-  margin-top: -1rem
-
 .text-tiny
   text: $body-tiny
 
@@ -38,6 +30,19 @@ p + p
 
     &:hover
       text: $pseudo-neutral-900
+
+.link
+  text: $accent-1-medium
+  border-bottom: 1px solid $pseudo-neutral-100
+  text-decoration: none
+
+  &:hover
+    text: $accent-1-light
+    border-color: $accent-1-light
+
+  &:active
+    text: $accent-1-dark
+    border-color: $accent-1-dark
 
 .link-text
   text: $accent-1-medium
@@ -80,8 +85,8 @@ p + p
     text: $accent-1-dark
 
 .list
-  margin: 2rem 0
-  padding: 0 0 0 1rem
+  margin: 2.1rem 0 3rem
+  padding: 0 0 0 1.5rem
   list-style: none
 
   &__item
@@ -96,4 +101,12 @@ p + p
       content: "•"
       display: block
       position: absolute
-      left: -1rem
+      left: -1.5rem
+
+p
+  text: $article-standart
+  font-family: $font-article
+  margin: 0 0 2.5rem
+
+p + p, p + .list
+  margin-top: -1rem

@@ -39,18 +39,25 @@
   &__img, img
     display: block
 
+  &__content
+    margin-bottom: 2.3rem
+
+    > *:last-child
+      margin-bottom: 0 !important
+
   &__contents
-    margin: 3rem *
+    margin: 3.4rem * 2.6rem
 
     &-title
       text: $header-tiny
-      margin-bottom: 1rem
+      margin-bottom: 1.6rem
 
     &-list
       @extend .list-reset
 
     &-item
       box: center
+      margin-bottom: 1.45rem
 
       & + &
         margin-top: .8rem
@@ -64,13 +71,13 @@
 
   &__related
     background: $neutral-100
-    padding: 2rem
-    margin: 3rem *
+    padding: 2rem 2rem 1.4rem
+    margin: 3.4rem * 3.1rem
     box: left
 
     &-title
       text: $header-tiny
-      margin-bottom: 1rem
+      margin-bottom: .7rem
 
     &-link
       text: $body-large
@@ -83,32 +90,35 @@
   &__subscribe
     border: $border
     border-radius: 2px
-    padding: 2rem
-    margin: 3rem *
+    padding: 1.4rem 2rem 1.5rem
+    margin: 3.4rem * 3.4rem
     box: left
 
     &-col
       & + &
         margin-left: 2rem
 
+      &:first-child
+        width: 100%
+
     &-title
       text: $header-tiny
-      margin-bottom: 1.3rem
+      margin-bottom: 1.6rem
 
     &-form
       margin-bottom: 1rem
 
     &-input
-      width: 309px
+      width: 100%
 
   &__fact
     background: $neutral-100
-    padding: 2rem
-    margin: 3rem *
+    padding: 3.4rem 2rem
+    margin: 3.3rem * 3.1rem
 
     &-title
       text: $header-large center
-      margin-bottom: 2rem
+      margin-bottom: 2.4rem
 
     &-text
       text: $body-large center
