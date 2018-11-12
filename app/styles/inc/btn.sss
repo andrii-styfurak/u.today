@@ -31,6 +31,13 @@
     background: transparent
     cursor: pointer
 
+  &--block
+    display: flex
+    width: 100%
+
+  &--large
+    min-height: 48px
+
   &--hash-tag
     text: $body-small normal none none
     background: $neutral-100
@@ -52,7 +59,9 @@
   &--arrow-down,
   &--arrow-right,
   &--rating-up,
-  &--rating-down
+  &--rating-down,
+  &--attach,
+  &--more
     &:after
       content: ""
       display: block
@@ -98,3 +107,30 @@
       transform: rotate(90deg)
       size: 24px
 
+  &--attach
+    &:after
+      background: svg-load("icons/attach.svg", fill: $pseudo-neutral-200)
+      size: 24px
+
+    &:hover:after
+      background: svg-load("icons/attach.svg", fill: $accent-1-medium)
+
+    &:active:after
+      background: svg-load("icons/attach.svg", fill: $accent-1-dark)
+
+    &:disabled:after, &^&--disabled:after
+      background: svg-load("icons/attach.svg", fill: $pseudo-neutral-300)
+
+  &--more
+    &:after
+      background: svg-load("icons/more_horizontal.svg", fill: $pseudo-neutral-200)
+      size: 24px
+
+    &:hover:after
+      background: svg-load("icons/more_horizontal.svg", fill: $accent-1-medium)
+
+    &:active:after
+      background: svg-load("icons/more_horizontal.svg", fill: $accent-1-dark)
+
+    &:disabled:after, &^&--disabled:after
+      background: svg-load("icons/more_horizontal.svg", fill: $pseudo-neutral-300)

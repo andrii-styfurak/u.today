@@ -1,0 +1,28 @@
+.tabs
+  box:
+  @extend .list-reset
+
+  &__item
+    position: relative
+
+    & + &
+      margin-left: 1.5rem
+
+    &:after
+      content: ""
+      height: 4px
+      position: absolute null 0 -1px 0
+
+    &:hover
+      &:after
+        background: $accent-1-medium
+
+    &--active
+      &:after
+        background: $pseudo-neutral-900
+
+  &__btn
+    padding-bottom: 1.6rem
+
+    &:hover
+      text: $pseudo-neutral-900

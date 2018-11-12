@@ -1,12 +1,16 @@
 .article
 
+  &__summary
+    box: center
+    margin-bottom: 1.3rem
+
   &__info
     box: center
     margin-bottom: 1.3rem
 
   &__panel
     box: center
-    margin-bottom: 2rem
+    margin-bottom: 3.2rem
 
     &--border
       border: $border
@@ -112,11 +116,41 @@
   &__tags
     margin-bottom: 1.5rem
 
-  &__rating
-    box: center
+  &__recommended
+    margin-bottom: 3rem
 
-    &-value
-      text: $header-small
-      text: $status-positive
-      margin: * .4rem
-      
+    &-header
+      box: center
+      margin-bottom: 1.5rem
+
+    &-title
+      text: $header-tiny
+      margin-right: 1.5rem
+
+    &-list
+      box:
+
+    &-item
+      width: 33%
+
+      & + &
+        margin-left: 2rem
+
+      &-title
+
+    &-img
+      display: block
+      max-width: 100%
+      width: 100%
+      margin-bottom: 0.7rem
+      border-radius: 2px
+      border: $border
+
+    &-link
+      text: $body-small
+      margin-bottom: .1rem
+      display: block
+      @extend .link-plain
+
+    &-info
+      box: center

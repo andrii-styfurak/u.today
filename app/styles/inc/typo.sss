@@ -48,13 +48,13 @@ p + p
     text: $accent-1-light
     border-color: $accent-1-light
 
-  &:active
-    text: $accent-1-dark
-    border-color: $accent-1-dark
-
   &:visited
     text: $accent-1-alt
     border-color: $accent-1-alt
+
+  &:active
+    text: $accent-1-dark
+    border-color: $accent-1-dark
 
 .link-pseudo
   text: $pseudo-neutral-900
@@ -71,12 +71,13 @@ p + p
 
 .link-plain
   text: $pseudo-neutral-900
-  border-color: $pseudo-neutral-900
   text-decoration: none
 
   &:hover
     text: $accent-1-medium
-    border-color: $accent-1-medium
+
+  &:active
+    text: $accent-1-dark
 
 .list
   margin: 2rem 0

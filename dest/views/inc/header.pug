@@ -1,0 +1,23 @@
+header.header
+  .header__container.container
+    a.header__logo(href="#!")
+
+    .header__social.social
+      a.social__link.social__link--fb(href="#!")
+      a.social__link.social__link--tg(href="#!")
+      a.social__link.social__link--tw(href="#!")
+      a.social__link.social__link--em(href="#!")
+
+    nav.header__nav
+      ul.header__nav-list
+        each item, i in nav
+          li.header__nav-item(class=[ item.childs ? 'header__nav-item--arrow' : '' ] class=[ i == 1 ? 'header__nav-item--active' : '' ])
+            a.header__nav-link(href="#!")= item.name
+
+    .header__panel
+      button.header__search.btn--light
+
+      a.header__account(href="#!")
+        img.header__account-img(src="https://dummyimage.com/32x32/d8dbde/aaa")
+
+      .btn.btn--arrow-down ENG

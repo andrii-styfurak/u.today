@@ -1,0 +1,37 @@
+include ../inc/var.pug
+include ../inc/mixins.pug
+doctype html
+html(lang="en" dir="ltr")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    block title
+      title Home | u.today
+    block head
+      link(href="styles/libs.min.css" rel="stylesheet")
+      link(href="https://fonts.googleapis.com/css?family=Montserrat:500,600" rel="stylesheet")
+      link(href="styles/main.css" rel="stylesheet")
+
+  body
+    .adv-top
+
+    .currencies
+      .currencies__container.container
+        each currencie in currencies
+          a.currencies__link(href="#!")
+            .currencies__name= currencie.name
+            .currencies__trand(class=[ currencie.down ? 'currencies__trand--down' : '' ])= currencie.trand
+            .currencies__price= currencie.price
+
+        .btn.btn--arrow-down USD
+
+    .page-container.container
+      include ../inc/header.pug
+      .content-container.container
+        block content
+        block aside
+      include ../inc/footer.pug
+
+    block foot
+      script(type="text/javascript" src="scripts/libs.min.js")
+      script(type="text/javascript" src="scripts/main.js")
