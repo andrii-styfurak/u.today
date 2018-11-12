@@ -1,20 +1,28 @@
 .currencies
-  padding: .8rem * .7rem
+  padding: .75rem *
 
   &__container
     box: space-between
 
   &__link
-    text: $text-caps
-    text-decoration: none
-    box: wrap
+    text: $text-caps none
+    display: block
+
+    &:hover
+      ^^&__name
+        text: $accent-1-medium
+        border-bottom: 1px solid $accent-1-medium
 
   &__name
     border-bottom: 1px dashed $pseudo-neutral-400
     margin-right: .4rem
+    margin-bottom: .1rem
+    height: 15px
+    display: inline-block
 
   &__trand
     text: $status-positive
+    float: right
 
     &--down
       text: $status-negative
