@@ -4,6 +4,20 @@
     box: center
     margin-bottom: 1.3rem
 
+    &-device
+      display: block @xl none
+      margin: .9rem * .6rem
+
+    &-category,
+    &-time
+      display: none @xl block
+
+    &-bookmarks
+      font-size: @xl-down 0
+
+      &:before
+        margin-right: @xl-down 0
+
   &__info
     box: center
     margin-bottom: 1.3rem
@@ -33,11 +47,19 @@
       margin-left: .4rem
 
   &__mark
-    text: $body-large
-    margin: 0 * 1.4rem
+    text: $body-standart @xl $body-large
+    text: $pseudo-neutral-900
+    margin-top: 0
+    margin-bottom: 1rem @xl 1.4rem
 
-  &__img, img
-    display: block
+  &__main-img
+    position: absolute 0 null null 0
+    @extend .img
+
+    &-wrapper
+      background: $pseudo-neutral-50
+      padding-top: 63.0434783%
+      position: relative
 
   &__content
     margin-bottom: 2.3rem
@@ -68,6 +90,9 @@
         background: svg-load("icons/triangle_down.svg" fill: $pseudo-neutral-100)
         size: 24px
         margin-right: .5rem
+
+    &-link
+      height: 22px
 
   &__related
     background: $neutral-100

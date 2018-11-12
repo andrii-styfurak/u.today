@@ -8,10 +8,10 @@ h1, h2, h3, h4, h5
   margin-top: 0
 
 h1
-  text: 17px 1.41 @sm 22px 1.45 @md 31px 1.55
+  text: $header-small @xl $header-large
 
 h2
-  text: 17px 1.41 @sm 22px 1.45 @md 27px 1.55
+  text: $header-small @xl $header-standart
 
 h3
   text: 22px 1.45
@@ -90,7 +90,7 @@ h5
   list-style: none
 
   &__item
-    text: $article-standart
+    text: $article-small @xl $article-standart
     font-family: $font-article
     position: relative
 
@@ -104,7 +104,7 @@ h5
       left: -1.5rem
 
 p
-  text: $article-standart
+  text: $article-small @xl $article-standart
   font-family: $font-article
   margin: 0 0 2.5rem
 

@@ -1,6 +1,6 @@
 .aside-story
   box: left
-  padding-bottom: .9rem
+  padding-bottom: .5rem @xl .9rem
 
   &:first-child
     padding-top: 3px
@@ -9,31 +9,30 @@
     padding-bottom: 0
 
   & + &
-    padding-top: 1.4rem
+    padding-top: .9rem @xl 1.4rem
     border-top: 1px solid $pseudo-neutral-50
 
   &--events
-    padding-bottom: 1.4rem
+    padding-bottom: .9rem @xl 1.4rem
 
     &:first-child
       padding-top: 0
-      margin-top: -5px
+      margin-top: 0 @xl -5px
 
     & + &
       padding-top: 0
       border-top: 0
 
   &__img
-    border: $border
+    @extend .img
     border-radius: 2px
-    size: 38px
-    display: block
 
     &-wrapper
-      size: 38px
+      size: 24px @xl 40px
+      min-width: 24px @xl 40px
       background: $pseudo-neutral-50
       border-radius: 2px
-      margin-right: 1.1rem
+      margin-right: 0.5rem @xl 1rem
 
   &__info
     box: center
@@ -42,9 +41,11 @@
     margin-top: -6px
 
   &__link
-    text: $body-small
+    text: $body-tiny @xl $body-small
+    text: $pseudo-neutral-900
     text-decoration: none
     display: block
+    @extend .link-plain
 
   &__info
     margin-top: .1em

@@ -1,48 +1,72 @@
 .header
+  background: #fff
 
   &__container
     box: center space-between
-    padding: 2rem * 2.5rem
+    flex-wrap: wrap @xl nowrap
+    padding: 1.4rem * 0 @xl 2rem * 2.5rem
     position: relative
 
   &__logo
     display: block
     background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) left top / contain
     size: 176px 33px
+    min-width: 176px
 
   &__social
-    width: 161px
-    position: absolute null null 5px 16px
+    width: 236px @xl 161px
+    position: @xl absolute null null 5px 0
 
   &__nav
-    margin-bottom: calc(-2.5rem)
-    margin-top: 1px
-    margin-left: 9px
+    margin-bottom: 0 @xl calc(-2.5rem)
+    margin-top: 1.3rem @xl 1px
+    margin-left: 0 @xl 9px
     border-bottom: $border
+    position: relative
+    order: @xl-down 9
+    width: 100% @xl auto
+
+    &:after
+      content: ""
+      display: none @xl block
+      position: absolute null -210px -1px null
+      width: 210px
+      border-top: $border
 
     &-list
-      list-style: none
-      margin: 0
-      padding: 0
-      box: center
+      @extend .list-reset
+      box: space-between @xl center
 
     &-item
       position: relative
       font-family: $font
 
-      &:hover, &--active
+      &:after
+        content: ""
+        height: 4px
+        position: absolute null 0 -1px 0
+
+      &:hover
+        ^^&-child-list
+          display: block
+
         &:after
-          content: ""
-          height: 4px
-          position: absolute null 0 -1px 0
-          background: $pseudo-neutral-900
+          background: $accent-1-medium
+
+      &--active:after
+        background: $pseudo-neutral-900
 
       & + &
         margin-left: 1.5rem
 
       &--arrow
-        &:hover:after
-          right: 24px
+        &:hover
+
+          &:after
+            right: 24px
+
+          ^^^&-link:after
+            transform: scaleY(-1)
 
         &:after
           right: 24px
@@ -56,19 +80,47 @@
     &-link
       text: $text-caps none
       box: center
-      padding-bottom: 2.5rem
+      padding-bottom: .7rem @xl 2.5rem
+
+    &-child
+
+      &-list
+        @extend .list-reset
+        display: none
+        position: absolute
+        padding-top: .5rem
+        border-radius: 2px
+        border: 1px solid $pseudo-neutral-300
+        background: #fff
+
+      &-item
+        border-left: 4px solid transparent
+
+        &--active
+          border-color: $pseudo-neutral-900
+
+        &:hover
+          background: $neutral-100
+
+        & + &
+          margin-top: .5rem
+
+      &-link
+        text: $text-caps none
+        white-space: nowrap
+        height: 2.5rem
+        box: center
+        padding: * .8rem
 
   &__panel
-    box: center
+    box: center space-between
+    width: 230px @xl 187px
 
   &__search
-    background: svg-load("icons/search.svg", fill: $pseudo-neutral-900) no-repeat center
-    size: 32px
-    margin-right: 1.5rem
 
   &__account
-    margin-right: 1.5rem
 
     &-img
       display: block
       border-radius: 2px
+      position: absolute

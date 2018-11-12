@@ -4,7 +4,7 @@ doctype html
 html(lang="en" dir="ltr")
   head
     meta(charset="UTF-8")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
     block title
       title Home | u.today
     block head
@@ -15,21 +15,15 @@ html(lang="en" dir="ltr")
   body
     .adv-top
 
-    .currencies
-      .currencies__container.container
-        each currencie in currencies
-          a.currencies__link(href="#!")
-            .currencies__name= currencie.name
-            .currencies__trand(class=[ currencie.down ? 'currencies__trand--down' : '' ])= currencie.trand
-            .currencies__price= currencie.price
-
-        .btn.btn--arrow-down USD
+    include ../blocks/currencies.pug
 
     .page-container.container
       include ../inc/header.pug
-      .content-container.container
+
+      .content-container
         block content
         block aside
+
       include ../inc/footer.pug
 
     block foot
