@@ -63,7 +63,8 @@
   &--attach,
   &--more,
   &--search,
-  &--account
+  &--account,
+  &--burger
     &:after
       content: ""
       display: block
@@ -166,3 +167,17 @@
 
     &:disabled:after, &^&--disabled:after
       background-image: svg-load("icons/no_avatar.svg", fill: $pseudo-neutral-300)
+
+  &--burger
+    &:after
+      background-image: svg-load("icons/burger.svg", fill: $pseudo-neutral-900)
+      size: 32px
+
+    &:hover:after
+      background-image: svg-load("icons/burger.svg", fill: $accent-1-medium)
+
+    &:active:after
+      background-image: svg-load("icons/burger.svg", fill: $accent-1-dark)
+
+    &:disabled:after, &^&--disabled:after
+      background-image: svg-load("icons/burger.svg", fill: $pseudo-neutral-300)

@@ -4,18 +4,19 @@
   &__container
     box: center space-between
     flex-wrap: wrap @xl nowrap
-    padding: 1.4rem * 0 @xl 2rem * 2.5rem
+    padding: .7rem * @md 1.4rem * 0 @xl 2rem * 2.5rem
     position: relative
 
   &__logo
     display: block
-    background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) left top / contain
-    size: 176px 33px
-    min-width: 176px
+    background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
+    size: 130px 24px @md 176px 33px
+    min-width: 130px @md 176px
 
   &__social
     width: 236px @xl 161px
     position: @xl absolute null null 5px 0
+    display: @md-down none
 
   &__nav
     margin-bottom: 0 @xl calc(-2.5rem)
@@ -25,6 +26,7 @@
     position: relative
     order: @xl-down 9
     width: 100% @xl auto
+    display: none @md block
 
     &:after
       content: ""
@@ -114,7 +116,7 @@
 
   &__panel
     box: center space-between
-    width: 230px @xl 187px
+    width: 129px @xs 159px @md 230px @xl 187px
 
   &__search
 
@@ -124,3 +126,9 @@
       display: block
       border-radius: 2px
       position: absolute
+
+  &__burger
+    display: @md none
+
+  &__lang
+    display: @md-down none

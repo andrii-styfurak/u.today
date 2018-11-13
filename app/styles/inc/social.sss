@@ -6,9 +6,10 @@
   &--border
     border: $border
     border-radius: 2px
+    width: @md-down 100%
 
     ^&__link
-      width: 2.45rem @xl 4rem
+      width: 100% @md 2.45rem @xl 4rem
       height: 38px
 
       & + ^^&__link
@@ -16,7 +17,7 @@
 
   &--wide
     ^&__link
-      width: 4.5rem
+      width: 2.7rem @xl 4.5rem
 
   &__link
     size: 1.5rem
@@ -63,7 +64,7 @@
       background-image: svg-load("icons/social/youtube.svg" fill: $pseudo-neutral-100)
 
       &:hover
-        background-image: svg-load("icons/social/youtube.svg" fill: $accent-1-medium)
+        background-image: svg-load("icons/social/youtube.svg" fill: #ff0000)
 
       &:active
         background-image: svg-load("icons/social/youtube.svg" fill: $pseudo-neutral-900)
@@ -72,7 +73,7 @@
       background-image: svg-load("icons/social/reddit.svg" fill: $pseudo-neutral-100)
 
       &:hover
-        background-image: svg-load("icons/social/reddit.svg" fill: $accent-1-medium)
+        background-image: svg-load("icons/social/reddit.svg" fill: #ff4500)
 
       &:active
         background-image: svg-load("icons/social/reddit.svg" fill: $pseudo-neutral-900)
@@ -81,7 +82,7 @@
       background-image: svg-load("icons/social/rss.svg" fill: $pseudo-neutral-100)
 
       &:hover
-        background-image: svg-load("icons/social/rss.svg" fill: $accent-1-medium)
+        background-image: svg-load("icons/social/rss.svg" fill: #f26522)
 
       &:active
         background-image: svg-load("icons/social/rss.svg" fill: $pseudo-neutral-900)

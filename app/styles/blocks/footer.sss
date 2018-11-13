@@ -8,15 +8,15 @@
 
   &__row
     box: space-between
-    padding: 3.2rem * 3.5rem
+    padding: 2.6rem * @xl 3.2rem * 3.5rem
     border-bottom: $border
 
   &__title
-    text: $header-tiny
+    text: $header-super-tiny @xl $header-tiny
     margin-bottom: 1.7rem
 
   &__follow-us
-    margin-right: 3.6rem
+    margin-right: 1rem @xl 3.6rem
 
   &__subscribe
 
@@ -24,13 +24,13 @@
       height: 40px
 
     &-input
-      width: 269px
+      width: 116px @xl 269px
 
     .text-tiny
       margin-top: -2px
 
   &__nav
-    padding: 3.5rem *
+    padding: 2.5rem * @xl 3.5rem *
     border-bottom: $border
     position: relative
 
@@ -41,10 +41,12 @@
     &-item
 
       &:last-child
-        position: absolute 96px 32px null null
+        position: absolute
+        top: 80px @xl 96px
+        right: 24px @xl 32px
 
     &-link
-      text: $header-tiny
+      text: $header-super-tiny @xl $header-tiny
       @extend .link-plain
 
     &-child
@@ -56,15 +58,16 @@
       &-item
 
         & + &
-          margin-top: 1rem
+          margin-top: 0.94rem @xl 1rem
 
       &-link
-        text: $body-small
+        text: $body-tiny @xl $body-small
+        text: $pseudo-neutral-900
         @extend .link-plain
 
   &__copy
     box: center
-    padding: 1.1rem *
+    padding: 1rem * @xl 1.1rem *
 
     &-text
       text: $body-small
