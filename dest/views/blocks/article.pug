@@ -124,7 +124,7 @@ main.main-block
       a.btn.btn--hash-tag(href="#!") #Bitcoin
       a.btn.btn--hash-tag(href="#!") #Processor
 
-    section.article__panel.article__panel--border
+    section.article__panel
       .rating.rating--positive
         button.btn.btn--light.btn--rating-down
         .rating__value 28
@@ -132,11 +132,17 @@ main.main-block
 
       .article__panel-separator
 
-      a.humble.humble--link(href="#!") ⭐ Featured
-      time.humble Oct 31, 11:25AM (updated)
-      .humble.humble--views 123.5k views
-      a.humble.humble--comments(href="#!") 256 comments
-      button.humble.humble--bookmark.humble--single-icon
+      .article__panel-row
+        .article__panel-col
+          a.humble.humble--link(href="#!") ⭐ Featured
+          time.humble Oct 31, 11:25AM (updated)
+
+        .article__panel-col
+          .humble.humble--views 123.5k
+            .humble__inner-text.hide-xl-down views
+          a.humble.humble--comments(href="#!") 256
+            .humble__inner-text.hide-xl-down comments
+          button.humble.humble--bookmark.humble--single-icon
 
     include article-recommended.pug
 

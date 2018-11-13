@@ -86,8 +86,9 @@ h5
     text: $accent-1-dark
 
 .list
-  margin: 2.1rem 0 3rem
-  padding: 0 0 0 1.5rem
+  margin: 2rem 0 @xl 2.1rem 0 3rem
+  padding: 0
+  padding-left: 1.1rem @xl 1.5rem
   list-style: none
 
   &__item
@@ -96,13 +97,13 @@ h5
     position: relative
 
     & + &
-      margin-top: 1.5rem
+      margin-top: 1rem @xl 1.5rem
 
     &:before
       content: "•"
       display: block
       position: absolute
-      left: -1.5rem
+      left: -1.1rem @xl -1.5rem
 
 p
   text: $article-small @xl $article-standart
