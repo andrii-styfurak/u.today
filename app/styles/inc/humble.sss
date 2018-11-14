@@ -16,6 +16,10 @@
   &__inner-text
     margin-left: .25rem
 
+  &--accent
+    color: $accent-1-medium
+    margin-right: .3rem
+
   &--link,
   &--comments,
   &--bookmark,
@@ -31,7 +35,8 @@
   &--views,
   &--comments,
   &--bookmark,
-  &--share
+  &--share,
+  &--info
     &:before
       content: ""
       display: block
@@ -44,6 +49,10 @@
   &--views
     &:before
       background-image: svg-load("icons/eye.svg" fill: $pseudo-neutral-200)
+
+  &--info
+    &:before
+      background-image: svg-load("icons/information.svg" fill: $pseudo-neutral-200)
 
   &--comments
     &:before
@@ -80,7 +89,7 @@
 
     &:before
       size: 12px
-      margin-right: 0.4rem
+      margin-right: .3rem
 
   &--single-icon:before
     margin-right: 0

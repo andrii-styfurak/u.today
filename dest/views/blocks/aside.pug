@@ -1,61 +1,60 @@
-aside.aside-block
-  section.card
-    .card__title 🔥 Hot Stories
+section.card
+  .card__title 🔥 Hot Stories
 
-    .card__body
-      each hot in hots
-        article.aside-story
-          .aside-story__img-wrapper
-            img.aside-story__img(src="https://dummyimage.com/40x40/d8dbde/aaa")
+  .card__body
+    each hot in hots
+      article.aside-story
+        .aside-story__img-wrapper
+          img.aside-story__img(src="https://dummyimage.com/40x40/d8dbde/aaa")
 
-          .aside-story__body
-            a.aside-story__link(href="#!")= hot
+        .aside-story__body
+          a.aside-story__link(href="#!")= hot
 
-            .aside-story__info
-              time.humble.humble--tiny 12:25AM
-              a.humble.humble--comments.humble--tiny(href="#!") 256
-              button.humble.humble--share.humble--tiny.humble--single-icon
+          .aside-story__info
+            time.humble.humble--tiny 12:25AM
+            a.humble.humble--comments.humble--tiny(href="#!") 256
+            button.humble.humble--share.humble--tiny.humble--single-icon
 
-    .card__footer
-      a.btn.btn--arrow-right(href="#!") See all
+  .card__footer
+    a.btn.btn--arrow-right(href="#!") See all
 
-  section.card.card--no-padding
-    .something-aside
+section.card.card--no-padding
+  .something-aside
 
-  section.card
-    .card__title 👓 Topics of current interest
+section.card
+  .card__title 👓 Topics of current interest
 
-    .card__body
-      .btns-spacer
-        each tag in tags
-          a.btn.btn--hash-tag(href="#!")= tag
+  .card__body
+    .btns-spacer
+      each tag in tags
+        a.btn.btn--hash-tag(href="#!")= tag
 
-  section.card
-    .card__title 🗓 Upcoming events
+section.card
+  .card__title 🗓 Upcoming events
 
-    .card__body
-      each event in events
-        article.aside-story.aside-story--events
-          .aside-story__body
-            a.aside-story__link(href="#!")= event
+  .card__body
+    each event in events
+      article.aside-story.aside-story--events
+        .aside-story__body
+          a.aside-story__link(href="#!")= event
 
-            .aside-story__info
-              time.humble.humble--tiny Oct 31, 2018
-              .humble.humble--tiny Las Vegas, USA
+          .aside-story__info
+            time.humble.humble--tiny Oct 31, 2018
+            .humble.humble--tiny Las Vegas, USA
 
-    .card__footer
-      a.btn.btn--arrow-right(href="#!") See all
+  .card__footer
+    a.btn.btn--arrow-right(href="#!") See all
 
-  section.card
-    .card__title ✉ Got no time? Subscribe!
+section.card
+  .card__title ✉ Got no time? Subscribe!
 
-    .card__body
-      form.form--col(action="#" method="get")
-        .input
-          input.input__elem(type="text" name="email" placeholder="Email" required)
+  .card__body
+    form.form--col(action="#" method="get")
+      .input
+        input.input__elem(type="text" name="email" placeholder="Email" required)
 
-        .input
-          button.btn.btn--input(type="submit") Subscribe
+      .input
+        button.btn.btn--input(type="submit") Subscribe
 
-      .text-tiny By pressing the “Subscribe button” you agree with our 
-          a(href="#!") Privacy Policy
+    .text-tiny By pressing the “Subscribe button” you agree with our 
+        a(href="#!") Privacy Policy

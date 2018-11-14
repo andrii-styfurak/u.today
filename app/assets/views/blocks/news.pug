@@ -1,11 +1,21 @@
 section.news
   .news__header
     .news__title ☕ Nov 5, Monday News
-    a.btn.btn--arrow-right.hide-xl-down(href="#!") See all
+    a.btn.btn--arrow-right.hide-md-down(href="#!") See all
 
   ul.news__list
-    //- each item in 
-    //-   li
+    each item, i in news
+      li.news__item
+        .news__item-time-wrapper
+          time.news__item-time.humble= item.date
 
+        .news__item-title-wrapper
+          a.news__item-title(href="#!")= item.title
 
-  a.btn.btn--arrow-right.hide-xl-only(href="#!") See all
+          .news__item-info
+            if i != 2
+              .humble.humble--accent +28
+            a.humble.humble--comments.humble--tiny(href="#!") 463
+
+  .news__footer.hide-md-up
+    a.btn.btn--arrow-right(href="#!") See all

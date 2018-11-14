@@ -1,0 +1,23 @@
+mixin newsCategory(category)
+  section.news-category
+    .news-category__header
+      .news-category__title= category.title
+      a.btn.btn--arrow-right.hide-md-down(href="#!") See all
+
+    .news-category__list
+      each item in category.news
+        article.news-category__item
+          a.news-category__item-link(href="#!")
+            .news-category__item-img-wrapper
+              img.news-category__item-img(src="https://dummyimage.com/224x152/d8dbde/aaa")
+
+            .news-category__item-title= item.title
+
+          .news-category__item-info
+            time.humble.humble--tiny Nov 07
+            a.humble.humble--comments.humble--tiny(href="#!") 256
+            .humble.humble--views.humble--tiny(href="#!") 123.5k
+            button.humble.humble--share.humble--tiny.humble--single-icon
+
+    .news-category__footer.hide-md-up
+      a.btn.btn--arrow-right(href="#!") See all

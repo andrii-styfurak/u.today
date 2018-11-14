@@ -22,6 +22,16 @@
       padding-top: 0 !important
       border-top: 0
 
+  &--tweets
+    flex-wrap: wrap
+
+    ^&__img
+      border-radius: 50%
+
+      &-wrapper
+        margin-top: -1px
+        border-radius: 50%
+
   &__img
     @extend .img
     border-radius: 2px
@@ -48,3 +58,7 @@
 
   &__info
     margin-top: .1em
+
+  &__text
+    text: $body-small
+    margin-top: .7em

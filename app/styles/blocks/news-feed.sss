@@ -1,0 +1,38 @@
+.news-feed
+  border-bottom: $border
+  padding-bottom: 1.9rem
+  margin-bottom: 1.7rem
+
+  &__header
+    box: center
+    margin-bottom: 1.5rem
+
+  &__title
+    text: $header-small
+    margin-bottom: 1.6rem
+
+  &__item
+    box: left
+
+    & + &
+      margin-top: 2rem
+
+    &-img
+      @extend .img-cover
+      border-radius: 2px
+
+      &-wrapper
+        @extend .img-cover-wrapper
+        display: block
+        size: 96px 64px
+        margin-right: .9rem
+
+    &-title
+      text: $body-small
+      @extend .link-plain
+
+    &-info
+      box: center
+
+  &__footer
+    margin-top: 1.5rem

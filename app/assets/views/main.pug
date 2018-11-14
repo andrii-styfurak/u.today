@@ -12,3 +12,27 @@ block content
 
     .news-block
       include blocks/news.pug
+
+  include blocks/news-featured.pug
+
+  .something-wide
+
+  .main-aside-container
+    .main-news-block
+      include blocks/news-category.pug
+
+      +newsCategory(newsCategoryOpinions)
+      +newsCategory(newsCategoryInterviews)
+
+      .something-news-category-wrapper
+        .something-news-category
+
+      +newsCategory(newsCategoryPress)
+
+      include blocks/news-feed.pug
+
+      include blocks/news-categories.pug
+
+    .aside-news-block
+      include blocks/crypto-tweets.pug
+      include blocks/aside.pug
