@@ -15,13 +15,25 @@
   margin: 0
 
 .title-mark
-  text: $body-tiny
+  text: $pseudo-neutral-900 $body-tiny
   display: inline-block
   margin-left: 0.2rem
+
+.text-tiny
+  text: $pseudo-neutral-400 $body-tiny
 
 .img
   display: block
   max-width: 100%
+
+.img-cover
+  position: absolute 0 null null 0
+  width: 100%
+
+  &-wrapper
+    background: $pseudo-neutral-50
+    overflow: hidden
+    position: relative
 
 .hide
 
@@ -30,3 +42,9 @@
 
   &-xl-only
     display: @xl none
+
+  &-sm-down
+    display: @sm-down none
+
+  &-sm-only
+    display: @sm none

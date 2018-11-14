@@ -21,7 +21,7 @@
 
 .content-container
   box: space-between
-  padding: 2rem *
+  padding: 1rem * @md 2rem *
 
 .main-block
   max-width: 100% @md 480px @xl 736px
@@ -30,3 +30,17 @@
   max-width: 240px @xl 320px
   margin-top: 0 @xl -9px
   display: @md-down none
+
+.main-container
+  box: space-between
+  flex-wrap: wrap @md nowrap
+  margin: 2rem *
+  padding-bottom: 2rem
+  border-bottom: $border
+
+.top-story-block
+  max-width: 100% @md 272px @xl 416px
+  margin-right: 0 @md 1rem @xl 2rem
+
+.news-block
+  max-width: 100% @md 448px @xl 672px

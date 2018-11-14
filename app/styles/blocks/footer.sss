@@ -8,45 +8,56 @@
 
   &__row
     box: space-between
-    padding: 2.6rem * @xl 3.2rem * 3.5rem
+    flex-wrap: wrap @md nowrap
+    padding: 1.6rem * @md 2.6rem * @xl 3.2rem * 3.5rem
     border-bottom: $border
 
   &__title
     text: $header-super-tiny @xl $header-tiny
-    margin-bottom: 1.7rem
+    margin-bottom: .8rem @md 1.7rem
 
   &__follow-us
-    margin-right: 1rem @xl 3.6rem
+    margin-right: 0 @md 1rem @xl 3.6rem
+    margin-bottom: @md-down 1.4rem
+    width: @md-down 100%
 
   &__subscribe
+    width: @md-down 100%
 
     &-form
-      height: 40px
+      height: auto @md 40px
 
     &-input
-      width: 116px @xl 269px
+      width: @md 116px @xl 269px
 
-    .text-tiny
-      margin-top: -2px
+    &-agree
+      text: $pseudo-neutral-400 $body-tiny
+      margin-top: 0 @sm -2px
 
   &__nav
-    padding: 2.5rem * @xl 3.5rem *
+    padding: 1.3rem * 0.3rem @md 2.5rem * @xl 3.5rem *
     border-bottom: $border
     position: relative
 
     &-list
       @extend .list-reset
-      box: space-between
+      box: wrap @md space-between
 
     &-item
+      width: 60% @sm 33% @md auto
+      margin-bottom: @md-down 1.1rem
+      white-space: nowrap
+
+      &:nth-child(even)
+        width: @sm-down 40%
 
       &:last-child
-        position: absolute
+        position: @md absolute
         top: 80px @xl 96px
         right: 24px @xl 32px
 
     &-link
-      text: $header-super-tiny @xl $header-tiny
+      text: $header-tiny @md $header-super-tiny @xl $header-tiny
       @extend .link-plain
 
     &-child
@@ -54,6 +65,7 @@
       &-list
         @extend .list-reset
         margin-top: 1rem
+        display: @md-down none
 
       &-item
 
@@ -66,13 +78,14 @@
         @extend .link-plain
 
   &__copy
-    box: center
-    padding: 1rem * @xl 1.1rem *
+    box: wrap @md center
+    padding: 1.5rem * @md 1rem * @xl 1.1rem *
 
     &-text
       text: $body-small
       text: $pseudo-neutral-400
       margin-right: 2rem
+      margin-bottom: @sm-down 1rem
 
     &-link
       text: $body-small

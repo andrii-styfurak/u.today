@@ -1,0 +1,14 @@
+extends layouts/layout.pug
+
+block title
+  title Main | u.today
+
+block content
+  include blocks/breaking.pug
+
+  .main-container
+    .top-story-block
+      include blocks/top-story.pug
+
+    .news-block
+      include blocks/news.pug

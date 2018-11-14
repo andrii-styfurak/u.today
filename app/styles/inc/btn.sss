@@ -1,5 +1,5 @@
 .btn
-  text: $text-caps none
+  text: $pseudo-neutral-900 $text-caps none
   line-height: unset
   min-height: 2rem
   padding: 0 .7rem
@@ -35,8 +35,17 @@
     display: flex
     width: 100%
 
+  &--big
+    min-height: 40px
+
   &--large
     min-height: 48px
+
+  &--pseudo
+    @extend .btn--light
+    text-transform: none
+    text: 500 13px
+    letter-spacing: normal
 
   &--hash-tag
     text: $body-small normal none none
@@ -51,10 +60,46 @@
     border-color: $accent-1-dark
     text: $accent-1-dark
 
-  &:disabled, &--disabled, &--disabled:hover
-    text: $pseudo-neutral-300
-    border-color: $pseudo-neutral-100
+  &:disabled, &--disabled
+    text: $pseudo-neutral-300 !important
+    border-color: $pseudo-neutral-100 !important
     cursor: default
+
+  &--accent
+    background: $accent-1-medium
+    border-color: $accent-1-medium
+    text: #fff
+
+    &:hover
+      background: $accent-1-light
+      border-color: $accent-1-light
+      text: #fff
+
+    &:active
+      background: $accent-1-dark
+      border-color: $accent-1-dark
+      text: #fff
+
+    &:disabled, &.btn--disabled
+      background: $pseudo-neutral-100 !important
+      text: $pseudo-neutral-300 !important
+      border-color: $pseudo-neutral-100 !important
+      cursor: default
+
+  &--accent-2
+    background: $accent-2-medium
+    border-color: $accent-2-medium
+    text: #fff
+
+    &:hover
+      background: $accent-2-medium
+      border-color: $accent-2-medium
+      text: #fff
+
+    &:active
+      background: $accent-2-medium
+      border-color: $accent-2-medium
+      text: #fff
 
   &--arrow-down,
   &--arrow-right,
@@ -64,8 +109,18 @@
   &--more,
   &--search,
   &--account,
-  &--burger
+  &--burger,
+  &--info,
+  &--info-white,
+  &--lightning-white
     &:after
+      content: ""
+      display: block
+      background-repeat: no-repeat
+      background-position: center
+
+  &--info-before
+    &:before
       content: ""
       display: block
       background-repeat: no-repeat
@@ -181,3 +236,51 @@
 
     &:disabled:after, &^&--disabled:after
       background-image: svg-load("icons/burger.svg", fill: $pseudo-neutral-300)
+
+  &--info
+    &:after
+      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-900)
+      size: 20px
+      margin-left: .9em
+
+    &:hover:after
+      background-image: svg-load("icons/information.svg", fill: $accent-1-medium)
+
+    &:active:after
+      background-image: svg-load("icons/information.svg", fill: $accent-1-dark)
+
+    &:disabled:after, &^&--disabled:after
+      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-300)
+
+  &--info-white
+    &:after
+      background-image: svg-load("icons/information.svg", fill: #fff)
+      size: 20px
+      margin-left: .9em
+
+    &:disabled:after, &^&--disabled:after
+      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-200)
+
+  &--info-before
+    &:before
+      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-900)
+      size: 20px
+      margin-right: .6em
+
+    &:hover:before
+      background-image: svg-load("icons/information.svg", fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/information.svg", fill: $accent-1-dark)
+
+    &:disabled:before, &^&--disabled:after
+      background-image: svg-load("icons/information.svg", fill: $pseudo-neutral-300)
+
+  &--lightning-white
+    &:after
+      background-image: svg-load("icons/lightning.svg", fill: #fff)
+      size: 20px
+      margin-left: .9em
+
+    &:disabled:after, &^&--disabled:after
+      background-image: svg-load("icons/lightning.svg", fill: $pseudo-neutral-200)

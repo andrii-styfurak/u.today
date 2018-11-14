@@ -7,6 +7,15 @@
     padding: .7rem * @md 1.4rem * 0 @xl 2rem * 2.5rem
     position: relative
 
+    &:after
+      content: ""
+      display: block @md none
+      border-bottom: $border
+      position: absolute
+      bottom: 0
+      left: -16px @sm 0
+      right: -16px @sm 0
+
   &__logo
     display: block
     background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
@@ -80,7 +89,7 @@
           size: 24px 12px
 
     &-link
-      text: $text-caps none
+      text: $pseudo-neutral-900 $text-caps none
       box: center
       padding-bottom: .7rem @xl 2.5rem
 
@@ -94,6 +103,7 @@
         border-radius: 2px
         border: 1px solid $pseudo-neutral-300
         background: #fff
+        z-index: 999
 
       &-item
         border-left: 4px solid transparent
@@ -108,7 +118,7 @@
           margin-top: .5rem
 
       &-link
-        text: $text-caps none
+        text: $pseudo-neutral-900 $text-caps none
         white-space: nowrap
         height: 2.5rem
         box: center

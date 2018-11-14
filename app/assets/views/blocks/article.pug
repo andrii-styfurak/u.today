@@ -17,8 +17,10 @@ main.main-block
     .article__mark Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels
 
     section.article__info
-      .humble.humble--views 123.5k views
-      a.humble.humble--comments(href="#!") 256 comments
+      .humble.humble--views 123.5k
+        .humble__inner-text.hide-sm-down views
+      a.humble.humble--comments(href="#!") 256
+        .humble__inner-text.hide-sm-down comments
       button.article__summary-bookmarks.humble.humble--bookmark Add to bookmarks
 
     .article__main-img-wrapper
@@ -45,45 +47,38 @@ main.main-block
 
       p!= articleTexts[3]
 
-      blockquote.quote
-        .quote__text Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+      blockquote
+        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
 
-        .quote__person
-          img.quote__img(src="https://dummyimage.com/64x64/d8dbde/aaa")
-
-          .quote__info
-            .quote__name Bob Stewarts
-            .quote__tip CEO of uToday
+        img(src="https://dummyimage.com/64x64/d8dbde/aaa")
+        strong Bob Stewarts
+        em CEO of uToday
 
       p!= articleTexts[0]
 
-      blockquote.quote
-        .quote__text Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+      blockquote
+        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
 
-        .quote__person
-          .quote__info
-            .quote__name Bob Stewarts
-            .quote__tip CEO of uToday
+        strong Bob Stewarts
+        em CEO of uToday
 
       p!= articleTexts[1]
 
-      blockquote.quote
-        .quote__text Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+      blockquote
+        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
 
-        .quote__person
-          .quote__info
-            .quote__name Bob Stewarts
+        strong Bob Stewarts
 
       p!= articleTexts[2]
 
-      blockquote.quote
-        .quote__text Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
+      blockquote
+        p Speaking of the aisle, another statistic of interest: all 17 panelists in the Women of Crypto track were female, while on the Main Stage over the next two days women <a class="link-text" href="#!">made up roughly 20 percent</a> of the speakers.
 
       p!= articleTexts[5]
 
-      ul.list
+      ul
         each li in articleList
-          li.list__item= li
+          li= li
 
       h2 Scaling community and activism
 
@@ -97,7 +92,7 @@ main.main-block
 
       p!= articleTexts[1]
 
-      .adv-article
+      .something-article
 
       p!= articleTexts[2]
 
@@ -115,9 +110,42 @@ main.main-block
 
       include article-fact.pug
 
+      p!= articleTexts[1]
+
+      h4
+        strong almost 300 000
+        p iPhones XS and XS Max was sold in Russia in the first ten days
+
       h2 Adding value despite challenges
 
       p!= articleTexts[0]
+
+      table
+        tbody
+          tr
+            td Subunit
+            td Symbol
+            td Value (of 1 BTC)
+          tr
+            td 'millibit'
+            td mBTC
+            td 1/1000
+          tr
+            td ‘bit’
+            td μBTC
+            td 1⁄1000000
+          tr
+            td ‘satoshi’
+            td satoshi
+            td 1⁄100000000
+
+      p!= articleTexts[2]
+
+      p
+        strong Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
+
+      p
+        em Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, ducimus?
 
     section.article__tags.btns-spacer
       a.btn.btn--hash-tag(href="#!") #MaltaBlockchainSummit

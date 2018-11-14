@@ -2,11 +2,11 @@
 
   &__summary
     box: center
-    margin-bottom: 1.3rem
+    margin-bottom: 0.7rem @md 1.3rem
 
     &-device
       display: block @xl none
-      margin: .9rem * .6rem
+      margin: 1.1rem * .8rem
 
     &-category,
     &-time
@@ -161,22 +161,26 @@
       width: 100%
 
     &-agree
+      text: $pseudo-neutral-400 $body-tiny
       order: 2 @md 4
       margin-bottom: 2.2rem @md 0
 
-  &__fact
+  &__fact, h4
     background: $neutral-100
     padding: 1.3rem 2rem @xl 3.4rem 2rem
     margin: 2.6rem * 2.2rem @xl 3.3rem * 3.1rem
     margin: @sm-down * -1rem
 
-    &-title
+    &-title, strong
       text: $header-standart center @xl $header-large
       margin-bottom: .6rem @xl 2.4rem
+      display: block
 
-    &-text
+    &-text, p
       text: $body-standart center @xl $body-large
       text: $pseudo-neutral-900
+      font-family: $font
+      margin-bottom: 0
 
   &__tags
     margin-bottom: 1.5rem
@@ -194,16 +198,30 @@
 
     &-list
       margin-bottom: @xl-down 1.5rem
-      box:
+      box: left
+      overflow: @md-down auto
+      padding: @md-down 0 1rem 6rem
+
+      &:after
+        content: ""
+        display: block
+        min-width: 1rem
+        size: 1rem
+
+      &-slide
+        max-height: @md-down 290px
+        overflow: @md-down hidden
+        margin: @md-down * -1rem
 
     &-item
       width: 50% @xl 33%
+      min-width: 224px
 
       & + &
         margin-left: 2rem
 
       &:last-child
-        display: @xl-down none
+        display: @md none @xl block
 
       &-title
 

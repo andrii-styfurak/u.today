@@ -1,0 +1,22 @@
+.top-story
+  border: $border
+  border-radius: 2px
+
+  &__link
+    @extend .link-plain
+
+  &__img
+    @extend .img-cover
+    border-bottom: $border
+
+    &-wrapper
+      @extend .img-cover-wrapper
+      padding-top: 61.5384615%
+
+  &__title
+    text: $header-tiny @xl $header-small
+    padding: 1.5rem 1rem 1rem
+
+  &__info
+    box: center
+    padding: 0 1rem 1rem

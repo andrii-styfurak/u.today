@@ -10,3 +10,49 @@ figcaption
   text: $pseudo-neutral-400
   margin-top: .5rem @xl 1.2rem
   margin-left: @sm-down 1rem
+
+ul:not([class])
+  margin: 2rem 0 @xl 2.1rem 0 3rem
+  padding: 0
+  padding-left: 1.1rem @xl 1.5rem
+  list-style: none
+
+  li
+    text: $article-small @xl $article-standart
+    font-family: $font-article
+    position: relative
+
+    + li
+      margin-top: 1rem @xl 1.5rem
+
+    &:before
+      content: "•"
+      display: block
+      position: absolute
+      left: -1.1rem @xl -1.5rem
+
+p
+  text: $article-small @xl $article-standart
+  font-family: $font-article
+  margin: 0
+  margin-bottom: 1.7rem @xl 2.5rem
+
+p + p, p + ul
+  margin-top: -0.7rem @xl -1rem
+
+img:not([class])
+  @extend .img
+
+table
+  width: 100%
+  margin-bottom: 1.7rem @xl 2.5rem
+  border-collapse: collapse
+  border-radius: 2px
+  border: $border
+
+  td
+    text: $body-small @xl $body-standart
+    padding: .75rem 1rem
+    vertical-align: top
+    border-top: 1px solid #dee2e6
+    border-right: 1px solid #dee2e6

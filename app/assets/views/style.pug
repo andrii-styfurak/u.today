@@ -4,7 +4,7 @@ block title
   title Style | u.today
 
 block content
-  .style__container.container
+  .style__container
     section.style__elem
       pre.style__code h1-h5
       h1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
@@ -40,24 +40,45 @@ block content
 
     section.style__elem
       pre.style__code
-        | .btns-spacer
-        |   .btn
-        |   .btn--arrow-right
-        |   .btn--arrow-down
-        |   .btn--hash-tag
-        |   .btn--disabled
+        | .btn
+        | .btn--light
+        | .btn--arrow-right
+        | .btn--arrow-down
+        | .btn--hash-tag
+        | .btn--disabled
+        | .btn--big
 
       .btns-spacer
-        button.btn button.btn
-        a.btn(href="#!") a.btn
+        button.btn btn
+        a.btn(href="#!") link
         button.btn.btn--light(href="#!") light
         button.btn.btn--arrow-right arrow
         button.btn.btn--arrow-down arrow
+        button.btn.btn--info info
+        button.btn.btn--pseudo Pseudo
+        button.btn.btn--pseudo.btn--info-before Pseudo
         button.btn.btn--hash-tag #HashTag
-        button.btn(disabled) button disabled
-        button.btn.btn--arrow-right(disabled) button disabled
-        a.btn.btn--disabled(href="#!") a disabled
-        a.btn.btn--arrow-right.btn--disabled(href="#!") a disabled
+        button.btn(disabled) btn disabled
+        button.btn.btn--arrow-right(disabled) btn disabled
+        a.btn.btn--disabled(href="#!") link disabled
+        a.btn.btn--arrow-right.btn--disabled(href="#!") link disabled
+
+        button.btn.btn--accent-2 accent-2
+        button.btn.btn--accent-2.btn--lightning-white accent-2
+
+        button.btn.btn--accent accent
+        a.btn.btn--accent accent
+        a.btn.btn--accent.btn--info-white accent
+
+        button.btn.btn--accent(disabled) accent
+        a.btn.btn--accent.btn--disabled accent
+
+      br
+
+      .btns-spacer
+        a.btn.btn--big(href="#!") link
+        button.btn.btn--arrow-right.btn--big arrow
+        a.btn.btn--accent.btn--big accent
 
     section.style__elem
       pre.style__code
