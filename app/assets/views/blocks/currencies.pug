@@ -10,4 +10,15 @@
               .currencies__trand(class=[ currencie.down ? 'currencies__trand--down' : '' ])= currencie.trand
             .currencies__price= currencie.price
 
-    .currencies__currency.btn.btn--arrow-down USD
+    button.currencies__currency.dropdown(
+      v-on:click.self="activeDropdown = 'currency'"
+      :class="{ 'dropdown--open': activeDropdown === 'currency' }"
+      )
+      span(v-text="currency")
+
+      .dropdown__list
+        each lang in ['usd', 'eur', 'rub']
+          .dropdown__item(
+            v-on:click.stop:="activeDropdown = null; currency = '" + lang + "'"
+            v-show="currency !== '" + lang + "'"
+          )= lang

@@ -102,6 +102,7 @@
       text: #fff
 
   &--arrow-down,
+  &--dropdown,
   &--arrow-right,
   &--rating-up,
   &--rating-down,
@@ -133,6 +134,23 @@
 
     &:hover:after
       background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-medium)
+
+    &:active:after
+      background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-dark)
+
+    &:disabled:after, &^&--disabled:after
+      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-300)
+
+  &--dropdown
+    &:after
+      background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
+      size: 18px 24px
+
+    &:hover
+      color: $pseudo-neutral-900
+
+      &:after
+        background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
 
     &:active:after
       background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-dark)

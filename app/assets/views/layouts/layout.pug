@@ -21,16 +21,17 @@ html(lang="en" dir="ltr")
       link(href="styles/main.css" rel="stylesheet")
 
   body
-    .something-top
+    #app
+      .something-top
 
-    include ../blocks/currencies.pug
+      include ../blocks/currencies.pug
 
-    .page-container.container
-      include ../inc/header.pug
+      .page-container.container
+        include ../inc/header.pug
 
-      block content
+        block content
 
-      include ../inc/footer.pug
+        include ../inc/footer.pug
 
     block foot
       script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
