@@ -79,7 +79,7 @@
           <div class="header__container"><a class="header__logo" href="#!"></a>
             <div class="header__social social"><a class="social__link social__link--fb" href="#!"></a><a class="social__link social__link--tg" href="#!"></a><a class="social__link social__link--tw" href="#!"></a><a class="social__link social__link--em" href="#!"></a></div>
             <nav class="header__nav">
-              <ul class="header__nav-list">
+              <ul class="header__nav-list" :class="{ hidden: activeSearch }">
                 <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="#!">News</a>
                   <ul class="header__nav-child-list">
                     <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Latest News</a></li>
@@ -131,21 +131,23 @@
                 </li>
               </ul>
             </nav>
-            <div class="header__search">
-              <form class="header__search-form" action="#" method="get">
-                <button class="header__search-btn btn btn--light btn--search"></button>
-                <input class="header__search-input" type="text" name="search">
-                <button class="header__search-close btn btn--light btn--close"></button>
-              </form>
-            </div>
             <div class="header__panel">
-              <button class="btn btn--light btn--search"></button>
+              <button class="btn btn--light btn--search" @click.prevent="activeSearch = true"></button>
               <button class="header__account btn btn--light btn--account"></button>
               <button class="header__burger btn btn--light btn--burger"></button>
               <button class="header__lang dropdown">ENG
                 <div class="dropdown__list"><a class="dropdown__item" href="#!">Esp</a></div>
               </button>
             </div>
+            <transition name="search">
+              <div class="header__search" v-show="activeSearch">
+                <form class="header__search-form" action="#" method="get">
+                  <button class="header__search-submit btn btn--light btn--search" type="submit"></button>
+                  <input class="header__search-input" type="text" name="search">
+                  <button class="header__search-close btn btn--light btn--cross" @click.prevent="activeSearch = false"></button>
+                </form>
+              </div>
+            </transition>
           </div>
         </header>
         <div class="content-container">

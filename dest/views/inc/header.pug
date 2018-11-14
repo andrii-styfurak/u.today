@@ -9,7 +9,7 @@ header.header
       a.social__link.social__link--em(href="#!")
 
     nav.header__nav
-      ul.header__nav-list
+      ul.header__nav-list(:class="{ hidden: activeSearch }")
         each category, i in nav
           li.header__nav-item(class=[ category.childs ? 'header__nav-item--arrow' : '' ] class=[ i == 1 ? 'header__nav-item--active' : '' ])
             a.header__nav-link(href="#!")= category.name
@@ -20,14 +20,8 @@ header.header
                   li.header__nav-child-item(class=[ i == 1 ? 'header__nav-child-item--active' : '' ])
                     a.header__nav-child-link(href="#!")= child.name
 
-    .header__search
-      form.header__search-form(action="#" method="get")
-        button.header__search-btn.btn.btn--light.btn--search
-        input.header__search-input(type="text" name="search")
-        button.header__search-close.btn.btn--light.btn--close
-
     .header__panel
-      button.btn.btn--light.btn--search
+      button.btn.btn--light.btn--search(@click.prevent="activeSearch = true")
 
       button.header__account.btn.btn--light.btn--account
 
@@ -39,3 +33,10 @@ header.header
       button.header__lang.dropdown ENG
         .dropdown__list
           a.dropdown__item(href="#!") Esp
+
+    transition(name="search")
+      .header__search(v-show="activeSearch")
+        form.header__search-form(action="#" method="get")
+          button.header__search-submit.btn.btn--light.btn--search(type="submit")
+          input.header__search-input(type="text" name="search")
+          button.header__search-close.btn.btn--light.btn--cross(@click.prevent="activeSearch = false")
