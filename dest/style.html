@@ -65,11 +65,11 @@
                 <div class="currencies__price">0.02241</div></a>
             </div>
           </div>
-          <button class="currencies__currency dropdown" v-on:click.self="activeDropdown = 'currency'" :class="{ 'dropdown--open': activeDropdown === 'currency' }"><span v-text="currency"></span>
+          <button class="currencies__currency dropdown"><span v-text="currency"></span>
             <div class="dropdown__list">
-              <div class="dropdown__item" v-on:click.stop:="activeDropdown = null; currency = 'usd'" v-show="currency !== 'usd'">usd</div>
-              <div class="dropdown__item" v-on:click.stop:="activeDropdown = null; currency = 'eur'" v-show="currency !== 'eur'">eur</div>
-              <div class="dropdown__item" v-on:click.stop:="activeDropdown = null; currency = 'rub'" v-show="currency !== 'rub'">rub</div>
+              <div class="dropdown__item" v-on:click.stop:="currency = 'usd'" v-show="currency !== 'usd'">usd</div>
+              <div class="dropdown__item" v-on:click.stop:="currency = 'eur'" v-show="currency !== 'eur'">eur</div>
+              <div class="dropdown__item" v-on:click.stop:="currency = 'rub'" v-show="currency !== 'rub'">rub</div>
             </div>
           </button>
         </div>
@@ -131,8 +131,15 @@
                 </li>
               </ul>
             </nav>
+            <div class="header__search">
+              <form class="header__search-form" action="#" method="get">
+                <button class="header__search-btn btn btn--light btn--search"></button>
+                <input class="header__search-input" type="text" name="search">
+                <button class="header__search-close btn btn--light btn--close"></button>
+              </form>
+            </div>
             <div class="header__panel">
-              <button class="header__search btn btn--light btn--search"></button>
+              <button class="btn btn--light btn--search"></button>
               <button class="header__account btn btn--light btn--account"></button>
               <button class="header__burger btn btn--light btn--burger"></button>
               <button class="header__lang dropdown">ENG

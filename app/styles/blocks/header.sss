@@ -108,15 +108,13 @@
 
       &-item
         border-left: 4px solid transparent
+        margin-bottom: .5rem
 
         &--active
           border-color: $pseudo-neutral-900
 
         &:hover
           background: $neutral-100
-
-        & + &
-          margin-top: .5rem
 
       &-link
         text: $pseudo-neutral-900 $text-caps none
@@ -130,6 +128,12 @@
     width: 129px @xs 159px @md 230px @xl 187px
 
   &__search
+    position: absolute
+
+    &-input
+
+    &-form
+      box: center
 
   &__account
 

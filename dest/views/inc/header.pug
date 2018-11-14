@@ -20,8 +20,14 @@ header.header
                   li.header__nav-child-item(class=[ i == 1 ? 'header__nav-child-item--active' : '' ])
                     a.header__nav-child-link(href="#!")= child.name
 
+    .header__search
+      form.header__search-form(action="#" method="get")
+        button.header__search-btn.btn.btn--light.btn--search
+        input.header__search-input(type="text" name="search")
+        button.header__search-close.btn.btn--light.btn--close
+
     .header__panel
-      button.header__search.btn.btn--light.btn--search
+      button.btn.btn--light.btn--search
 
       button.header__account.btn.btn--light.btn--account
 

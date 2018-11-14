@@ -1239,17 +1239,17 @@ blockquote em {
   width: 10px;
 }
 
-.dropdown--open {
+.dropdown:hover {
   border: 1px solid #90A4AE !important;
   background: #fff;
   z-index: 995;
 }
 
-.dropdown--open .dropdown__list {
+.dropdown:hover .dropdown__list {
   display: block;
 }
 
-.dropdown--open:after {
+.dropdown:hover:after {
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1);
 }
@@ -1366,7 +1366,7 @@ blockquote em {
 }
 
 .currencies__currency span {
-  min-width: 32px;
+  width: 33px;
 }
 
 .header {
@@ -1507,6 +1507,7 @@ blockquote em {
 
 .header__nav-child-item {
   border-left: 4px solid transparent;
+  margin-bottom: .5rem;
 }
 
 .header__nav-child-item--active {
@@ -1515,10 +1516,6 @@ blockquote em {
 
 .header__nav-child-item:hover {
   background: #F5F5F5;
-}
-
-.header__nav-child-item + .header__nav-child-item {
-  margin-top: .5rem;
 }
 
 .header__nav-child-link {
@@ -1544,9 +1541,18 @@ blockquote em {
   justify-content: space-between;
 }
 
-.header__search
+.header__search {
+  position: absolute;
+}
 
-  .header__account-img {
+.header__search-input
+
+    .header__search-form {
+  display: flex;
+  align-items: center;
+}
+
+.header__account-img {
   display: block;
   border-radius: 2px;
   position: absolute;
