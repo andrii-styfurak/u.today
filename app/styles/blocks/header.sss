@@ -21,6 +21,8 @@
     background: svg-load("icons/logo.svg", fill: $pseudo-neutral-900) no-repeat left top / contain
     size: 130px 24px @md 176px 33px
     min-width: 130px @md 176px
+    position: relative
+    top: 3px @xl 1px
 
   &__social
     width: 236px @xl 161px
@@ -47,6 +49,9 @@
     &-list
       @extend .list-reset
       box: space-between @xl center
+
+      &.hidden
+        visibility: @xl-down visible
 
     &-item
       position: relative
@@ -129,8 +134,9 @@
 
   &__search
     position: absolute
-    left: 208px
-    right: 157px
+    left: 0 @md 219px @xl 208px
+    right: 0 @md 199px @xl 157px
+    top: 11px @md 23px @xl 33px
 
     &-form
       box: center
@@ -139,8 +145,8 @@
       position: absolute 0 null 0 0
 
     &-input
-      background: $neutral-100
-      border-color: $neutral-100 !important
+      background: #fff @md $neutral-100
+      border-color: #fff !important @md $neutral-100 !important
       min-height: 32px
       padding-left: 2rem
 
