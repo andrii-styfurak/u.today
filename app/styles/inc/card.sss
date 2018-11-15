@@ -5,6 +5,17 @@
   margin-bottom: 1rem @xl 2rem
   overflow: hidden
 
+  &--tweet
+    padding-top: @md-down .9rem
+
+    ^&__title:before
+      content: ""
+      display: inline-block
+      background: svg-load("icons/social/twitter.svg" fill: #1DA1F2)
+      size: 24px
+      margin-bottom: -0.4rem
+      margin-right: .5rem
+
   &--no-padding
     padding: 0 !important
 
@@ -12,14 +23,6 @@
     text: $header-super-tiny @xl $header-tiny
     margin-bottom: 1.1rem @xl 1.7rem
     cursor: default
-
-    &--tweet:before
-      content: ""
-      display: inline-block
-      background: svg-load("icons/social/twitter.svg" fill: #1DA1F2)
-      size: 24px
-      margin-bottom: -0.4rem
-      margin-right: .3rem
 
   &__footer
     margin-top: .9rem @xl 1.4rem

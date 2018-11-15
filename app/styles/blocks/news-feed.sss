@@ -1,7 +1,7 @@
 .news-feed
   border-bottom: $border
   padding-bottom: 1.9rem
-  margin-bottom: 1.7rem
+  margin-bottom: 1.2rem @xl 1.7rem
 
   &__header
     box: center
@@ -15,7 +15,12 @@
     box: left
 
     & + &
-      margin-top: 2rem
+      margin-top: 1.47rem @md 1.75rem @xl 2rem
+
+    &-body
+      position: relative
+      top: -5px @xl 0
+      max-width: calc(100% - 40px - 1rem)
 
     &-img
       @extend .img-cover
@@ -24,8 +29,9 @@
       &-wrapper
         @extend .img-cover-wrapper
         display: block
-        size: 96px 64px
         margin-right: .9rem
+        min-width: 40px @md 96px
+        height: 40px @md 64px
 
     &-title
       text: $body-small
@@ -35,4 +41,4 @@
       box: center
 
   &__footer
-    margin-top: 1.5rem
+    margin-top: 1.3rem

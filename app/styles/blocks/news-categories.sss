@@ -1,5 +1,5 @@
 .news-categories
-  margin-bottom: 2.8rem
+  margin-bottom: 1.8rem @xl 2.8rem
 
   &__title
     text: $header-small
@@ -7,10 +7,10 @@
 
   &__list
     @extend .list-reset
-    box: wrap
+    box: wrap space-between
 
   &__item
-    width: 31%
+    width: calc(50% - .5rem) @md calc(33% - .3rem)  @xl 31%
     margin-bottom: .5rem
 
     &-link

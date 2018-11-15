@@ -34,13 +34,14 @@
 .main-container
   box: space-between
   flex-wrap: wrap @md nowrap
-  margin: 2rem * 1.3rem
-  padding-bottom: 2rem
+  margin: 1rem * @xl 2rem * 1.3rem
+  padding-bottom: 1rem @xl 2rem
   border-bottom: $border
 
 .top-story-block
   max-width: 100% @md 272px @xl 416px
   margin-right: 0 @md 1rem @xl 2rem
+  margin-bottom: 1rem @md 0
 
 .news-block
   max-width: 100% @md 448px @xl 672px
@@ -51,8 +52,8 @@
 .main-news-block
   @extend .main-block
   border-top: $border
-  padding-top: 1.5rem
+  padding-top: 1rem @xl 1.5rem
 
 .aside-news-block
   @extend .aside-block
-  margin-top: -1px !important
+  margin-top: 0 !important

@@ -1,40 +1,51 @@
 .news
   border: $border
   border-radius: 2px
-  padding: 1rem 2rem
+  padding: 1.2rem .9rem .7rem @xl 1rem 2rem .9rem
   height: 100%
 
   &__header
     box: center
-    margin-bottom: 1.1rem
+    margin-bottom: .7rem @xl 1.1rem
 
   &__title
-    text: $header-tiny
+    text: $header-super-tiny @xl $header-tiny
     margin-right: 1rem
 
   &__list
     @extend .list-reset
 
   &__item
-    box:
+    display: @md flex
     align-items: baseline
 
+    &:nth-child(4), &:nth-child(5)
+      display: @xl-down none
+
     & + &
-      margin-top: 1.1rem
+      margin-top: .5rem @xl 1.1rem
 
     &-time
-      margin-right: 1rem
+      margin-right: .3rem @md 1rem
 
       &-wrapper
         min-width: 4.2rem
         text: right
+        display: inline
 
     &-title
-      text: $body-standart
+      text: $body-small @xl $body-standart
+      margin-right: .2rem @xl .7rem
       @extend .link-plain
+
+      &-wrapper
+        display: inline
 
     &-info
       display: inline-flex
       align-items: center
       vertical-align: middle
-      margin-left: .7rem
+
+  &__footer
+    margin-top: 1rem
+    margin-bottom: .7rem
