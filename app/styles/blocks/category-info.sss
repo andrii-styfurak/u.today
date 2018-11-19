@@ -1,0 +1,23 @@
+.category-info
+  box: left
+  border-bottom: $border
+  padding-bottom: 1rem
+  margin-bottom: 1rem
+
+  &__title
+    text: $header-large
+    margin-bottom: .5rem
+
+  &__desc
+    text: $body-large
+    margin-bottom: .5rem
+
+  &__img
+    @extend .img-cover
+    border-radius: 2px
+
+    &-wrapper
+      @extend .img-cover-wrapper
+      margin-left: 1rem
+      min-width: 40px @md 96px @xl 224px
+      height: 152px
