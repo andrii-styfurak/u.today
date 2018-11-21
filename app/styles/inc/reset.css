@@ -170,3 +170,8 @@ template,
 [hidden] {
   display: none;
 }
+
+a,
+button {
+  -webkit-tap-highlight-color: transparent
+}

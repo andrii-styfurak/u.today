@@ -4,6 +4,7 @@ const app = new Vue({
     currency: "usd",
     activeSearch: false,
     activeModal: null,
+    showMobileMenu: false,
     showMore: false
   },
   methods: {
@@ -51,3 +52,37 @@ const app = new Vue({
     }
   }
 });
+
+
+const header = document.querySelector(".header");
+const headerContainer = document.querySelector(".header__container");
+var firstLoad = true;
+
+function stickyHeader(e) {
+  let distanceToTop = header.getBoundingClientRect().top;
+  let isScrollDown = this.oldScroll > this.scrollY;
+  let isMobileMenuOpen = header.classList.contains("header--mobile-menu");
+
+  if (distanceToTop <= 0) {
+    if (isScrollDown || firstLoad) {
+      firstLoad = false;
+      headerContainer.classList.add('header__container--sticky');
+    }
+  } else {
+    headerContainer.classList.remove('header__container--sticky');
+  }
+
+  if (isScrollDown) {
+    headerContainer.classList.add('header__container--sticky-show');
+  } else {
+    if (!isMobileMenuOpen) {
+      headerContainer.classList.remove('header__container--sticky-show');
+    }
+  }
+
+  this.oldScroll = this.scrollY;
+}
+
+stickyHeader();
+
+window.addEventListener("scroll", stickyHeader);
