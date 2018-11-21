@@ -114,7 +114,8 @@
   &--info,
   &--cross,
   &--info-white,
-  &--lightning-white
+  &--lightning-white,
+  &--cross-white
     &:after
       content: ""
       display: block
@@ -273,6 +274,17 @@
 
     &:disabled:after, &^&--disabled:after
       background-image: svg-load("icons/cross.svg", fill: $pseudo-neutral-300)
+
+  &--cross-white
+    &:after
+      background-image: svg-load("icons/cross.svg", fill: #fff)
+      size: 32px
+
+    &:hover:after
+      background-image: svg-load("icons/cross.svg", fill: #fff)
+
+    &:active:after
+      background-image: svg-load("icons/cross.svg", fill: #fff)
 
   &--account
     &:after

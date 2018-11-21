@@ -4,7 +4,7 @@ section.card
   .card__body
     each hot in hots
       article.aside-story
-        .aside-story__img-wrapper
+        a.aside-story__img-wrapper(href="#!")
           img.aside-story__img(src="https://dummyimage.com/40x40/d8dbde/aaa")
 
         .aside-story__body
@@ -13,7 +13,7 @@ section.card
           .aside-story__info
             time.humble.humble--tiny 12:25AM
             a.humble.humble--comments.humble--tiny(href="#!") 256
-            button.humble.humble--share.humble--tiny.humble--single-icon
+            button.humble.humble--share.humble--tiny.humble--single-icon(@click="share('#1', '#2', '#3', $event)")
 
   .card__footer
     a.btn.btn--arrow-right(href="#!") See all

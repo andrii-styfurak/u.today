@@ -13,9 +13,14 @@ block content
       h4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
       h5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt?
 
+
+    section.style__elem
+      pre.style__code p
+      p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, fuga cum! Incidunt qui dolores, expedita necessitatibus, ipsam vel omnis dolorum, nostrum unde consequatur odio sed reiciendis ullam sint.
+
     section.style__elem
       pre.style__code
-        |.input.input--error
+        |.input<b>.input--error</b>
         |    input.input__elem
         |    .input__error
 
@@ -33,10 +38,10 @@ block content
           .input__error E-mail can’t contain symbols
 
         .input
-          input.input__elem(type="text" placeholder="Email" disabled required)
+          input.input__elem(type="text" placeholder="Disabled" disabled required)
           .input__error E-mail can’t contain symbols
 
-        input(type="text" placeholder="Email")
+        input(type="text" placeholder="Input tag without a class")
 
     section.style__elem
       pre.style__code
@@ -82,32 +87,48 @@ block content
 
     section.style__elem
       pre.style__code
-        | .link-text
+        | .link
+        | .link-decorate
+        | .link-text <i>(only this with visited style)</i>
         | .link-pseudo
         | .link-plain
 
-      h1 Lorem 
+      h1
+        a.link(href="#!") link
+        | 
+        a.link-decorate(href="#!") link-decorate
+        | 
         a.link-text(href="#!") link-text
-        |  amet 
+        | 
         a.link-pseudo(href="#!") link-pseudo
-        |  adipisicing 
+        | 
         a.link-plain(href="#!") link-plain
 
-      h2 Lorem 
+      h2
+        a.link(href="#!") link
+        | 
+        a.link-decorate(href="#!") link-decorate
+        | 
         a.link-text(href="#!") link-text
-        |  amet 
+        | 
         a.link-pseudo(href="#!") link-pseudo
-        |  adipisicing 
+        | 
         a.link-plain(href="#!") link-plain
 
-      h3 Lorem 
+      h3
+        a.link(href="#!") link
+        | 
+        a.link-decorate(href="#!") link-decorate
+        | 
         a.link-text(href="#!") link-text
-        |  amet 
+        | 
         a.link-pseudo(href="#!") link-pseudo
-        |  adipisicing 
+        | 
         a.link-plain(href="#!") link-plain
 
       .links-spacer
+        a.link(href="#!") link
+        a.link-decorate(href="#!") link-decorate
         a.link-text(href="#!") link-text
         a.link-pseudo(href="#!") link-pseudo
         a.link-plain(href="#!") link-plain
@@ -166,8 +187,8 @@ block content
 
     section.style__elem
       pre.style__code
-        | ul.tabs.tabs--vertical
-        |   li.tabs__item.tabs__item--sub-open
+        | ul.tabs<b>.tabs--vertical</b>
+        |   li.tabs__item<b>.tabs__item--sub-open</b>
         |      button.tabs__btn
         |
         |      ul.tabs__sub
@@ -195,8 +216,17 @@ block content
       pre.style__code
         | .accordion.accordion--open
         |   .accordion__title(@click="accordionOpen")
-        |   .accordion__body
+        |   .accordion__body<b>.accordion__body--content</b>
+
+      p On mobile .accordion--open works reverse. Default closed.
 
       .accordion.accordion--open
         .accordion__title(@click="accordionOpen") Accordion
-        .accordion__body Content
+        .accordion__body.accordion__body--content Content
+
+
+    section.style__elem
+      pre.style__code
+        | (@click="share('<b>telegram-url</b>', '<b>twitter-url</b>', '<b>facebook-url</b>', $event)")
+
+      button.btn(@click="share('#1', '#2', '#3', $event)") Share

@@ -1,0 +1,43 @@
+.modal
+  position: fixed 0 0 0 0
+  background: rgba(38, 50, 56, .85)
+  box: center middle
+  z-index: 9990
+
+  &__item
+    width: 320px
+    background: #fff
+    border-radius: 4px 4px 2px 2px
+    position: relative
+
+    &-header
+      background: $pseudo-neutral-900
+      border-radius: 2px 2px 0 0
+      box: wrap center middle
+      padding: 1rem *
+
+      &-title
+        text: $pseudo-neutral-300 $text-caps center
+        width: 100%
+        margin-bottom: .5rem
+
+    &-logo
+      background: svg-load("icons/logo.svg", fill: #fff) no-repeat left top / contain
+      size: 130px 19px
+
+    &-body
+      padding: 1.7rem 2rem 1.4rem 2rem
+
+    &-icon
+      text: $header-large center
+
+    &-text
+      text: $header-tiny center
+      margin-bottom: 1.5rem
+
+    &-agree
+      text: $pseudo-neutral-400 $body-tiny center
+      margin-top: 1rem
+
+  &__close
+    position: absolute 3px 3px null null

@@ -3,6 +3,7 @@ const app = new Vue({
   data: {
     currency: "usd",
     activeSearch: false,
+    activeModal: null,
     showMore: false
   },
   methods: {
@@ -20,6 +21,33 @@ const app = new Vue({
       currentOpenSelect && !isСurrent && (currentOpenSelect.classList.remove("select--open"));
 
       select.toggle("select--open");
+    },
+    share(tg, tw, fb, e) {
+      let shareBox = document.getElementById("share-post");
+      let bodyRect = document.body.getBoundingClientRect();
+      let elemRect = e.target.getBoundingClientRect();
+
+      let tgLink = document.getElementById("share-post-link-tg")
+      let twLink = document.getElementById("share-post-link-tw")
+      let fbLink = document.getElementById("share-post-link-fb")
+
+      tgLink.setAttribute("href", tgLink);
+      twLink.setAttribute("href", twLink);
+      fbLink.setAttribute("href", fbLink);
+
+      let offset = {
+        top: elemRect.top - bodyRect.top,
+        left: elemRect.left - bodyRect.left
+      }
+
+      shareBox.style.top = offset.top + "px";
+      shareBox.style.left = offset.left + "px";
+
+
+    },
+    shareHide() {
+      let shareBox = document.getElementById("share-post");
+      shareBox.style.top = "-9999px";
     }
   }
 });
