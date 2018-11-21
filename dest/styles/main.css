@@ -1939,7 +1939,7 @@ transition {
 .currencies {
   padding: 0;
   position: relative;
-  z-index: 996;
+  z-index: 997;
   background: #F5F5F5;
 }
 
@@ -2129,7 +2129,6 @@ transition {
 }
 
 .header__nav-item:hover:before {
-  display: block;
 }
 
 .header__nav-item:after {
@@ -4961,6 +4960,10 @@ table td {
     background: #fff;
     padding-top: .8rem;
     padding-bottom: 1.7rem;
+  }
+
+  .header__nav-item:hover:before {
+    display: block;
   }
 
   .header__nav-item:after {
