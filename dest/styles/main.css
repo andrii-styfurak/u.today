@@ -2141,7 +2141,7 @@ transition {
   right: auto;
   bottom: auto;
   left: 0;
-  z-index: 995;
+  z-index: 997;
 }
 
 .header__nav-item:hover .header__nav-child-list {
@@ -3288,6 +3288,7 @@ transition {
 .news-feed__item-info {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .news-feed__footer {
