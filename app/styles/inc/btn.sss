@@ -122,7 +122,8 @@
       background-position: center
 
   &--info-before,
-  &--arrow-down-before
+  &--arrow-down-before,
+  &--arrow-up-before
     &:before
       content: ""
       display: block
@@ -147,7 +148,7 @@
     &:before
       background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
       size: 24px
-      margin-right: .3rem
+      margin-right: .6rem
 
     &:hover:before
       background-image: svg-load("icons/triangle_down.svg", fill: $accent-1-medium)
@@ -157,6 +158,21 @@
 
     &:disabled:before, &^&--disabled:before
       background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-300)
+
+  &--arrow-up-before
+    &:before
+      background-image: svg-load("icons/triangle_up.svg", fill: $pseudo-neutral-900)
+      size: 24px
+      margin-right: .6rem
+
+    &:hover:before
+      background-image: svg-load("icons/triangle_up.svg", fill: $accent-1-medium)
+
+    &:active:before
+      background-image: svg-load("icons/triangle_up.svg", fill: $accent-1-dark)
+
+    &:disabled:before, &^&--disabled:before
+      background-image: svg-load("icons/triangle_up.svg", fill: $pseudo-neutral-300)
 
   &--dropdown
     &:after

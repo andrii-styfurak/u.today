@@ -145,3 +145,58 @@ block content
         button.humble.humble--bookmark.humble--single-icon
         .humble.humble--comments.humble--single-icon
         button.humble.humble--share.humble--single-icon
+
+
+    section.style__elem
+      pre.style__code
+        | .tabs
+        |   .tabs__item
+        |      button.tabs__btn
+
+      ul.tabs
+        li.tabs__item
+          button.tabs__btn.btn.btn--light Popular
+
+        li.tabs__item.tabs__item--active
+          button.tabs__btn.btn.btn--light Active
+
+        li.tabs__item
+          button.tabs__btn.btn.btn--light Recent
+
+
+    section.style__elem
+      pre.style__code
+        | ul.tabs.tabs--vertical
+        |   li.tabs__item.tabs__item--sub-open
+        |      button.tabs__btn
+        |
+        |      ul.tabs__sub
+        |        li.tabs__sub-item
+        |          button.tabs__btn.btn.btn--pseudo
+
+      ul.tabs.tabs--vertical
+        li.tabs__item
+          button.tabs__btn.btn.btn--light Popular
+
+        li.tabs__item.tabs__item--active.tabs__item--sub-open
+          button.tabs__btn.btn.btn--light Active
+
+          ul.tabs__sub
+            li.tabs__sub-item
+              button.tabs__btn.btn.btn--pseudo Sub item
+            li.tabs__sub-item
+              button.tabs__btn.btn.btn--pseudo Sub item
+
+        li.tabs__item
+          button.tabs__btn.btn.btn--light Recent
+
+
+    section.style__elem
+      pre.style__code
+        | .accordion.accordion--open
+        |   .accordion__title(@click="accordionOpen")
+        |   .accordion__body
+
+      .accordion.accordion--open
+        .accordion__title(@click="accordionOpen") Accordion
+        .accordion__body Content

@@ -21,8 +21,41 @@
       &:after
         background: $pseudo-neutral-900
 
+    &--sub-open
+      ^^&__sub
+        display: block
+
   &__btn
     padding-bottom: 1.6rem
 
     &:hover
       text: $pseudo-neutral-900
+
+  &--vertical
+    flex-direction: column
+
+    ^&__item
+      margin-left: 0
+
+      & + ^^&__item
+        margin-top: @xl .5rem
+
+      &:after
+        size: 4px 40px
+        position: absolute 0 auto auto 0
+
+    ^&__btn
+      padding-bottom: 0
+      padding-left: 1rem
+      min-height: 40px
+      width: 100%
+      justify-content: flex-start
+
+  &__sub
+    @extend .list-reset
+    margin-left: 2rem
+    margin-top: @xl .5rem
+    display: none
+
+    &-item
+      margin-bottom: @xl .5rem

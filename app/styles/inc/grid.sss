@@ -28,6 +28,7 @@
 
 .aside-block
   max-width: 240px @xl 320px
+  width: 100%
   margin-top: 0 @xl -9px
   display: @md-down none
 
@@ -48,6 +49,7 @@
 
 .main-aside-container
   box: space-between
+  flex-wrap: wrap @md nowrap
 
 .main-news-block
   @extend .main-block
@@ -60,9 +62,14 @@
 
 .main-category-block
   @extend .main-block
-  padding-top: 1rem @xl 1.5rem
+  padding-top: 1rem @md 2.1rem @xl 1.5rem
 
 .aside-category-block
   @extend .aside-block
-  padding-top: 1rem @xl 1.5rem
+  padding-top: 2.5rem @xl 1.5rem
   margin-top: 0 !important
+
+.aside-menu-block
+  max-width: 100% @md 240px @xl 320px
+  width: 100%
+  padding-top: 1rem @md 2.2rem @xl 1.5rem

@@ -1,25 +1,54 @@
 .category-item
-  box: left
-  padding-bottom: 1rem
-  margin-bottom: 1rem
-  padding-top: 1rem
+  box: left space-between
+  margin-bottom: 0.6rem
+  padding-top: 1.1rem @xl 1.5rem
+  position: relative
 
   & + &
     border-top: $border
 
+  + .btn
+    margin-top: 1rem @xl 2.7rem
+
+  &__body
+    max-width: 100% @md calc(100% - 1rem - 144px) @xl unset
+
   &__info
     box: center
-    margin-bottom: 1rem
+    margin-bottom: .3rem @md .4rem @xl .8rem
+    max-width: @md-down calc(100% - 72px - 1rem)
+
+    &-event
+      box: center
+      margin-bottom: 1.2rem
+
+    &-link
+      max-width: 40% @md 50% @xl unset
 
   &__title
-    text: $header-standart
-    margin-bottom: .5rem
+    text: $header-tiny @xl $header-standart
+    margin-bottom: .6rem @xl 1.3rem
     display: block
-    @extend .link-plain
+    max-width: @md-down calc(100% - 72px - 1rem)
+
+    a&
+      @extend .link-plain
+
+  &__list
+    @extend .list-reset
+    margin-top: 0 @xl 1.7rem
+    max-width: @md-down calc(100% - 72px - 1rem)
+
+    &-item
+      margin-bottom: .5rem @xl 1.6rem
+
+    &-link
+      @extend .link-plain
+      text: $body-small @xl $body-standart
 
   &__desc
-    text: $body-standart
-    margin-bottom: .7rem
+    text: $body-small @xl $body-standart
+    margin-bottom: .6rem @xl .9rem
 
   &__img
     @extend .img-cover
@@ -27,6 +56,9 @@
 
     &-wrapper
       @extend .img-cover-wrapper
-      margin-left: 1rem
-      min-width: 40px @md 96px @xl 224px
-      height: 152px
+      margin-left: 1rem @xl 2rem
+      min-width: 72px @md 144px @xl 224px
+      height: 48px @md 96px @xl 152px
+      position: absolute @md relative
+      right: 0
+      top: 16px @md 0 @xl 9px

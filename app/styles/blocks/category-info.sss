@@ -1,16 +1,32 @@
 .category-info
-  box: left
+  box: left space-between
   border-bottom: $border
-  padding-bottom: 1rem
-  margin-bottom: 1rem
+  padding-bottom: .6rem @md 1.1rem @xl 2rem
+  position: relative
 
   &__title
-    text: $header-large
-    margin-bottom: .5rem
+    text: $header-tiny @md $header-small @xl $header-large
+    margin-top: @md-down 1rem
 
   &__desc
-    text: $body-large
-    margin-bottom: .5rem
+    text: $body-small @xl $body-large
+    margin-top: 1.5rem @md .5rem @xl .3rem
+    margin-bottom: .6rem @md .5rem
+    max-height: 6.1rem @xl 7.6rem
+    overflow: hidden
+    position: relative
+
+    &:after
+      content: ""
+      position: absolute null 0 0 0
+      height: 4rem
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
+
+    &--open
+      max-height: unset !important
+
+      &:after
+        display: none
 
   &__img
     @extend .img-cover
@@ -18,6 +34,7 @@
 
     &-wrapper
       @extend .img-cover-wrapper
-      margin-left: 1rem
-      min-width: 40px @md 96px @xl 224px
-      height: 152px
+      margin-left: 1rem @xl 2rem
+      min-width: 72px @md 144px @xl 224px
+      height: 48px @md 96px @xl 152px
+      position: @md-down absolute 0 0 null null

@@ -246,6 +246,59 @@
               <button class="humble humble--share humble--single-icon"></button>
             </div>
           </section>
+          <section class="style__elem">
+            <pre class="style__code">.tabs
+  .tabs__item
+     button.tabs__btn</pre>
+            <ul class="tabs">
+              <li class="tabs__item">
+                <button class="tabs__btn btn btn--light">Popular</button>
+              </li>
+              <li class="tabs__item tabs__item--active">
+                <button class="tabs__btn btn btn--light">Active</button>
+              </li>
+              <li class="tabs__item">
+                <button class="tabs__btn btn btn--light">Recent</button>
+              </li>
+            </ul>
+          </section>
+          <section class="style__elem">
+            <pre class="style__code">ul.tabs.tabs--vertical
+  li.tabs__item.tabs__item--sub-open
+     button.tabs__btn
+
+     ul.tabs__sub
+       li.tabs__sub-item
+         button.tabs__btn.btn.btn--pseudo</pre>
+            <ul class="tabs tabs--vertical">
+              <li class="tabs__item">
+                <button class="tabs__btn btn btn--light">Popular</button>
+              </li>
+              <li class="tabs__item tabs__item--active tabs__item--sub-open">
+                <button class="tabs__btn btn btn--light">Active</button>
+                <ul class="tabs__sub">
+                  <li class="tabs__sub-item">
+                    <button class="tabs__btn btn btn--pseudo">Sub item</button>
+                  </li>
+                  <li class="tabs__sub-item">
+                    <button class="tabs__btn btn btn--pseudo">Sub item</button>
+                  </li>
+                </ul>
+              </li>
+              <li class="tabs__item">
+                <button class="tabs__btn btn btn--light">Recent</button>
+              </li>
+            </ul>
+          </section>
+          <section class="style__elem">
+            <pre class="style__code">.accordion.accordion--open
+  .accordion__title(@click="accordionOpen")
+  .accordion__body</pre>
+            <div class="accordion accordion--open">
+              <div class="accordion__title" @click="accordionOpen">Accordion</div>
+              <div class="accordion__body">Content</div>
+            </div>
+          </section>
         </div>
         <footer class="footer">
           <div class="footer__container">
