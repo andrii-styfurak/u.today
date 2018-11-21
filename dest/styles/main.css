@@ -1370,6 +1370,8 @@ blockquote em {
   display: block;
   border-radius: 2px;
   margin-right: .5rem;
+  width: 24px;
+  height: 24px;
 }
 
 .tabs {
@@ -3675,6 +3677,12 @@ table td {
   vertical-align: top;
   border-top: 1px solid #dee2e6;
   border-right: 1px solid #dee2e6;
+}
+
+table td p {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (min-width: 380px) {
