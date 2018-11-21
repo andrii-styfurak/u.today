@@ -75,69 +75,77 @@
         </div>
       </div>
       <div class="page-container container">
-        <header class="header">
+        <header class="header" v-bind:class="{ 'header--mobile-menu': showMobileMenu }">
           <div class="header__container"><a class="header__logo" href="#!"></a>
-            <div class="header__social social"><a class="social__link social__link--fb" href="#!"></a><a class="social__link social__link--tg" href="#!"></a><a class="social__link social__link--tw" href="#!"></a><a class="social__link social__link--em" href="#!"></a></div>
+            <div class="header__social social"><a class="social__link social__link--fb" href="#!fb"></a><a class="social__link social__link--tg" href="#!tg"></a><a class="social__link social__link--tw" href="#!tw"></a><a class="social__link social__link--em" href="#!em"></a></div>
             <nav class="header__nav">
               <ul class="header__nav-list" :class="{ hidden: activeSearch }">
-                <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="#!">News</a>
+                <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="#!0">News</a>
                   <ul class="header__nav-child-list">
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Latest News</a></li>
-                    <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!">Bitcoin News</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Ethereum News</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Bitcoin Cash News</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Ripple News</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">EOS News</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Litecoin News</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Cardano News</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">NEM</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Press releases</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Submit Press releases</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Latest News</a></li>
+                    <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!c1">Bitcoin News</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Ethereum News</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Bitcoin Cash News</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Ripple News</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">EOS News</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c6">Litecoin News</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c7">Cardano News</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c8">NEM</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c9">Press releases</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c10">Submit Press releases</a></li>
                   </ul>
                 </li>
-                <li class="header__nav-item header__nav-item--arrow header__nav-item--active"><a class="header__nav-link" href="#!">Stories</a>
+                <li class="header__nav-item header__nav-item--arrow header__nav-item--active"><a class="header__nav-link" href="#!1">Stories</a>
                   <ul class="header__nav-child-list">
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Features</a></li>
-                    <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!">Opinions</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Artificial Intelligence</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">SingUlarity</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Infographics</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">ICO Watch</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Features</a></li>
+                    <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!c1">Opinions</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Artificial Intelligence</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">SingUlarity</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Infographics</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">ICO Watch</a></li>
                   </ul>
                 </li>
-                <li class="header__nav-item"><a class="header__nav-link" href="#!">Interviews</a>
+                <li class="header__nav-item"><a class="header__nav-link" href="#!2">Interviews</a>
                 </li>
-                <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="#!">Market analysis</a>
+                <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="#!3">Market analysis</a>
                   <ul class="header__nav-child-list">
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Pricewise</a></li>
-                    <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!">Bitcoin Price Index</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Ethereum Price Index</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Bitcoin Cash Price Index</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Ripple Price Index</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">EOS Price Index</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Litecoin Price Index</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Cardano Price Index</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Pricewise</a></li>
+                    <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!c1">Bitcoin Price Index</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">Ethereum Price Index</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Bitcoin Cash Price Index</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c4">Ripple Price Index</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c5">EOS Price Index</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c6">Litecoin Price Index</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c7">Cardano Price Index</a></li>
                   </ul>
                 </li>
-                <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="#!">Guides</a>
+                <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="#!4">Guides</a>
                   <ul class="header__nav-child-list">
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Coins Guide</a></li>
-                    <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!">WikiCoin</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">CryptoTips</a></li>
-                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!">Trading Guide</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Coins Guide</a></li>
+                    <li class="header__nav-child-item header__nav-child-item--active"><a class="header__nav-child-link" href="#!c1">WikiCoin</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c2">CryptoTips</a></li>
+                    <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c3">Trading Guide</a></li>
                   </ul>
                 </li>
-                <li class="header__nav-item"><a class="header__nav-link" href="#!">Events</a>
+                <li class="header__nav-item"><a class="header__nav-link" href="#!5">Events</a>
                 </li>
               </ul>
             </nav>
             <div class="header__panel">
               <button class="btn btn--light btn--search" @click.prevent="activeSearch = true"></button>
               <button class="header__account btn btn--light btn--account"></button>
-              <button class="header__burger btn btn--light btn--burger"></button>
+              <button class="header__burger btn btn--light btn--burger" @click="showMobileMenu = !showMobileMenu" :class="{ 'btn--cross': showMobileMenu }"></button>
               <button class="header__lang dropdown">ENG
                 <div class="dropdown__list"><a class="dropdown__item" href="#!">Esp</a></div>
               </button>
+            </div>
+            <div class="mobile-menu-lang">
+              <div class="tabs tabs--small">
+                <div class="tabs__item tabs__item--active">
+                  <div class="tabs__btn btn btn--light">English</div>
+                </div>
+                <div class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Español</a></div>
+              </div>
             </div>
             <transition name="search">
               <div class="header__search" v-show="activeSearch">
@@ -565,6 +573,9 @@
         <div class="share-post" id="share-post"><a class="share__square share__square--tg" id="share-post-link-tg" href="#!"></a><a class="share__square share__square--tw" id="share-post-link-tw" href="#!"></a><a class="share__square share__square--fb" id="share-post-link-fb" href="#!"></a>
           <button class="btn btn--light share__square share__square--close" @click="shareHide"></button>
         </div>
+        <transition name="fade">
+          <div class="mobile-menu-cover" v-show="showMobileMenu"></div>
+        </transition>
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
