@@ -897,38 +897,30 @@ textarea.input__elem {
   display: block;
 }
 
-.something-top {
+.something {
+  background: #032e60;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.something--top {
   height: 56px;
-  background: #263238;
   position: relative;
   z-index: 996;
 }
 
-.something-aside {
-  padding-top: 79%;
-  background: #263238;
+.something--aside
+
+  .something--content {
+  margin: 1.6rem -1rem;
 }
 
-.something-article {
-  padding-top: 13.0434783%;
-  margin: 2rem -1rem;
-  background: #263238;
-}
-
-.something-wide {
-  padding-top: 70%;
-  background: #263238;
+.something--wide {
   margin-bottom: 1rem;
 }
 
-.something-news-category {
-  padding-top: 70%;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  background: #263238;
-}
-
-.something-news-category-wrapper {
+.something__wrapper {
   margin-bottom: 1rem;
   border-bottom: 1px solid #CFD8DC;
 }
@@ -3710,6 +3702,10 @@ table td p {
 }
 
 @media (min-width: 480px) {
+  .something--aside .something--content {
+    margin: 2rem 0;
+  }
+
   .hide-sm-only {
     display: none;
   }
@@ -3789,23 +3785,12 @@ table td p {
     display: flex;
   }
 
-  .something-top {
+  .something--top {
     height: 48px;
   }
 
-  .something-article {
-    margin-top: 2.4rem;
-    margin-bottom: 2.4rem;
-  }
-
-  .something-wide {
-    padding-top: 17.1428571%;
-  }
-
-  .something-news-category {
-    padding-top: 30.0626305%;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  .something--aside .something--content {
+    margin: 2.4rem 0;
   }
 
   .social--border .social__link {
@@ -4211,26 +4196,19 @@ table td p {
     margin-right: 1rem;
   }
 
-  .something-top {
+  .something--top {
     height: 64px;
   }
 
-  .something-article {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+  .something--aside .something--content {
+    margin: 3rem 0;
   }
 
-  .something-wide {
+  .something--wide {
     margin-bottom: 2rem;
   }
 
-  .something-news-category {
-    padding-top: 13.0434783%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .something-news-category-wrapper {
+  .something__wrapper {
     margin-bottom: 1.5rem;
   }
 
@@ -5130,17 +5108,7 @@ table td p {
 }
 
 @media (max-width: 479px) {
-  .something-article {
-    margin-right: -1rem;
-    margin-left: -1rem;
-  }
-
-  .something-wide {
-    margin-right: -1rem;
-    margin-left: -1rem;
-  }
-
-  .something-news-category {
+  .something--wide {
     margin-right: -1rem;
     margin-left: -1rem;
   }

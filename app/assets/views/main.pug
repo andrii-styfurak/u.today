@@ -15,7 +15,8 @@ block content
 
   include blocks/news-featured.pug
 
-  .something-wide
+  a.something.something--wide(href="#!")
+    img(src="img/something/wide.png" alt="something-wide")
 
   .main-aside-container
     .main-news-block
@@ -24,8 +25,9 @@ block content
       +newsCategory(newsCategoryOpinions)
       +newsCategory(newsCategoryInterviews)
 
-      .something-news-category-wrapper
-        .something-news-category
+      .something__wrapper
+        a.something.something--content(href="#!")
+          img(src="img/something/content.png" alt="something-content")
 
       +newsCategory(newsCategoryPress)
 
