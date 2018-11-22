@@ -159,6 +159,7 @@ body {
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
   background: #F5F5F5;
+  overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5 {
@@ -910,9 +911,7 @@ textarea.input__elem {
   z-index: 996;
 }
 
-.something--aside
-
-  .something--content {
+.something--content {
   margin: 1.6rem -1rem;
 }
 
@@ -2030,6 +2029,7 @@ transition {
   background: #fff;
   position: relative;
   z-index: 996;
+  box-shadow: 13rem 0 0 #fff,-13rem 0 0 #fff;
   min-height: 56px;
 }
 
@@ -2199,7 +2199,7 @@ transition {
   position: absolute;
   padding-top: .5rem;
   background: #fff;
-  z-index: 997;
+  z-index: 999;
 }
 
 .header__nav-child-item {
@@ -2244,6 +2244,7 @@ transition {
   left: 0;
   right: 0;
   top: 12px;
+  display: none;
 }
 
 .header__search-form {
@@ -2286,6 +2287,10 @@ transition {
 .header__lang {
 }
 
+.header--mobile-menu .header__container:after {
+  display: none;
+}
+
 .header--mobile-menu .header__social {
 }
 
@@ -2317,6 +2322,7 @@ transition {
   left: 0;
   z-index: 995;
   background: rgba(38, 50, 56, .85);
+  display: none;
 }
 
 .article__summary {
@@ -3702,7 +3708,7 @@ table td p {
 }
 
 @media (min-width: 480px) {
-  .something--aside .something--content {
+  .something--content {
     margin: 2rem 0;
   }
 
@@ -3718,6 +3724,10 @@ table td p {
     left: 1rem;
     display: flex;
     flex-direction: column;
+  }
+
+  .header {
+    box-shadow: 1rem 0 0 #fff,-1rem 0 0 #fff;
   }
 
   .header__container:after {
@@ -3789,7 +3799,7 @@ table td p {
     height: 48px;
   }
 
-  .something--aside .something--content {
+  .something--content {
     margin: 2.4rem 0;
   }
 
@@ -3841,6 +3851,8 @@ table td p {
 
   .header__container:after {
     display: none;
+    left: 0;
+    right: 0;
   }
 
   .header__logo {
@@ -3899,6 +3911,7 @@ table td p {
   .header__nav-child-list {
     border-radius: 2px;
     border: 1px solid #90A4AE;
+    z-index: 997;
   }
 
   .header__nav-child-item:hover {
@@ -3921,10 +3934,6 @@ table td p {
   }
 
   .header__burger {
-    display: none;
-  }
-
-  .mobile-menu-cover {
     display: none;
   }
 
@@ -4200,7 +4209,7 @@ table td p {
     height: 64px;
   }
 
-  .something--aside .something--content {
+  .something--content {
     margin: 3rem 0;
   }
 
@@ -4965,10 +4974,6 @@ table td p {
     display: none;
   }
 
-  .header {
-    box-shadow: 5rem 0 0 #fff,-5rem 0 0 #fff;
-  }
-
   .header__social {
     display: none;
   }
@@ -5024,6 +5029,7 @@ table td p {
     background: #fff;
     padding-right: 1.3rem;
     padding-left: 1.3rem;
+    border-top: 1px solid #CFD8DC;
     border-bottom: 1px solid #CFD8DC;
   }
 

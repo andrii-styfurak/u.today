@@ -1,82 +1,49 @@
-const app = new Vue({
-  el: "#app",
-  data: {
-    currency: "usd",
-    activeSearch: false,
-    activeModal: null,
-    showMobileMenu: false,
-    showMore: false
-  },
-  methods: {
-    tabsSub(e) {
-      e.target.parentNode.classList.toggle("tabs__item--sub-open");
-    },
-    accordionOpen(e) {
-      e.target.parentNode.classList.toggle("accordion--open");
-    },
-    selectOpen(e) {
-      let select = e.target.parentNode.classList;
-      let isСurrent = select.contains("select--open");
-      let currentOpenSelect = document.querySelector(".select--open");
+//
+// Mobile menu
+//
 
-      currentOpenSelect && !isСurrent && (currentOpenSelect.classList.remove("select--open"));
+const $header = $(".header"),
+  $headerContainer = $(".header__container"),
+  $headerBurger = $(".header__burger"),
+  $mobileMenuCover = $(".mobile-menu-cover"),
+  $headerBtnSearch = $(".header__btn-search"),
+  $headerSearch = $(".header__search"),
+  $headerSearchBtnClose = $(".header__search-close"),
+  $headerNavList = $(".header__nav-list");
 
-      select.toggle("select--open");
-    },
-    share(tg, tw, fb, e) {
-      let shareBox = document.getElementById("share-post");
-      let bodyRect = document.body.getBoundingClientRect();
-      let elemRect = e.target.getBoundingClientRect();
+var firstHeaderLoad = true;
 
-      let tgLink = document.getElementById("share-post-link-tg")
-      let twLink = document.getElementById("share-post-link-tw")
-      let fbLink = document.getElementById("share-post-link-fb")
+function toggleMobileMenu() {
+  $header.toggleClass("header--mobile-menu");
+  $headerBurger.toggleClass("btn--cross");
+  $mobileMenuCover.fadeToggle(280);
+}
 
-      tgLink.setAttribute("href", tgLink);
-      twLink.setAttribute("href", twLink);
-      fbLink.setAttribute("href", fbLink);
-
-      let offset = {
-        top: elemRect.top - bodyRect.top,
-        left: elemRect.left - bodyRect.left
-      }
-
-      shareBox.style.top = offset.top + "px";
-      shareBox.style.left = offset.left + "px";
-
-
-    },
-    shareHide() {
-      let shareBox = document.getElementById("share-post");
-      shareBox.style.top = "-9999px";
-    }
-  }
-});
-
-
-const header = document.querySelector(".header");
-const headerContainer = document.querySelector(".header__container");
-var firstLoad = true;
+function toggleHeaderSearch(e) {
+  e.preventDefault();
+  $headerNavList.toggleClass("hidden");
+  $headerSearch.fadeToggle(180);
+}
 
 function stickyHeader(e) {
-  let distanceToTop = header.getBoundingClientRect().top;
+  let distanceToTop = $header[0].getBoundingClientRect().top;
   let isScrollDown = this.oldScroll > this.scrollY;
-  let isMobileMenuOpen = header.classList.contains("header--mobile-menu");
+  let isMobileMenuOpen = $header.hasClass("header--mobile-menu");
 
   if (distanceToTop <= 0) {
-    if (isScrollDown || firstLoad) {
-      firstLoad = false;
-      headerContainer.classList.add('header__container--sticky');
+    if (isScrollDown || firstHeaderLoad) {
+      firstHeaderLoad = false;
+      $headerContainer.addClass("header__container--sticky");
     }
   } else {
-    headerContainer.classList.remove('header__container--sticky');
+    $headerContainer.removeClass("header__container--sticky");
   }
 
   if (isScrollDown) {
-    headerContainer.classList.add('header__container--sticky-show');
+    $headerContainer.addClass("header__container--sticky-show");
   } else {
     if (!isMobileMenuOpen) {
-      headerContainer.classList.remove('header__container--sticky-show');
+      $headerContainer.removeClass("header__container--sticky-show");
     }
   }
 
@@ -85,4 +52,7 @@ function stickyHeader(e) {
 
 stickyHeader();
 
-window.addEventListener("scroll", stickyHeader);
+$headerBurger.on("click", toggleMobileMenu);
+$headerBtnSearch.on("click", toggleHeaderSearch)
+$headerSearchBtnClose.on("click", toggleHeaderSearch);
+$(window).on("scroll", stickyHeader);

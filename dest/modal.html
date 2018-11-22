@@ -64,7 +64,7 @@
                 <div class="currencies__price">0.02241</div></a>
             </div>
           </div>
-          <button class="currencies__currency dropdown"><span v-text="currency"></span>
+          <button class="currencies__currency dropdown"><span v-text="currency">USD</span>
             <div class="dropdown__list">
               <div class="dropdown__item" v-on:click.stop:="currency = 'usd'" v-show="currency !== 'usd'">usd</div>
               <div class="dropdown__item" v-on:click.stop:="currency = 'eur'" v-show="currency !== 'eur'">eur</div>
@@ -74,11 +74,11 @@
         </div>
       </div>
       <div class="page-container container">
-        <header class="header" v-bind:class="{ 'header--mobile-menu': showMobileMenu }">
+        <header class="header">
           <div class="header__container"><a class="header__logo" href="#!"></a>
             <div class="header__social social"><a class="social__link social__link--fb" href="#!fb"></a><a class="social__link social__link--tg" href="#!tg"></a><a class="social__link social__link--tw" href="#!tw"></a><a class="social__link social__link--em" href="#!em"></a></div>
             <nav class="header__nav">
-              <ul class="header__nav-list" :class="{ hidden: activeSearch }">
+              <ul class="header__nav-list">
                 <li class="header__nav-item header__nav-item--arrow"><a class="header__nav-link" href="#!0">News</a>
                   <ul class="header__nav-child-list">
                     <li class="header__nav-child-item"><a class="header__nav-child-link" href="#!c0">Latest News</a></li>
@@ -131,9 +131,9 @@
               </ul>
             </nav>
             <div class="header__panel">
-              <button class="btn btn--light btn--search" @click.prevent="activeSearch = true"></button>
+              <button class="header__btn-search btn btn--light btn--search"></button>
               <button class="header__account btn btn--light btn--account"></button>
-              <button class="header__burger btn btn--light btn--burger" @click="showMobileMenu = !showMobileMenu" :class="{ 'btn--cross': showMobileMenu }"></button>
+              <button class="header__burger btn btn--light btn--burger"></button>
               <button class="header__lang dropdown">ENG
                 <div class="dropdown__list"><a class="dropdown__item" href="#!">Esp</a></div>
               </button>
@@ -146,15 +146,13 @@
                 <div class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Español</a></div>
               </div>
             </div>
-            <transition name="search">
-              <div class="header__search" v-show="activeSearch">
-                <form class="header__search-form" action="#" method="get">
-                  <button class="header__search-submit btn btn--light btn--search" type="submit"></button>
-                  <input class="header__search-input" type="text" name="search">
-                  <button class="header__search-close btn btn--light btn--cross" @click.prevent="activeSearch = false"></button>
-                </form>
-              </div>
-            </transition>
+            <div class="header__search">
+              <form class="header__search-form" action="#" method="get">
+                <button class="header__search-submit btn btn--light btn--search" type="submit"></button>
+                <input class="header__search-input" type="text" name="search">
+                <button class="header__search-close btn btn--light btn--cross"></button>
+              </form>
+            </div>
           </div>
         </header>
         <div class="content-container">
@@ -271,12 +269,10 @@
         <div class="share-post" id="share-post"><a class="share__square share__square--tg" id="share-post-link-tg" href="#!"></a><a class="share__square share__square--tw" id="share-post-link-tw" href="#!"></a><a class="share__square share__square--fb" id="share-post-link-fb" href="#!"></a>
           <button class="btn btn--light share__square share__square--close" @click="shareHide"></button>
         </div>
-        <transition name="fade">
-          <div class="mobile-menu-cover" v-show="showMobileMenu"></div>
-        </transition>
+        <div class="mobile-menu-cover"></div>
       </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="scripts/main.js"></script>
   </body>
 </html>

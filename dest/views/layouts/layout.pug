@@ -37,9 +37,8 @@ html(lang="en" dir="ltr")
 
         include ../inc/share.pug
 
-        transition(name="fade")
-          .mobile-menu-cover(v-show="showMobileMenu")
+        .mobile-menu-cover
 
     block foot
-      script(src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js")
+      script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
       script(src="scripts/main.js")
