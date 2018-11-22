@@ -1,0 +1,38 @@
+extends layouts/layout.pug
+
+block title
+  title About Us | u.today
+
+block content
+  .content-container
+    aside.aside-block
+      section.card
+        .card__title Contacts
+
+        .card__desc If you would like to give us some editorial feedback, have a partnership idea or would like to request permission for reprints, please use the contacts here.
+
+        .card__body
+          each hot in hots
+            article.aside-story
+              a.aside-story__img-wrapper(href="#!")
+                img.aside-story__img(src="https://dummyimage.com/40x40/d8dbde/aaa")
+
+              .aside-story__body
+                a.aside-story__link(href="#!")= hot
+
+                .aside-story__info
+                  time.humble.humble--tiny 12:25AM
+                  a.humble.humble--comments.humble--tiny(href="#!") 256
+                  button.humble.humble--share.humble--tiny.humble--single-icon(@click="share('#1', '#2', '#3', $event)")
+
+        .card__footer
+          a.btn.btn--arrow-right(href="#!") See all
+
+    main.main-block
+      h1 About Us
+      p U.Today is a news, analysis and educational platform that covers the crypto industry, Blockchain and new gen tech. It was founded by editors with extensive experience in both high-quality journalism and the crypto industry, who have developed some very successful media projects. We’re proud to serve the crypto community keeping it tuned to what’s up and new in the field by heeding the core journalistic values- clear thinking, accuracy, impartiality and independence.
+
+      p We run daily crypto market reviews, ICO analytics, interviews with the best experts and major newsmakers, in-depth feature stories and thought-provoking opinion. On the educational side, we’re giving the newcomers step-by-step trading guides, crypto tips and WikiCoin references that help them cope with crypto economics and learn more.
+
+      p We appreciate when members of our audience share with us their expertise through social media or by other means. Stay tuned and let’s build a better community together!
+

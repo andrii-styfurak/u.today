@@ -1084,6 +1084,12 @@ textarea.input__elem {
   cursor: default;
 }
 
+.card__desc {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+}
+
 .card__footer {
   margin-top: .9rem;
 }
@@ -2417,7 +2423,7 @@ transition {
 
 .article__main-img-wrapper {
   background: #ECEFF1;
-  padding-top: 63.0434783%;
+  padding-top: 62.5%;
   position: relative;
 }
 
@@ -3385,7 +3391,7 @@ transition {
 .category-info__img-wrapper {
   margin-left: 1rem;
   min-width: 72px;
-  padding-top: 62.5%;
+  height: 45px;
 }
 
 .category-item {
@@ -3461,7 +3467,7 @@ transition {
 .category-item__img-wrapper {
   margin-left: 1rem;
   min-width: 72px;
-  padding-top: 62.5%;
+  height: 45px;
   position: absolute;
   right: 0;
   top: 16px;
@@ -3651,6 +3657,14 @@ ul:not([class]) li:before {
 }
 
 p {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  margin: 0;
+  margin-bottom: 1.7rem;
+}
+
+.article p {
   font-size: 0.875rem;
   line-height: 1.75;
   font-family: Georgia, serif;
@@ -3684,6 +3698,9 @@ table td p {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.9;
 }
 
 @media (min-width: 380px) {
@@ -4073,6 +4090,7 @@ table td p {
 
   .category-info__img-wrapper {
     min-width: 144px;
+    height: 90px;
   }
 
   .category-item__body {
@@ -4089,6 +4107,7 @@ table td p {
 
   .category-item__img-wrapper {
     min-width: 144px;
+    height: 90px;
     position: relative;
     top: 0;
   }
@@ -4762,6 +4781,7 @@ table td p {
   .category-info__img-wrapper {
     margin-left: 2rem;
     min-width: 224px;
+    height: 140px;
   }
 
   .category-item {
@@ -4815,6 +4835,7 @@ table td p {
   .category-item__img-wrapper {
     margin-left: 2rem;
     min-width: 224px;
+    height: 140px;
     top: 9px;
   }
 
@@ -4895,6 +4916,13 @@ table td p {
   }
 
   p {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 2.1;
+    margin-bottom: 2.5rem;
+  }
+
+  .article p {
     font-size: 1.125rem;
     line-height: 1.8;
     margin-bottom: 2.5rem;
@@ -4909,6 +4937,12 @@ table td p {
   }
 
   table td {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 2.1;
+  }
+
+  table td p {
     font-weight: 500;
     font-size: 0.9375rem;
     line-height: 2.1;

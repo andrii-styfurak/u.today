@@ -12,7 +12,7 @@
     <meta name="msapplication-TileColor" content="#263238">
     <meta name="msapplication-config" content="img/favicon/browserconfig.xml">
     <meta name="theme-color" content="#263238">
-    <title>Category filter | u.today</title>
+    <title>About Us | u.today</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,600" rel="stylesheet">
     <link href="styles/main.css" rel="stylesheet">
   </head>
@@ -158,96 +158,62 @@
             </transition>
           </div>
         </header>
-        <div class="main-aside-container">
-          <aside class="aside-menu-block">
-            <div class="accordion accordion--open">
-              <div class="accordion__title" @click="accordionOpen">Filters</div>
-              <div class="accordion__body accordion__body--content">
-                <div class="input select">
-                  <div class="select__label">Country</div>
-                  <button class="select__btn" @click="selectOpen">- Any -</button>
-                  <div class="select__options">
-                    <div class="select__option">Andorra</div>
-                    <div class="select__option">Angola</div>
-                    <div class="select__option">Argentina</div>
+        <div class="content-container">
+          <aside class="aside-block">
+            <section class="card">
+              <div class="card__title">Contacts</div>
+              <div class="card__desc">If you would like to give us some editorial feedback, have a partnership idea or would like to request permission for reprints, please use the contacts here.</div>
+              <div class="card__body">
+                <article class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://dummyimage.com/40x40/d8dbde/aaa"></a>
+                  <div class="aside-story__body"><a class="aside-story__link" href="#!">A Day and Night Difference or Nothing Special? Ethereum Futures Are Coming Soon</a>
+                    <div class="aside-story__info">
+                      <time class="humble humble--tiny">12:25AM</time><a class="humble humble--comments humble--tiny" href="#!">256</a>
+                      <button class="humble humble--share humble--tiny humble--single-icon" @click="share('#1', '#2', '#3', $event)"></button>
+                    </div>
                   </div>
-                </div>
-                <div class="input select">
-                  <div class="select__label">Country</div>
-                  <button class="select__btn" @click="selectOpen">- Any -</button>
-                  <div class="select__options">
-                    <div class="select__option">Andorra</div>
-                    <div class="select__option">Angola</div>
-                    <div class="select__option">Argentina</div>
+                </article>
+                <article class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://dummyimage.com/40x40/d8dbde/aaa"></a>
+                  <div class="aside-story__body"><a class="aside-story__link" href="#!">Google’s Amir Sarhangi Joins Ripple</a>
+                    <div class="aside-story__info">
+                      <time class="humble humble--tiny">12:25AM</time><a class="humble humble--comments humble--tiny" href="#!">256</a>
+                      <button class="humble humble--share humble--tiny humble--single-icon" @click="share('#1', '#2', '#3', $event)"></button>
+                    </div>
                   </div>
-                </div>
-                <div class="input select">
-                  <div class="select__label">Country</div>
-                  <button class="select__btn" @click="selectOpen">- Any -</button>
-                  <div class="select__options">
-                    <div class="select__option">Andorra</div>
-                    <div class="select__option">Angola</div>
-                    <div class="select__option">Argentina</div>
+                </article>
+                <article class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://dummyimage.com/40x40/d8dbde/aaa"></a>
+                  <div class="aside-story__body"><a class="aside-story__link" href="#!">HitBTC, OKEx, Binance and Huobi Lead in Trading Pair Stakes</a>
+                    <div class="aside-story__info">
+                      <time class="humble humble--tiny">12:25AM</time><a class="humble humble--comments humble--tiny" href="#!">256</a>
+                      <button class="humble humble--share humble--tiny humble--single-icon" @click="share('#1', '#2', '#3', $event)"></button>
+                    </div>
                   </div>
-                </div>
-                <div class="input select">
-                  <div class="select__label">Country</div>
-                  <button class="select__btn" @click="selectOpen">- Any -</button>
-                  <div class="select__options">
-                    <div class="select__option">Andorra</div>
-                    <div class="select__option">Angola</div>
-                    <div class="select__option">Argentina</div>
+                </article>
+                <article class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://dummyimage.com/40x40/d8dbde/aaa"></a>
+                  <div class="aside-story__body"><a class="aside-story__link" href="#!">Where Is Bitcoin Going in the Near Future? Experts Weigh In</a>
+                    <div class="aside-story__info">
+                      <time class="humble humble--tiny">12:25AM</time><a class="humble humble--comments humble--tiny" href="#!">256</a>
+                      <button class="humble humble--share humble--tiny humble--single-icon" @click="share('#1', '#2', '#3', $event)"></button>
+                    </div>
                   </div>
-                </div><a class="btn-filter-space btn btn--block btn--big btn--disabled" href="#!">Clear</a>
+                </article>
+                <article class="aside-story"><a class="aside-story__img-wrapper" href="#!"><img class="aside-story__img" src="https://dummyimage.com/40x40/d8dbde/aaa"></a>
+                  <div class="aside-story__body"><a class="aside-story__link" href="#!">Interest in Cryptocurrency Leaders Drops: New Players Likely on the Rise</a>
+                    <div class="aside-story__info">
+                      <time class="humble humble--tiny">12:25AM</time><a class="humble humble--comments humble--tiny" href="#!">256</a>
+                      <button class="humble humble--share humble--tiny humble--single-icon" @click="share('#1', '#2', '#3', $event)"></button>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </div><a class="btn-aside-space btn btn--block btn--big" href="#!">Event archive</a><a class="btn-aside-space btn btn--block btn--big btn--accent" href="#!">Submit event</a>
+              <div class="card__footer"><a class="btn btn--arrow-right" href="#!">See all</a></div>
+            </section>
           </aside>
-          <div class="main-category-block">
-            <div class="category-info">
-              <div class="category-info__body">
-                <h1 class="category-info__title">🗓 Upcoming CryptoEvents</h1>
-              </div>
-            </div>
-            <div class="category-item">
-              <div class="category-item__body">
-                <h2><a class="category-item__title" href="#!">👑 Blockspot Conference Europe 2018</a></h2>
-                <div class="category-item__info-event">
-                  <time class="humble humble--large">🗓 Nov 14</time>
-                  <div class="humble humble--large">📍 Lisbon, Portugal</div>
-                </div>
-                <div class="category-item__desc">Some short description - recommended, but optional. Crypto space is all about ideas so find here thought-provoking pinions, experts blogs. When it comes to company assets, intangible ones are dynamic and fluid, and are becoming</div>
-              </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
-            </div>
-            <div class="category-item">
-              <div class="category-item__body">
-                <h2><a class="category-item__title" href="#!">👑 Blockspot Conference Europe 2018</a></h2>
-                <div class="category-item__info-event">
-                  <time class="humble humble--large">🗓 Nov 14</time>
-                  <div class="humble humble--large">📍 Lisbon, Portugal</div>
-                </div>
-              </div>
-            </div>
-            <div class="category-item">
-              <div class="category-item__body">
-                <h2><a class="category-item__title" href="#!">👑 Money 20/20 China</a></h2>
-                <div class="category-item__info-event">
-                  <time class="humble humble--large">🗓 Nov 14</time>
-                  <div class="humble humble--large">📍 Lisbon, Portugal</div>
-                </div>
-                <div class="category-item__desc">Crypto events are beginning to invite more women speakers, but tend to feature them in separate Women in Crypto panels</div>
-              </div><a class="category-item__img-wrapper" href="#!"><img class="category-item__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></a>
-            </div>
-            <div class="category-item">
-              <div class="category-item__body">
-                <h2><a class="category-item__title" href="#!">ChainPoint'18 — International Blockchain Conference</a></h2>
-                <div class="category-item__info-event">
-                  <time class="humble humble--large">🗓 Nov 14</time>
-                  <div class="humble humble--large">📍 Lisbon, Portugal</div>
-                </div>
-                <div class="category-item__desc">When it comes to company assets, intangible ones are dynamic and fluid, and are becoming vitally important when considering blockchain tokens</div>
-              </div>
-            </div><a class="btn btn--block btn--large" href="#!">Show more</a>
-          </div>
+          <main class="main-block">
+            <h1>About Us</h1>
+            <p>U.Today is a news, analysis and educational platform that covers the crypto industry, Blockchain and new gen tech. It was founded by editors with extensive experience in both high-quality journalism and the crypto industry, who have developed some very successful media projects. We’re proud to serve the crypto community keeping it tuned to what’s up and new in the field by heeding the core journalistic values- clear thinking, accuracy, impartiality and independence.</p>
+            <p>We run daily crypto market reviews, ICO analytics, interviews with the best experts and major newsmakers, in-depth feature stories and thought-provoking opinion. On the educational side, we’re giving the newcomers step-by-step trading guides, crypto tips and WikiCoin references that help them cope with crypto economics and learn more.</p>
+            <p>We appreciate when members of our audience share with us their expertise through social media or by other means. Stay tuned and let’s build a better community together!</p>
+          </main>
         </div>
         <footer class="footer">
           <div class="footer__container">
