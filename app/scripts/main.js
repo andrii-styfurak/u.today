@@ -7,6 +7,7 @@
     $headerBtnSearch = $(".header__btn-search"),
     $headerSearch = $(".header__search"),
     $headerSearchBtnClose = $(".header__search-close"),
+    $headerSearchInput = $(".header__search-input"),
     $headerNavList = $(".header__nav-list");
 
   var firstHeaderLoad = true;
@@ -21,6 +22,7 @@
     e.preventDefault();
     $headerNavList.toggleClass("hidden");
     $headerSearch.fadeToggle(180);
+    $headerSearchInput.focus();
   }
 
   function stickyHeader(e) {
