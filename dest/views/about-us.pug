@@ -5,28 +5,17 @@ block title
 
 block content
   .content-container
-    aside.aside-block
+    aside.aside-block.aside-block--mobile-visible
       section.card
         .card__title Contacts
 
         .card__desc If you would like to give us some editorial feedback, have a partnership idea or would like to request permission for reprints, please use the contacts here.
 
-        .card__body
-          each hot in hots
-            article.aside-story
-              a.aside-story__img-wrapper(href="#!")
-                img.aside-story__img(src="https://dummyimage.com/40x40/d8dbde/aaa")
-
-              .aside-story__body
-                a.aside-story__link(href="#!")= hot
-
-                .aside-story__info
-                  time.humble.humble--tiny 12:25AM
-                  a.humble.humble--comments.humble--tiny(href="#!") 256
-                  button.humble.humble--share.humble--tiny.humble--single-icon(@click="share('#1', '#2', '#3', $event)")
-
-        .card__footer
-          a.btn.btn--arrow-right(href="#!") See all
+        .card__list
+          each item in contactEmails
+            .card__list-item
+              .card__list-title= item.title
+              a.card__list-link(href="mailto:" + item.email)= item.email
 
     main.main-block
       h1 About Us
@@ -36,3 +25,16 @@ block content
 
       p We appreciate when members of our audience share with us their expertise through social media or by other means. Stay tuned and let’s build a better community together!
 
+      .about-logo
+
+    section.team
+      .team__title Team
+
+      .team__list
+        each i in [1,2,3,4,5,6,7,8,9]
+          a.team__item(href="#!")
+            .team__img-wrapper
+              img.team__img(src="https://u.today/sites/default/files/styles/profile_teaser/public/2018-06/borodich.jpg?itok=F_DxIVHf")
+
+            .team__name Angel Di Matteo
+            .team__post editor, writer
