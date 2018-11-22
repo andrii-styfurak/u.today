@@ -20,8 +20,10 @@
   box-shadow: 4rem 0 0 #fff, -4rem 0 0 #fff
 
 .content-container
-  box: space-between
+  box: space-between wrap
   padding: 1rem * @md 2rem *
+  position: relative
+  z-index: 96
 
 .main-block
   max-width: 100% @md 480px @xl 736px
@@ -32,12 +34,19 @@
   margin-top: 0 @xl -9px
   display: @md-down none
 
+  &--mobile-visible
+    display: @md-down block
+    order: @md-down 2
+    max-width: @md-down 100%
+
 .main-container
   box: space-between
   flex-wrap: wrap @md nowrap
   margin: 1rem * @xl 2rem * 1.3rem
   padding-bottom: 1rem @xl 2rem
   border-bottom: $border
+  position: relative
+  z-index: 96
 
 .top-story-block
   max-width: 100% @md 272px @xl 416px
