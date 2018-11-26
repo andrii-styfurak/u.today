@@ -3431,7 +3431,7 @@ transition {
 }
 
 .category-item {
-  margin-bottom: 0.6rem;
+  margin-bottom: 1.6rem;
   padding-top: 1.1rem;
   position: relative;
   display: flex;
@@ -3455,6 +3455,10 @@ transition {
   margin-bottom: .3rem;
   display: flex;
   align-items: center;
+}
+
+.category-item__info:last-child {
+  margin-bottom: 0 !important;
 }
 
 .category-item__info-event {
@@ -3760,6 +3764,72 @@ transition {
 .submit-event__form {
   margin-top: 1rem;
   margin-bottom: 2rem;
+}
+
+.price-index__aside {
+  border: 1px solid #CFD8DC;
+  border-radius: 2px;
+}
+
+.price-index__title {
+  color: #78909C;
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+}
+
+.price-index__header {
+  border-bottom: 1px solid #CFD8DC;
+  padding: 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price-index__tabs {
+  margin-bottom: -1rem;
+}
+
+.price-index__body {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  max-height: 168px;
+  overflow: hidden;
+}
+
+.price-index__body--open {
+  max-height: unset;
+}
+
+.price-index__coin-short {
+  background: #F5F5F5;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  padding: .1rem .2rem;
+  margin-left: .5rem;
+}
+
+.price-index__coin-trand {
+  margin-left: auto;
+  padding-right: .5rem;
+  color: #4CAF50;
+  font-weight: 600;
+  font-size: 0.6875rem;
+  line-height: 1.4;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+}
+
+.price-index__coin-trand--down {
+  color: #B71C1C;
+}
+
+.price-index__footer {
+  padding: .2rem 1rem .5rem;
 }
 
 figure {
@@ -4323,6 +4393,10 @@ li p,td p {
 
   .partners__item {
     width: 16.6666%;
+  }
+
+  .price-index__body {
+    max-height: 490px;
   }
 }
 
@@ -5119,6 +5193,10 @@ li p,td p {
     font-weight: 500;
     font-size: 0.9375rem;
     line-height: 2.1;
+  }
+
+  .price-index__footer {
+    padding: 0 1rem 1rem;
   }
 
   figure {

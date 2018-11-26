@@ -1,5 +1,9 @@
 (function ($) {
 
+  //
+  // Header and mobile menu
+  //
+
   const $header = $(".header"),
     $headerContainer = $(".header__container"),
     $headerBurger = $(".header__burger"),
@@ -57,4 +61,70 @@
   $headerSearchBtnClose.on("click", toggleHeaderSearch);
   $(window).on("scroll", stickyHeader);
 
+  //
+  // Accordion
+  //
+
+  $(".accordion__title").on("click", function () {
+    $(this).parent().toggleClass("accordion--open");
+  });
+
+  //
+  // Select
+  //
+
+  $(".select__btn").on("click", function () {
+    let select = event.target.parentNode.classList;
+    let isСurrent = select.contains("select--open");
+    let currentOpenSelect = document.querySelector(".select--open");
+
+    currentOpenSelect && !isСurrent && (currentOpenSelect.classList.remove("select--open"));
+
+    select.toggle("select--open");
+  });
+
 })(jQuery);
+
+//
+// Share
+//
+
+function share(tg, tw, fb) {
+  let shareBox = document.getElementById("share-post");
+  let bodyRect = document.body.getBoundingClientRect();
+  let elemRect = event.target.getBoundingClientRect();
+
+  let tgLink = document.getElementById("share-post-link-tg");
+  let twLink = document.getElementById("share-post-link-tw");
+  let fbLink = document.getElementById("share-post-link-fb");
+
+  tgLink.setAttribute("href", tg);
+  twLink.setAttribute("href", tw);
+  fbLink.setAttribute("href", fb);
+
+  let offset = {
+    top: elemRect.top - bodyRect.top,
+    left: elemRect.left - bodyRect.left
+  }
+
+  shareBox.style.top = offset.top + "px";
+  shareBox.style.left = offset.left + 34 + "px";
+}
+
+function shareHide() {
+  let shareBox = document.getElementById("share-post");
+  shareBox.style.top = "-9999px";
+}
+
+//
+// Show more buttons
+//
+
+function showMore(elem) {
+  event.target.classList.toggle("btn--arrow-up-before");
+  document.querySelector(elem).classList.toggle(elem.slice(1) + "--open");
+}
+
+function tabsSub() {
+  event.target.parentNode.classList.toggle("tabs__item--sub-open");
+}

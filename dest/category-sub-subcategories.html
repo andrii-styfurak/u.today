@@ -158,11 +158,11 @@
       <div class="main-aside-container">
         <aside class="aside-menu-block">
           <div class="accordion accordion--open">
-            <div class="accordion__title" @click="accordionOpen">Subcategories</div>
+            <div class="accordion__title">Subcategories</div>
             <div class="accordion__body">
               <ul class="tabs tabs--vertical">
                 <li class="tabs__item tabs__item--active">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Latest News</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Latest News</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -185,7 +185,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Bitcoin News</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Bitcoin News</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -208,7 +208,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Ethereum News</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Ethereum News</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -231,7 +231,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Bitcoin Cash News</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Bitcoin Cash News</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -254,7 +254,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Ripple News</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Ripple News</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -277,7 +277,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">EOS News</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">EOS News</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -300,7 +300,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Litecoin News</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Litecoin News</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -323,7 +323,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Cardano News</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Cardano News</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -346,7 +346,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">NEM</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">NEM</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -369,7 +369,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Press releases</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Press releases</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -392,7 +392,7 @@
                   </ul>
                 </li>
                 <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light" @click="tabsSub">Submit Press releases</button>
+                  <button class="tabs__btn btn btn--light" onclick="tabsSub()">Submit Press releases</button>
                   <ul class="tabs__sub">
                     <li class="tabs__sub-item">
                       <button class="tabs__btn btn btn--pseudo">Features</button>
@@ -422,8 +422,8 @@
           <div class="category-info">
             <div class="category-info__body">
               <h1 class="category-info__title">#Hashtag or 🌎 Category</h1>
-              <div class="category-info__desc" :class="{ 'category-info__desc--open': showMore }">Some short description - recommended, but optional. Crypto space is all about ideas so find here thought-provoking pinions, experts blogs. When it comes to company assets, intangible ones are dynamic and fluid, and are becoming</div>
-              <button class="category-info__btn btn btn--arrow-down-before btn--pseudo" @click="showMore = !showMore" :class="{ 'btn--arrow-up-before': showMore }">Show more</button>
+              <div class="category-info__desc">Some short description - recommended, but optional. Crypto space is all about ideas so find here thought-provoking pinions, experts blogs. When it comes to company assets, intangible ones are dynamic and fluid, and are becoming</div>
+              <button class="category-info__btn btn btn--arrow-down-before btn--pseudo" onclick="showMore('.category-info__desc')">Show more</button>
             </div>
             <div class="category-info__img-wrapper"><img class="category-info__img" src="https://u.today/sites/default/files/styles/large/public/2018-11/Pic%201_4.jpg?itok=ZixJNx2j"></div>
           </div>
@@ -568,7 +568,7 @@
       </footer>
       <div class="share-and-up"><a class="share__circle share__circle--tg" href="#!"></a><a class="share__circle share__circle--tw" href="#!"></a><a class="share__circle share__circle--fb" href="#!"></a><a class="share__circle share__circle--up" href="#"></a></div>
       <div class="share-post" id="share-post"><a class="share__square share__square--tg" id="share-post-link-tg" href="#!"></a><a class="share__square share__square--tw" id="share-post-link-tw" href="#!"></a><a class="share__square share__square--fb" id="share-post-link-fb" href="#!"></a>
-        <button class="btn btn--light share__square share__square--close" @click="shareHide"></button>
+        <button class="btn btn--light share__square share__square--close" onclick="shareHide()"></button>
       </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

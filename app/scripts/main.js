@@ -89,10 +89,10 @@
 // Share
 //
 
-function share(tg, tw, fb, e) {
+function share(tg, tw, fb) {
   let shareBox = document.getElementById("share-post");
   let bodyRect = document.body.getBoundingClientRect();
-  let elemRect = e.target.getBoundingClientRect();
+  let elemRect = event.target.getBoundingClientRect();
 
   let tgLink = document.getElementById("share-post-link-tg");
   let twLink = document.getElementById("share-post-link-tw");
@@ -114,4 +114,17 @@ function share(tg, tw, fb, e) {
 function shareHide() {
   let shareBox = document.getElementById("share-post");
   shareBox.style.top = "-9999px";
+}
+
+//
+// Show more buttons
+//
+
+function showMore(elem) {
+  event.target.classList.toggle("btn--arrow-up-before");
+  document.querySelector(elem).classList.toggle(elem.slice(1) + "--open");
+}
+
+function tabsSub() {
+  event.target.parentNode.classList.toggle("tabs__item--sub-open");
 }
