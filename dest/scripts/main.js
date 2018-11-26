@@ -20,7 +20,7 @@
 
   function toggleHeaderSearch(e) {
     e.preventDefault();
-    $headerNavList.toggleClass("hidden");
+    $headerNavList.toggleClass("visibility-hidden");
     $headerSearch.fadeToggle(180);
     $headerSearchInput.focus();
   }

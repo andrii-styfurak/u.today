@@ -68,18 +68,20 @@
 
     &-wrapper
       background: $pseudo-neutral-50
+      overflow: hidden
       padding-top: 62.5%
       position: relative
       margin: @sm-down * -1rem
+      margin-bottom: 1.5rem @md 2rem @xl 2.5rem
 
   &__content
-    margin-bottom: 2.5rem @xl 2.3rem
+    margin: 2.2rem * 2.5rem @xl 3rem * 2.3rem
 
     > *:last-child
       margin-bottom: 0 !important
 
   &__contents
-    margin: 2.5rem * 2.2rem @xl 3.4rem * 2.6rem
+    margin-bottom: 2.2rem @xl 2.6rem
 
     &-title
       text: $header-tiny
@@ -197,10 +199,8 @@
       margin-right: 1.5rem
 
     &-list
-      margin-bottom: @xl-down 1.5rem
-      box: left
-      overflow: @md-down auto
-      padding: @md-down 0 1rem 6rem
+      box: left wrap
+      margin: * -.5rem
 
       &:after
         content: ""
@@ -208,22 +208,10 @@
         min-width: 1rem
         size: 1rem
 
-      &-slide
-        max-height: @md-down 290px
-        overflow: @md-down hidden
-        margin: @md-down * -1rem
-
     &-item
-      width: 50% @xl 33%
-      min-width: 224px
-
-      & + &
-        margin-left: 2rem
-
-      &:last-child
-        display: @md none @xl block
-
-      &-title
+      width: calc(50% - 1rem) @md calc(50% - 1rem) @xl calc(33.3333% - 1rem)
+      margin: * .5rem
+      margin-bottom: 1.5rem
 
     &-img
       display: block
@@ -240,4 +228,4 @@
       @extend .link-plain
 
     &-info
-      box: center
+      box: center wrap

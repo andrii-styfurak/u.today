@@ -10,6 +10,19 @@
 .input
   margin-bottom: 1rem
 
+  &__row
+    display: @xl flex
+    margin-bottom: 1rem
+
+    .input
+      width: 100%
+
+      + .input
+        margin-left: @xl 2rem
+
+  &__label
+    text: $pseudo-neutral-400 $body-tiny
+
   &__elem
     border: $border
     border-radius: 2px

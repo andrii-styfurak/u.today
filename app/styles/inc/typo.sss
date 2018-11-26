@@ -20,21 +20,10 @@ h3
 
 h4
   text: 17px 1.41
+  margin-bottom: .3rem
 
 h5
   text: 14px 1.4
-
-a:not([class])
-  text-decoration: underline
-  color: inherit
-
-  &:hover
-    text: $accent-1-medium
-    border-color: $accent-1-medium
-
-  &:active
-    text: $accent-1-dark
-    border-color: $accent-1-dark
 
 .link
   text: $accent-1-medium
@@ -49,7 +38,7 @@ a:not([class])
     text: $accent-1-dark
     border-color: $accent-1-dark
 
-.link-decorate
+.link-decorate, a:not([class])
   text: $accent-1-medium
   border-bottom: 1px solid $accent-1-medium
   text-decoration: none
