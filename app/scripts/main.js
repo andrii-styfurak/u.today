@@ -1,5 +1,9 @@
 (function ($) {
 
+  //
+  // Header and mobile menu
+  //
+
   const $header = $(".header"),
     $headerContainer = $(".header__container"),
     $headerBurger = $(".header__burger"),
@@ -57,4 +61,43 @@
   $headerSearchBtnClose.on("click", toggleHeaderSearch);
   $(window).on("scroll", stickyHeader);
 
+  //
+  // Accordion
+  //
+
+  $(".accordion__title").on("click", function () {
+    $(this).parent().toggleClass("accordion--open");
+  });
+
 })(jQuery);
+
+//
+// Share
+//
+
+function share(tg, tw, fb, e) {
+  let shareBox = document.getElementById("share-post");
+  let bodyRect = document.body.getBoundingClientRect();
+  let elemRect = e.target.getBoundingClientRect();
+
+  let tgLink = document.getElementById("share-post-link-tg");
+  let twLink = document.getElementById("share-post-link-tw");
+  let fbLink = document.getElementById("share-post-link-fb");
+
+  tgLink.setAttribute("href", tg);
+  twLink.setAttribute("href", tw);
+  fbLink.setAttribute("href", fb);
+
+  let offset = {
+    top: elemRect.top - bodyRect.top,
+    left: elemRect.left - bodyRect.left
+  }
+
+  shareBox.style.top = offset.top + "px";
+  shareBox.style.left = offset.left + 34 + "px";
+}
+
+function shareHide() {
+  let shareBox = document.getElementById("share-post");
+  shareBox.style.top = "-9999px";
+}

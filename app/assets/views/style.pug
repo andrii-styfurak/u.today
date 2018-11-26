@@ -216,18 +216,24 @@ block content
     section.style__elem
       pre.style__code
         | .accordion.accordion--open
-        |   .accordion__title(@click="accordionOpen")
+        |   .accordion__title
         |   .accordion__body<b>.accordion__body--content</b>
 
       p On mobile .accordion--open works reverse. Default closed.
 
       .accordion.accordion--open
-        .accordion__title(@click="accordionOpen") Accordion
+        .accordion__title Accordion
         .accordion__body.accordion__body--content Content
 
 
     section.style__elem
       pre.style__code
-        | (@click="share('<b>telegram-url</b>', '<b>twitter-url</b>', '<b>facebook-url</b>', $event)")
+        | (onclick="share('<b>telegram-url</b>', '<b>twitter-url</b>', '<b>facebook-url</b>')")
 
-      button.btn(@click="share('#1', '#2', '#3', $event)") Share
+      button.humble.humble--share.humble--tiny(onclick="share('#1', '#2', '#3', event)") Share
+
+      br
+      br
+      br
+
+      button.humble.humble--share(onclick="share('#4', '#5', '#6', event)") Share
