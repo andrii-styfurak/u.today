@@ -69,6 +69,20 @@
     $(this).parent().toggleClass("accordion--open");
   });
 
+  //
+  // Select
+  //
+
+  $(".select__btn").on("click", function () {
+    let select = event.target.parentNode.classList;
+    let isСurrent = select.contains("select--open");
+    let currentOpenSelect = document.querySelector(".select--open");
+
+    currentOpenSelect && !isСurrent && (currentOpenSelect.classList.remove("select--open"));
+
+    select.toggle("select--open");
+  });
+
 })(jQuery);
 
 //
