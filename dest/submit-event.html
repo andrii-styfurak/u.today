@@ -63,11 +63,11 @@
               <div class="currencies__price">0.02241</div></a>
           </div>
         </div>
-        <button class="currencies__currency dropdown"><span v-text="currency">USD</span>
+        <button class="currencies__currency dropdown"><span>USD</span>
           <div class="dropdown__list">
-            <div class="dropdown__item" v-on:click.stop:="currency = 'usd'" v-show="currency !== 'usd'">usd</div>
-            <div class="dropdown__item" v-on:click.stop:="currency = 'eur'" v-show="currency !== 'eur'">eur</div>
-            <div class="dropdown__item" v-on:click.stop:="currency = 'rub'" v-show="currency !== 'rub'">rub</div>
+            <div class="dropdown__item" data-set-currency="usd">usd</div>
+            <div class="dropdown__item" data-set-currency="eur">eur</div>
+            <div class="dropdown__item" data-set-currency="rub">rub</div>
           </div>
         </button>
       </div>
@@ -177,14 +177,14 @@
             <div class="input__row">
               <div class="input">
                 <label class="input__label" for="name">Name</label>
-                <input class="input__elem" id="name" type="text" name="email" placeholder="John Doe" required>
+                <input class="input__elem" id="name" type="text" name="name" placeholder="John Doe" required>
               </div>
               <div class="input">
                 <label class="input__label" for="contact">Contact info</label>
-                <input class="input__elem" id="contact" type="text" name="contact" placeholder="Your phone number or email" required>
+                <input class="input__elem" id="contact" type="text" name="email" placeholder="Your phone number or email" required>
               </div>
             </div>
-            <button class="btn btn--wide btn--input btn--accent btn--disabled" type="submit">Contact me</button>
+            <button class="btn btn--input btn--accent btn--disabled" type="submit">Contact me</button>
           </form>
           <p>Or you can just send us an email: <a href="mailto:events@u.today">events@u.today</a></p>
         </main>

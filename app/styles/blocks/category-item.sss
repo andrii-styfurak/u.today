@@ -1,14 +1,17 @@
 .category-item
   box: left space-between
-  margin-bottom: 1.6rem
+  margin-bottom: 1.1rem @xl 1.5rem
   padding-top: 1.1rem @xl 1.5rem
   position: relative
+
+  h2
+    margin-bottom: 0
 
   & + &
     border-top: $border
 
   + .btn
-    margin-top: 1rem @xl 2.7rem
+    margin-top: 1.5rem @md 2rem @xl 2.7rem
 
   &__body
     max-width: 100% @md calc(100% - 1rem - 144px) @xl unset
@@ -29,8 +32,7 @@
       max-width: 40% @md 50% @xl unset
 
   &__title
-    text: $header-tiny @xl $header-standart
-    margin-bottom: .6rem @xl 1.3rem
+    text: $header-tiny @xl $header-small
     display: block
     max-width: @md-down calc(100% - 72px - 1rem)
 
@@ -51,6 +53,7 @@
 
   &__desc
     text: $body-small @xl $body-standart
+    margin-top: .6rem @xl 1.2rem
     margin-bottom: .6rem @xl .9rem
 
   &__img
@@ -64,5 +67,4 @@
       height: 45px @md 90px @xl 140px
       position: absolute @md relative
       right: 0
-      top: 16px @md 0 @xl 9px
-      margin-bottom: .5rem
+      top: 18px @md 0 @xl 0

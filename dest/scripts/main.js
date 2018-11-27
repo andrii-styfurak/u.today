@@ -83,6 +83,68 @@
     select.toggle("select--open");
   });
 
+  //
+  // Modals
+  //
+
+  function openModal() {
+    var modalId = $(this).data("modal");
+    $("#" + modalId).addClass("modal--open");
+
+    setTimeout(function () {
+      $("#" + modalId).addClass("modal--fadeIn");
+    }, 50);
+  }
+
+  function closeModal() {
+    var elem = this;
+    $(elem).removeClass("modal--fadeIn");
+
+    setTimeout(function () {
+      $(elem).removeClass("modal--open");
+    }, 300);
+  }
+
+  function closeBtnModal() {
+    var elem = this;
+    $(elem).parents(".modal").removeClass("modal--fadeIn");
+
+    setTimeout(function () {
+      $(elem).parents(".modal").removeClass("modal--open");
+    }, 300);
+  }
+
+  $("[data-modal]").on("click", openModal);
+  $(".modal").on("click", closeModal);
+  $("[data-close-modal]").on("click", closeBtnModal);
+  $(".modal__item").on("click", function () {
+    event.stopPropagation();
+  });
+
+  var currencyValue = $(".currencies__currency span");
+
+  $("[data-set-currency]").on("click", setCurrency);
+
+  function setCurrency() {
+    var currency = $(this).data("set-currency");
+
+    switch (currency) {
+      case "usd":
+        console.log("set usd")
+        break;
+
+      case "eur":
+        console.log("set eur")
+        break;
+
+      case "rub":
+        console.log("set rub")
+        break;
+    }
+
+    currencyValue.text(currency);
+  }
+
 })(jQuery);
 
 //

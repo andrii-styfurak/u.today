@@ -63,11 +63,11 @@
               <div class="currencies__price">0.02241</div></a>
           </div>
         </div>
-        <button class="currencies__currency dropdown"><span v-text="currency">USD</span>
+        <button class="currencies__currency dropdown"><span>USD</span>
           <div class="dropdown__list">
-            <div class="dropdown__item" v-on:click.stop:="currency = 'usd'" v-show="currency !== 'usd'">usd</div>
-            <div class="dropdown__item" v-on:click.stop:="currency = 'eur'" v-show="currency !== 'eur'">eur</div>
-            <div class="dropdown__item" v-on:click.stop:="currency = 'rub'" v-show="currency !== 'rub'">rub</div>
+            <div class="dropdown__item" data-set-currency="usd">usd</div>
+            <div class="dropdown__item" data-set-currency="eur">eur</div>
+            <div class="dropdown__item" data-set-currency="rub">rub</div>
           </div>
         </button>
       </div>
@@ -156,29 +156,27 @@
       </header>
       <div class="mobile-menu-cover"></div>
       <div class="content-container">
-        <div class="btn" @click="activeModal = 'subscribe-form'">modal</div>
-        <transition name="fade">
-          <div class="modal" v-show="activeModal === 'subscribe-form'" @click.self="activeModal = null">
-            <div class="modal__item">
-              <button class="modal__close btn btn--light btn--cross-white" @click="activeModal = null"></button>
-              <div class="modal__item-header">
-                <div class="modal__item-header-title">All crypto news for</div>
-                <div class="modal__item-logo"></div>
-              </div>
-              <div class="modal__item-body">
-                <div class="modal__item-icon">✉</div>
-                <div class="modal__item-text">Sign up for crypto digest</div>
-                <form action="#" method="get">
-                  <div class="input article__subscribe-input">
-                    <input class="input__elem" type="text" name="email" placeholder="Email" required>
-                  </div>
-                  <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
-                  <div class="modal__item-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
-                </form>
-              </div>
-            </div>
+        <div class="btn" data-modal="subscribe-form">modal</div>
+      </div>
+      <div class="modal" id="subscribe-form">
+        <div class="modal__item">
+          <button class="modal__close btn btn--light btn--cross-white" data-close-modal></button>
+          <div class="modal__item-header">
+            <div class="modal__item-header-title">All crypto news for</div>
+            <div class="modal__item-logo"></div>
           </div>
-        </transition>
+          <div class="modal__item-body">
+            <div class="modal__item-icon">✉</div>
+            <div class="modal__item-text">Sign up for crypto digest</div>
+            <form action="#" method="get">
+              <div class="input article__subscribe-input">
+                <input class="input__elem" type="text" name="email" placeholder="Email" required>
+              </div>
+              <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
+              <div class="modal__item-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+            </form>
+          </div>
+        </div>
       </div>
       <footer class="footer">
         <div class="footer__container">

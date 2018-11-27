@@ -12,7 +12,7 @@ block content
           ul.tabs.tabs--vertical
             each item, i in nav[0].childs
               li.tabs__item(class=[ i === 0 ? 'tabs__item--active' : '' ])
-                button.tabs__btn.btn.btn--light= item.name
+                a.tabs__btn.btn.btn--light(href="#!")= item.name
 
     .main-category-block
       include blocks/category-info.pug

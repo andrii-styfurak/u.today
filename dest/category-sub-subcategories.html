@@ -63,11 +63,11 @@
               <div class="currencies__price">0.02241</div></a>
           </div>
         </div>
-        <button class="currencies__currency dropdown"><span v-text="currency">USD</span>
+        <button class="currencies__currency dropdown"><span>USD</span>
           <div class="dropdown__list">
-            <div class="dropdown__item" v-on:click.stop:="currency = 'usd'" v-show="currency !== 'usd'">usd</div>
-            <div class="dropdown__item" v-on:click.stop:="currency = 'eur'" v-show="currency !== 'eur'">eur</div>
-            <div class="dropdown__item" v-on:click.stop:="currency = 'rub'" v-show="currency !== 'rub'">rub</div>
+            <div class="dropdown__item" data-set-currency="usd">usd</div>
+            <div class="dropdown__item" data-set-currency="eur">eur</div>
+            <div class="dropdown__item" data-set-currency="rub">rub</div>
           </div>
         </button>
       </div>

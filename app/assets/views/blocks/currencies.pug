@@ -11,11 +11,8 @@
             .currencies__price= currencie.price
 
     button.currencies__currency.dropdown
-      span(v-text="currency") USD
+      span USD
 
       .dropdown__list
         each lang in ['usd', 'eur', 'rub']
-          .dropdown__item(
-            v-on:click.stop:="currency = '" + lang + "'"
-            v-show="currency !== '" + lang + "'"
-          )= lang
+          .dropdown__item(data-set-currency=lang)= lang

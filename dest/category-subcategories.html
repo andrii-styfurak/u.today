@@ -63,11 +63,11 @@
               <div class="currencies__price">0.02241</div></a>
           </div>
         </div>
-        <button class="currencies__currency dropdown"><span v-text="currency">USD</span>
+        <button class="currencies__currency dropdown"><span>USD</span>
           <div class="dropdown__list">
-            <div class="dropdown__item" v-on:click.stop:="currency = 'usd'" v-show="currency !== 'usd'">usd</div>
-            <div class="dropdown__item" v-on:click.stop:="currency = 'eur'" v-show="currency !== 'eur'">eur</div>
-            <div class="dropdown__item" v-on:click.stop:="currency = 'rub'" v-show="currency !== 'rub'">rub</div>
+            <div class="dropdown__item" data-set-currency="usd">usd</div>
+            <div class="dropdown__item" data-set-currency="eur">eur</div>
+            <div class="dropdown__item" data-set-currency="rub">rub</div>
           </div>
         </button>
       </div>
@@ -161,39 +161,17 @@
             <div class="accordion__title" @click="accordionOpen">Subcategories</div>
             <div class="accordion__body">
               <ul class="tabs tabs--vertical">
-                <li class="tabs__item tabs__item--active">
-                  <button class="tabs__btn btn btn--light">Latest News</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">Bitcoin News</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">Ethereum News</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">Bitcoin Cash News</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">Ripple News</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">EOS News</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">Litecoin News</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">Cardano News</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">NEM</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">Press releases</button>
-                </li>
-                <li class="tabs__item">
-                  <button class="tabs__btn btn btn--light">Submit Press releases</button>
-                </li>
+                <li class="tabs__item tabs__item--active"><a class="tabs__btn btn btn--light" href="#!">Latest News</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Bitcoin News</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Ethereum News</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Bitcoin Cash News</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Ripple News</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">EOS News</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Litecoin News</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Cardano News</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">NEM</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Press releases</a></li>
+                <li class="tabs__item"><a class="tabs__btn btn btn--light" href="#!">Submit Press releases</a></li>
               </ul>
             </div>
           </div>

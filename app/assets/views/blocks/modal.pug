@@ -1,21 +1,20 @@
-transition(name="fade")
-  .modal(v-show="activeModal === 'subscribe-form'" @click.self="activeModal = null")
-    .modal__item
-      button.modal__close.btn.btn--light.btn--cross-white(@click="activeModal = null")
+.modal#subscribe-form
+  .modal__item
+    button.modal__close.btn.btn--light.btn--cross-white(data-close-modal)
 
-      .modal__item-header
-        .modal__item-header-title All crypto news for
-        .modal__item-logo
+    .modal__item-header
+      .modal__item-header-title All crypto news for
+      .modal__item-logo
 
-      .modal__item-body
-        .modal__item-icon ✉
-        .modal__item-text Sign up for crypto digest
+    .modal__item-body
+      .modal__item-icon ✉
+      .modal__item-text Sign up for crypto digest
 
-        form(action="#" method="get")
-          .input.article__subscribe-input
-            input.input__elem(type="text" name="email" placeholder="Email" required)
+      form(action="#" method="get")
+        .input.article__subscribe-input
+          input.input__elem(type="text" name="email" placeholder="Email" required)
 
-          button.btn.btn--wide.btn--input(type="submit") Subscribe
+        button.btn.btn--wide.btn--input(type="submit") Subscribe
 
-          .modal__item-agree By pressing the “Subscribe button” you agree with our 
-            a(href="#!") Privacy Policy
+        .modal__item-agree By pressing the “Subscribe button” you agree with our 
+          a(href="#!") Privacy Policy
