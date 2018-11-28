@@ -15,8 +15,8 @@ block content
 
   include blocks/news-featured.pug
 
-  a.something.something--wide(href="#!")
-    img(src="img/something/wide.png" alt="something-wide")
+  .something.something--wide
+    img(src="img/something/content.png" alt="something-content")
 
   .main-aside-container
     .main-news-block
@@ -26,7 +26,7 @@ block content
       +newsCategory(newsCategoryInterviews)
 
       .something__wrapper
-        a.something.something--content(href="#!")
+        .something.something--content
           img(src="img/something/content.png" alt="something-content")
 
       +newsCategory(newsCategoryPress)
@@ -38,3 +38,5 @@ block content
     .aside-news-block
       include blocks/crypto-tweets.pug
       include blocks/aside.pug
+
+  .something--footer

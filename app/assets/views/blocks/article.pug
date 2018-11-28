@@ -34,6 +34,9 @@
           li.article__contents-item
             a.article__contents-link.link-pseudo(href="#!")= content
 
+    .something.something--content
+      img(src="img/something/content.png" alt="something-content")
+
     p!= articleTexts[0]
 
     h2 Women of Crypto as opening act
@@ -91,7 +94,8 @@
 
     p!= articleTexts[1]
 
-    .something-article
+    .something.something--content
+      img(src="img/something/content.png" alt="something-content")
 
     p!= articleTexts[2]
 
@@ -196,6 +200,9 @@
         a.humble.humble--comments(href="#!") 256
           .humble__inner-text.hide-xl-down comments
         button.humble.humble--bookmark.humble--single-icon
+
+.something.something--content
+  img(src="img/something/content.png" alt="something-content")
 
 include article-recommended.pug
 
