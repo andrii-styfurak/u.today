@@ -16,7 +16,11 @@ block content
   include blocks/news-featured.pug
 
   .something.something--wide
-    img(src="img/something/content.png" alt="something-content")
+    .something__wide-long
+      img(src="img/something/long.png" width="728" height="90" alt="something-wide")
+
+    .something__wide-square
+      img(src="img/something/square.png" width="300" height="250" alt="something-square")
 
   .main-aside-container
     .main-news-block
@@ -27,7 +31,11 @@ block content
 
       .something__wrapper
         .something.something--content
-          img(src="img/something/content.png" alt="something-content")
+          .something__content-long
+            img(src="img/something/long.png" width="728" height="90" alt="something-wide")
+
+          .something__content-square
+            img(src="img/something/square.png" width="300" height="250" alt="something-square")
 
       +newsCategory(newsCategoryPress)
 

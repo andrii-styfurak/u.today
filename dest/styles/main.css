@@ -935,15 +935,15 @@ textarea.input__elem {
   margin: 1rem -1rem;
 }
 
-.something--content > * {
-  -webkit-transform: scale(.9);
-  transform: scale(.9);
+.something__content-long {
 }
 
-.something--content > img {
-  width: 300px;
-  height: 250px;
-  min-width: 300px;
+.something__content-square {
+}
+
+.something__content-square > * {
+  -webkit-transform: scale(.9);
+  transform: scale(.9);
 }
 
 .something--aside {
@@ -960,15 +960,15 @@ textarea.input__elem {
   margin-bottom: 1rem;
 }
 
-.something--wide > * {
-  -webkit-transform: scale(.9);
-  transform: scale(.9);
+.something__wide-long {
 }
 
-.something--wide > img {
-  width: 300px;
-  height: 250px;
-  min-width: 300px;
+.something__wide-square {
+}
+
+.something__wide-square > * {
+  -webkit-transform: scale(.9);
+  transform: scale(.9);
 }
 
 .something--footer {
@@ -4076,12 +4076,16 @@ li p,td p {
 }
 
 @media (min-width: 380px) {
-  .something--content > * {
-    -webkit-transform: scale(.659);
-    transform: scale(.659);
+  .something--content {
+    margin: 1.5rem 0;
   }
 
-  .something--wide > * {
+  .something__content-square > * {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .something__wide-square > * {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
@@ -4092,10 +4096,6 @@ li p,td p {
 }
 
 @media (min-width: 480px) {
-  .something--content {
-    margin: 1rem 0;
-  }
-
   .hide-sm-only {
     display: none;
   }
@@ -4202,19 +4202,11 @@ li p,td p {
   }
 
   .something--content {
-    margin: 1rem 0;
+    margin: 2rem 0;
   }
 
-  .something--content > img {
-    width: 728px;
-    height: 90px;
-    min-width: 728px;
-  }
-
-  .something--wide > img {
-    width: 728px;
-    height: 90px;
-    min-width: 728px;
+  .something__wide-square {
+    display: none;
   }
 
   .social--border .social__link {
@@ -4667,9 +4659,8 @@ li p,td p {
     margin: 3rem 0;
   }
 
-  .something--content > * {
-    -webkit-transform: scale(1);
-    transform: scale(1);
+  .something__content-square {
+    display: none;
   }
 
   .something--aside {
@@ -5504,6 +5495,10 @@ li p,td p {
     max-width: 100%;
   }
 
+  .something__wide-long {
+    display: none;
+  }
+
   .social--border {
     width: 100%;
   }
@@ -5669,6 +5664,10 @@ li p,td p {
 }
 
 @media (max-width: 1151px) {
+  .something__content-long {
+    display: none;
+  }
+
   .something--aside {
     height: 200px;
   }

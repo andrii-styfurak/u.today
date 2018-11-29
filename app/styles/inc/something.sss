@@ -9,14 +9,18 @@
     background: $pseudo-neutral-100
 
   &--content
-    margin: 1rem -1rem @sm 1rem 0 @md 1rem 0 @xl 3rem 0
+    margin: 1rem -1rem @xs 1.5rem 0 @md 2rem 0 @xl 3rem 0
 
-    > *
-      transform: scale(.9) @xs scale(.659) @xl scale(1)
+  &__content
 
-    > img
-      size: 300px 250px @md 728px 90px
-      min-width: 300px @md 728px
+    &-long
+      display: @xl-down none
+
+    &-square
+      display: @xl none
+
+      > *
+        transform: scale(.9) @xs scale(1)
 
   &--aside
     padding: @xl 9px *
@@ -32,12 +36,16 @@
     margin-bottom: 1rem @xl 2rem
     margin: @sm-down * -1rem
 
-    > *
-      transform: scale(.9) @xs scale(1)
+  &__wide
 
-    > img
-      size: 300px 250px @md 728px 90px
-      min-width: 300px @md 728px
+    &-long
+      display: @md-down none
+
+    &-square
+      display: @md none
+
+      > *
+        transform: scale(.9) @xs scale(1)
 
   &--footer
     position: fixed null 0 0 0
