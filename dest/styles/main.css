@@ -304,7 +304,7 @@ h5 {
 }
 
 .main-block,.main-category-block,.main-news-block {
-  max-width: 100%;
+  width: 100%;
 }
 
 .aside-block,.aside-category-block,.aside-news-block {
@@ -4161,7 +4161,7 @@ li p,td p {
   }
 
   .main-block,.main-category-block,.main-news-block {
-    max-width: 480px;
+    width: 480px;
   }
 
   .main-container {
@@ -4603,7 +4603,7 @@ li p,td p {
   }
 
   .main-block,.main-category-block,.main-news-block {
-    max-width: 736px;
+    width: 736px;
   }
 
   .aside-block,.aside-category-block,.aside-news-block {
