@@ -60,6 +60,19 @@
     &-item
       margin-bottom: @xl .5rem
 
+    &--dots
+      display: block
+
+      ^&-item
+        box: center
+
+        &:before
+          content: ""
+          size: 4px
+          min-width: 4px
+          border-radius: 50%
+          background: $pseudo-neutral-900
+
   &--small
 
     ^&__btn

@@ -11,14 +11,8 @@ block content
         .accordion__body
           ul.tabs.tabs--vertical
             each item, i in nav[0].childs
-              li.tabs__item(class=[ i === 1 ? 'tabs__item--active' : '' ])
-                a.tabs__btn.btn.btn--pseudo(href="#!")= item.name
-
-                if i === 1
-                  ul.tabs__sub.tabs__sub--dots
-                    each itemChild, i in nav[1].childs
-                      li.tabs__sub-item
-                        a.tabs__btn.btn.btn--pseudo.link-plain(href="#!")= itemChild.name
+              li.tabs__item(class=[ i === 0 ? 'tabs__item--active' : '' ])
+                a.tabs__btn.btn.btn--light(href="#!")= item.name
 
     .main-category-block
       include blocks/category-info.pug
