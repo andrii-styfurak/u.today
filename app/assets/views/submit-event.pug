@@ -43,11 +43,11 @@ block content
       h3 Choose your Event plan
 
       ul.tabs.tabs--devider
-        li.tabs__item
-          button.tabs__btn.btn.btn--light(data-active-tab="standard") Standard
+        li.tabs__item(data-active-tab="standard")
+          button.tabs__btn.btn.btn--light Standard
 
-        li.tabs__item.tabs__item--active
-          button.tabs__btn.btn.btn--light(data-active-tab="premium") Premium
+        li.tabs__item.tabs__item--active(data-active-tab="premium")
+          button.tabs__btn.btn.btn--light Premium
 
 
       form.form--col(action="#" method="get" data-tab="standard")
@@ -76,4 +76,5 @@ block content
           input#partner.input__checkbox(type="checkbox" name="partner" checked)
           label.input__checkbox-label(for="partner") Media-partner
 
-        button.btn.btn--input(type="submit") ORDER NOW
+        .form__submit
+          button.btn.btn--input(type="submit") ORDER NOW
