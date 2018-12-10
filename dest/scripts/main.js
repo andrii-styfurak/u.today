@@ -145,6 +145,20 @@
     currencyValue.text(currency);
   }
 
+  //
+  // Tabs
+  //
+
+  $("[data-active-tab").on("click", function () {
+    var idTab = $(this).data("active-tab");
+
+    $("[data-active-tab]").parent().removeClass("tabs__item--active");
+    $(this).parent().addClass("tabs__item--active");
+
+    $("[data-tab]").removeClass("active");
+    $("[data-tab=" + idTab + "]").addClass("active");
+  });
+
 })(jQuery);
 
 //

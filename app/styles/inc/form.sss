@@ -10,8 +10,44 @@
       margin-bottom: @md 0
       display: @md flex
 
+  &--col
+    max-width: 352px
+
+  &__submit
+    margin-top: 2rem
+
 .input
   margin-bottom: 1rem
+  min-height: 40px
+
+  &--large-space
+    margin-bottom: .4rem @md 1.4rem
+
+    + .btn
+      margin-top: -.4rem
+
+  &__checkbox
+    display: none
+
+    &:checked
+
+      & + ^&-label
+        &:before
+          background: svg-load("icons/checkbox_marked.svg" fill: $pseudo-neutral-400) center / contain
+
+    &-label
+      text: $pseudo-neutral-400 $body-small
+      box: center
+      cursor: pointer
+      user-select: none
+      margin-top: 1rem @md 1.5rem
+
+      &:before
+        content: ""
+        display: block
+        size: 24px
+        margin-right: .5rem
+        background: svg-load("icons/checkbox_blank.svg" fill: $pseudo-neutral-400) center / contain
 
   &__row
     display: @xl flex

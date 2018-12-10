@@ -31,3 +31,14 @@
   &--rd
     &:before
       background-image: svg-load("icons/social/reddit.svg" fill: $rd-color)
+
+.icon
+  size: 16px @md 24px
+  display: inline-block
+  background-size: contain
+
+  &--check
+    background-image: svg-load("icons/check.svg" fill: $status-positive)
+
+  &--cross
+    background-image: svg-load("icons/cross.svg" fill: $status-negative)
