@@ -4,6 +4,7 @@ input
 figure
   margin: 2.3rem 0 2.1rem @xl 3.3rem 0 2.5rem
   margin: @sm-down * -1rem
+  font-family: $font
 
 figcaption
   text: $body-small @xl $body-standart
@@ -54,7 +55,8 @@ p
   margin-bottom: 1.7rem @xl 2.5rem
 
 .article
-  p
+
+  p, &__content
     text: $article-small @xl $article-standart
     font-family: $font-article
     margin: 0
