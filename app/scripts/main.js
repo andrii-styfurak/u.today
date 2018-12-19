@@ -12,13 +12,16 @@
     $headerSearch = $(".header__search"),
     $headerSearchBtnClose = $(".header__search-close"),
     $headerSearchInput = $(".header__search-input"),
-    $headerNavList = $(".header__nav-list");
+    $headerNavList = $(".header__nav-list"),
+    $headerNavLinksList = $(".header__nav-item--arrow"),
+    $headerMobileMenuBack = $(".mobile-menu-back");
 
   var firstHeaderLoad = true;
 
   function toggleMobileMenu() {
     $header.toggleClass("header--mobile-menu");
     $headerBurger.toggleClass("btn--cross");
+    hideMobileSubMenu();
     $mobileMenuCover.fadeToggle(280);
   }
 
@@ -27,6 +30,16 @@
     $headerNavList.toggleClass("visibility-hidden");
     $headerSearch.fadeToggle(180);
     $headerSearchInput.focus();
+  }
+
+  function showMobileSubMenu() {
+    $headerMobileMenuBack.show()
+    $(".header__nav-child-list", this).show()
+  }
+
+  function hideMobileSubMenu() {
+    $headerMobileMenuBack.hide()
+    $(".header__nav-child-list").hide()
   }
 
   function stickyHeader(e) {
@@ -56,7 +69,10 @@
 
   stickyHeader();
 
+  $headerMobileMenuBack.on("click", hideMobileSubMenu);
+  $headerNavLinksList.on("click", showMobileSubMenu);
   $headerBurger.on("click", toggleMobileMenu);
+  $mobileMenuCover.on("click", toggleMobileMenu);
   $headerBtnSearch.on("click", toggleHeaderSearch)
   $headerSearchBtnClose.on("click", toggleHeaderSearch);
   $(window).on("scroll", stickyHeader);
