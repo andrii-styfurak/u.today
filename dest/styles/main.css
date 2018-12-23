@@ -2642,6 +2642,12 @@ blockquote em {
   display: none;
 }
 
+.article {
+  position: relative;
+  z-index: 5;
+  background: #fff;
+}
+
 .article__summary {
   margin-bottom: 0.7rem;
   display: flex;
@@ -2970,6 +2976,63 @@ blockquote em {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.article__recommended .btn {
+  margin-bottom: 2rem;
+}
+
+.article-infinite-scroll {
+  position: relative;
+  z-index: 1;
+}
+
+.article-infinite-scroll .article {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+}
+
+.article--scroll-show {
+  max-height: 9999px !important;
+  position: fixed;
+  z-index: 5;
+  top: 30vh;
+  width: 100%;
+  opacity: 1 !important;
+  transition: opacity .2s ease;
+}
+
+.article--full-show {
+  position: relative;
+  top: 0;
+}
+
+main:not(.scroll-end) > .article:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: -3000px;
+  bottom: 0;
+  left: -3000px;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+  height: 100vh;
+  background: linear-gradient(180deg, #263238 0%, rgba(38, 50, 56, 0) 100%);
+  opacity: 0;
+  transition: .5s ease;
+  pointer-events: none;
+}
+
+main > .article {
+}
+
+main > .article:nth-last-child(2) {
+  z-index: 4;
+}
+
+main > .article:nth-last-child(2):after {
+  opacity: 1;
 }
 
 .footer {
@@ -4444,6 +4507,10 @@ transition {
     right: 0;
   }
 
+  .article--scroll-show {
+    width: 448px;
+  }
+
   .footer__subscribe-agree {
     margin-top: -2px;
   }
@@ -4727,6 +4794,10 @@ transition {
 
   .article__recommended-item {
     width: calc(50% - 1rem);
+  }
+
+  .article--scroll-show {
+    width: 480px;
   }
 
   .footer {
@@ -5374,6 +5445,10 @@ transition {
 
   .article__recommended-item {
     width: calc(33.3333% - 1rem);
+  }
+
+  .article--scroll-show {
+    width: 736px;
   }
 
   .footer {
@@ -6247,6 +6322,17 @@ transition {
   .article__fact,.article h4 {
     margin-right: -1rem;
     margin-left: -1rem;
+  }
+
+  .article--scroll-show {
+    left: 0;
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  main > .article {
+    box-shadow: 3rem 0 0 #fff,-3rem 0 0 #fff;
+    padding: 0;
   }
 
   .footer__nav-item:nth-child(even) {

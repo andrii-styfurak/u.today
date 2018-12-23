@@ -175,6 +175,52 @@
     $("[data-tab=" + idTab + "]").addClass("active");
   });
 
+  //
+  // Article infinite scroll
+  //
+
+  var $articles = $(".article");
+
+  if ($articles.length) {
+    var viewHeight = $(window).height();
+    var $articleContainer = $(".article-infinite-scroll");
+    var stop = false;
+
+    function articleInfiniteScroll() {
+      if (stop) return;
+
+      var article = $(".article-infinite-scroll .article:first")[0];
+
+      if (article === undefined) {
+        stop = true;
+        $("main").addClass("scroll-end");
+        $articleContainer.remove();
+        return;
+      }
+
+      var articlePrev = $("main > .article:nth-last-child(2)")[0];
+      var articleRect = article.getBoundingClientRect();
+      var articlePrevRect = articlePrev.getBoundingClientRect();
+
+      $articleContainer.height(articleRect.height)
+
+      if (articlePrevRect.height + articlePrevRect.top - viewHeight * 0.2 < 0) {
+        $(article).addClass("article--full-show")
+
+        var articleDetach = $(article).detach();
+        articlePrev.after(articleDetach[0]);
+      }
+
+      if (articleRect.y - viewHeight * 1.2 < 0) {
+        $(article).addClass("article--scroll-show")
+      }
+    }
+
+    articleInfiniteScroll();
+    setTimeout(articleInfiniteScroll, 1000);
+    $(window).on("scroll", articleInfiniteScroll);
+  }
+
 })(jQuery);
 
 //

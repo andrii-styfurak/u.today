@@ -1,4 +1,7 @@
 .article
+  position: relative
+  z-index: 5
+  background: #fff
 
   &__summary
     box: center
@@ -233,3 +236,51 @@
 
     &-info
       box: center wrap
+
+    .btn
+      margin-bottom: 2rem
+
+  &-infinite-scroll
+    position: relative
+    z-index: 1
+
+    .article
+      overflow: hidden
+      max-height: 0
+      opacity: 0
+
+  &--scroll-show
+    max-height: 9999px !important
+    position: fixed
+    z-index: 5
+    top: 30vh
+    left: @sm-down 0
+    padding: @sm-down * 1rem
+    width: 100% @sm 448px @md 480px @xl 736px
+    opacity: 1 !important
+    transition: opacity .2s ease
+
+  &--full-show
+    position: relative
+    top: 0
+
+main:not(.scroll-end) > .article:after
+  content: ""
+  display: block
+  position: absolute null -3000px 0 -3000px
+  transform: translateY(100%)
+  height: 100vh
+  background: linear-gradient(180deg, #263238 0%, rgba(38, 50, 56, 0) 100%)
+  opacity: 0
+  transition: .5s ease
+  pointer-events: none
+
+main > .article
+  box-shadow: @sm-down 3rem 0 0 #fff, -3rem 0 0 #fff
+  padding: @sm-down 0
+
+  &:nth-last-child(2)
+    z-index: 4
+
+    &:after
+      opacity: 1

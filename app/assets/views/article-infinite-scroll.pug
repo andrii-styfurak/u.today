@@ -1,0 +1,29 @@
+extends layouts/layout.pug
+
+block title
+  title Article | u.today
+
+block content
+  .content-container
+    main.main-block
+      include blocks/article-infinite-scroll.pug
+
+      .article-infinite-scroll
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+        include blocks/article-infinite-scroll.pug
+
+
+    aside.aside-block
+      include blocks/aside.pug
+
