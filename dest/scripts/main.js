@@ -33,13 +33,13 @@
   }
 
   function showMobileSubMenu() {
-    $headerMobileMenuBack.show()
-    $(".header__nav-child-list", this).show()
+    $headerMobileMenuBack.addClass("show");
+    $(".header__nav-child-list", this).addClass("show");
   }
 
   function hideMobileSubMenu() {
-    $headerMobileMenuBack.hide()
-    $(".header__nav-child-list").hide()
+    $headerMobileMenuBack.removeClass("show");
+    $(".header__nav-child-list").removeClass("show");
   }
 
   function stickyHeader(e) {

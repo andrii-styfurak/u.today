@@ -2430,7 +2430,6 @@ blockquote em {
 }
 
 .header__nav-item:hover .header__nav-child-list {
-          /* display: block */;
 }
 
 .header__nav-item:hover:after {
@@ -2487,6 +2486,9 @@ blockquote em {
   padding-top: .5rem;
   background: #fff;
   z-index: 999;
+}
+
+.header__nav-child-list.show {
 }
 
 .header__nav-child-item {
@@ -2640,6 +2642,9 @@ blockquote em {
   background-position: 11px center;
   cursor: pointer;
   display: none;
+}
+
+.mobile-menu-back.show {
 }
 
 .article {
@@ -4717,6 +4722,10 @@ transition {
     left: 0;
   }
 
+  .header__nav-item:hover .header__nav-child-list {
+    display: block;
+  }
+
   .header__nav-item + .header__nav-item {
     margin-left: 1.5rem;
   }
@@ -6139,6 +6148,10 @@ transition {
     overflow: auto;
   }
 
+  .header__nav-child-list.show {
+    display: block;
+  }
+
   .header__lang {
     display: none;
   }
@@ -6162,6 +6175,10 @@ transition {
     top: 147px;
     right: -16px;
     width: 205px;
+    display: block;
+  }
+
+  .mobile-menu-back.show {
     display: block;
   }
 
