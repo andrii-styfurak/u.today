@@ -89,7 +89,7 @@
 
       &:hover
         ^^&-child-list
-          // display: block
+          display: @md block
 
         &:after
           background: $accent-1-medium
@@ -145,6 +145,9 @@
         border: @md 1px solid $pseudo-neutral-300
         background: #fff
         z-index: 999 @md 997
+
+        &.show
+          display: @md-down block
 
       &-item
         border-left: 4px solid transparent
@@ -262,3 +265,6 @@
     background-position: 11px center
     cursor: pointer
     display: none
+
+    &.show
+      display: @md-down block

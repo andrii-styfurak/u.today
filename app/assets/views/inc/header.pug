@@ -12,7 +12,7 @@ header.header
       ul.header__nav-list
         each category, i in nav
           li.header__nav-item(class=[ category.childs ? 'header__nav-item--arrow' : '' ] class=[ i == 1 ? 'header__nav-item--active' : '' ])
-            a.header__nav-link(href="#!" + i)= category.name
+            a.header__nav-link(href="/" + i)= category.name
 
             if category.childs
               ul.header__nav-child-list
