@@ -103,9 +103,29 @@
   // Modals
   //
 
+  function getScrollBarWidth() {
+    var $outer = $('<div>').css({
+        visibility: 'hidden',
+        width: 100,
+        overflow: 'scroll'
+      }).appendTo('body'),
+      widthWithScroll = $('<div>').css({
+        width: '100%'
+      }).appendTo($outer).outerWidth();
+    $outer.remove();
+    return 100 - widthWithScroll;
+  };
+
   function openModal() {
     var modalId = $(this).data("modal");
     $("#" + modalId).addClass("modal--open");
+
+    $("body").css("overflow", "hidden");
+    $("body").css("padding-right", getScrollBarWidth() + "px");
+
+    if (window.innerWidth >= 1152) {
+      $(".share-and-up").css("transform", "translateX(-" + (getScrollBarWidth() / 2) + "px)");
+    }
 
     setTimeout(function () {
       $("#" + modalId).addClass("modal--fadeIn");
@@ -113,27 +133,22 @@
   }
 
   function closeModal() {
-    var elem = this;
-    $(elem).removeClass("modal--fadeIn");
+    var $openModal = $(".modal--open");
+    $openModal.removeClass("modal--fadeIn");
 
     setTimeout(function () {
-      $(elem).removeClass("modal--open");
-    }, 300);
-  }
-
-  function closeBtnModal() {
-    var elem = this;
-    $(elem).parents(".modal").removeClass("modal--fadeIn");
-
-    setTimeout(function () {
-      $(elem).parents(".modal").removeClass("modal--open");
-    }, 300);
+      $openModal.removeClass("modal--open");
+      $("body").css("overflow", "auto");
+      $("body, .share-and-up").css("padding-right", "0");
+      $(".share-and-up").css("transform", "translateX(0)");
+    }, 200);
   }
 
   $("[data-modal]").on("click", openModal);
   $(".modal").on("click", closeModal);
-  $("[data-close-modal]").on("click", closeBtnModal);
-  $(".modal__item").on("click", function () {
+  $("[data-close-modal]").on("click", closeModal);
+
+  $(".modal > *").on("click", function () {
     event.stopPropagation();
   });
 
