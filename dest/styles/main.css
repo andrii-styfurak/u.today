@@ -275,18 +275,18 @@ a,button {
   border-color: #1A237E;
 }
 
-.card__list-link,.event__speakers-link,.input__text a,.link-decorate,p a:not([class]) {
+.card__list-link,.event__speakers-link,.input__text a,.link-decorate,.modal__square-agree a,p a:not([class]) {
   color: #651FFF;
   border-bottom: 1px solid #651FFF;
   text-decoration: none;
 }
 
-.card__list-link:hover,.event__speakers-link:hover,.input__text a:hover,.link-decorate:hover,p a:not([class]):hover {
+.card__list-link:hover,.event__speakers-link:hover,.input__text a:hover,.link-decorate:hover,.modal__square-agree a:hover,p a:not([class]):hover {
   color: #9575CD;
   border-color: #9575CD;
 }
 
-.card__list-link:active,.event__speakers-link:active,.input__text a:active,.link-decorate:active,p a:not([class]):active {
+.card__list-link:active,.event__speakers-link:active,.input__text a:active,.link-decorate:active,.modal__square-agree a:active,p a:not([class]):active {
   color: #1A237E;
   border-color: #1A237E;
 }
@@ -1196,6 +1196,12 @@ h5 {
   margin-top: .9rem;
 }
 
+.card--something {
+  padding: 0 !important;
+  border: 0;
+  border-radius: 0;
+}
+
 .form__group {
   margin-bottom: 2rem;
 }
@@ -2065,7 +2071,7 @@ blockquote em {
   position: fixed;
   left: auto;
   bottom: 1rem;
-  z-index: 99;
+  z-index: 997;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2095,12 +2101,13 @@ blockquote em {
   bottom: 0;
   left: 0;
   background: rgba(38, 50, 56, .85);
-  align-items: center;
   justify-content: center;
   z-index: 99990;
   display: none;
+  overflow: auto;
   opacity: 0;
   transition: .3s ease;
+  padding: 1rem;
 }
 
 .modal--open {
@@ -2111,19 +2118,30 @@ blockquote em {
   opacity: 1;
 }
 
-.modal--fadeIn .modal__item {
+.modal--fadeIn .modal__item,.modal--fadeIn .modal__square {
   -webkit-transform: translateY(0) scale(1);
   transform: translateY(0) scale(1);
 }
 
-.modal__item {
-  width: 320px;
-  background: #fff;
-  border-radius: 4px 4px 2px 2px;
-  position: relative;
+.modal--fadeIn .modal__square-img {
+  -webkit-transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1);
+  transition-delay: 0s;
+}
+
+.modal__item,.modal__square {
   -webkit-transform: translateY(-10px) scale(.98);
   transform: translateY(-10px) scale(.98);
   transition: .3s ease;
+}
+
+.modal__item {
+  width: 320px;
+  height: 400px;
+  background: #fff;
+  border-radius: 4px 4px 2px 2px;
+  position: relative;
+  margin: auto;
 }
 
 .modal__item-header {
@@ -2188,6 +2206,108 @@ blockquote em {
   position: absolute;
   top: 3px;
   right: 3px;
+}
+
+.modal__square {
+  width: auto;
+  height: auto;
+  border-radius: 2px;
+  overflow: hidden;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.modal__square .modal__close {
+  opacity: .6;
+  z-index: 3;
+}
+
+.modal__square .modal__close:hover {
+  opacity: .8;
+}
+
+.modal__square-img {
+  width: 320px;
+  height: 168px;
+  min-width: 320px;
+  min-height: 168px;
+  background-image: url('../img/modals/subscribe-title.jpg');
+  background-color: #c3c2c7;
+  background-position: center;
+  -webkit-transform: translateY(10px) scale(1.06);
+  transform: translateY(10px) scale(1.06);
+  border-radius: 2px 2px 0 0;
+  transition: box-shadow .22s ease 1s, -webkit-transform .32s ease 1s;
+  transition: transform .32s ease 1s, box-shadow .22s ease 1s;
+  transition: transform .32s ease 1s, box-shadow .22s ease 1s, -webkit-transform .32s ease 1s;
+}
+
+.modal__square-content {
+  width: 320px;
+  height: 272px;
+  padding: 1.5rem 2rem;
+  background: #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.modal__square-icon {
+  font-size: 1.9375rem;
+  text-align: center;
+  display: none;
+  margin-bottom: .4rem;
+}
+
+.modal__square-title {
+  font-weight: 600;
+  font-size: 1.0625rem;
+  line-height: 1.4;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1.1rem;
+}
+
+.modal__square-text {
+  font-weight: 500;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.modal__square-agree {
+  color: #78909C;
+  font-weight: 500;
+  font-size: 0.6875rem;
+  line-height: 2.1;
+  letter-spacing: .015em;
+  text-align: center;
+  margin-top: 1.1rem;
+}
+
+.modal__square-agree a {
+  color: inherit;
+  border-color: inherit;
+}
+
+.modal__square--text .modal__square-content {
+  width: 320px;
+  height: 280px;
+  padding: 1.5rem 2rem;
+}
+
+.modal__square--text .modal__square-img {
+  background-image: url('../img/modals/subscribe-text.jpg');
+  width: 320px;
+  height: 240px;
+  min-height: 240px;
+}
+
+.modal__square--text .modal__square-title {
+  white-space: nowrap;
+  margin-bottom: .6rem;
 }
 
 .link-icon {
@@ -2665,10 +2785,6 @@ blockquote em {
   margin-bottom: .8rem;
 }
 
-.article__summary-category,.article__summary-time {
-  display: none;
-}
-
 .article__summary-bookmarks {
 }
 
@@ -2813,6 +2929,7 @@ blockquote em {
   font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
 .article__related-title {
@@ -4661,6 +4778,50 @@ transition {
     display: none;
   }
 
+  .modal {
+    padding: 2rem;
+  }
+
+  .modal__square {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .modal__square .modal__close {
+    opacity: .25;
+  }
+
+  .modal__square .modal__close:hover {
+    opacity: 1;
+  }
+
+  .modal__square-img {
+    width: 320px;
+    height: 320px;
+    border-radius: 2px 0 0 2px;
+  }
+
+  .modal__square-content {
+    width: 320px;
+    height: 320px;
+    padding: 1.2rem 2rem;
+  }
+
+  .modal__square-icon {
+    display: block;
+  }
+
+  .modal__square--text .modal__square-content {
+    width: 320px;
+    height: 320px;
+    padding: .65rem 2rem;
+  }
+
+  .modal__square--text .modal__square-img {
+    width: 320px;
+    height: 320px;
+  }
+
   .link-icon {
     margin-bottom: 1.5rem;
   }
@@ -5340,10 +5501,6 @@ transition {
     display: none;
   }
 
-  .article__summary-category,.article__summary-time {
-    display: block;
-  }
-
   .article__info {
     margin-bottom: 1.3rem;
   }
@@ -5454,6 +5611,10 @@ transition {
 
   .article__recommended-item {
     width: calc(33.3333% - 1rem);
+  }
+
+  .article__recommended .btn {
+    margin-bottom: 0;
   }
 
   .article--scroll-show {
@@ -6097,6 +6258,11 @@ transition {
   .accordion__title:after {
     -webkit-transform: scaleY(-1);
     transform: scaleY(-1);
+  }
+
+  .modal__square .modal__close {
+    -webkit-filter: brightness(100);
+    filter: brightness(100);
   }
 
   .currencies__price {

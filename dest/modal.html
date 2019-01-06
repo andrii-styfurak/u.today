@@ -64,13 +64,13 @@
               <div class="currencies__price">0.02241</div></a>
           </div>
         </div>
-        <button class="currencies__currency dropdown"><span>USD</span>
+        <div class="currencies__currency dropdown"><span>USD</span>
           <div class="dropdown__list">
             <div class="dropdown__item" data-set-currency="usd">usd</div>
             <div class="dropdown__item" data-set-currency="eur">eur</div>
             <div class="dropdown__item" data-set-currency="rub">rub</div>
           </div>
-        </button>
+        </div>
       </div>
     </div>
     <div class="page-container container">
@@ -132,9 +132,9 @@
             <button class="header__btn-search btn btn--light btn--search"></button>
             <button class="header__account btn btn--light btn--account"></button>
             <button class="header__burger btn btn--light btn--burger"></button>
-            <button class="header__lang dropdown">ENG
+            <div class="header__lang dropdown">ENG
               <div class="dropdown__list"><a class="dropdown__item" href="#!">Esp</a></div>
-            </button>
+            </div>
           </div>
           <div class="mobile-menu-back">Back</div>
           <div class="mobile-menu-lang">
@@ -156,7 +156,11 @@
       </header>
       <div class="mobile-menu-cover"></div>
       <div class="content-container">
-        <div class="btn" data-modal="subscribe-form">modal</div>
+        <div class="btns-spacer">
+          <div class="btn" data-modal="subscribe-form">subscribe old</div>
+          <div class="btn" data-modal="subscribe-form-title">subscribe new 1</div>
+          <div class="btn" data-modal="subscribe-form-text">subscribe new 2</div>
+        </div>
       </div>
       <div class="modal" id="subscribe-form">
         <div class="modal__item">
@@ -174,6 +178,41 @@
               </div>
               <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
               <div class="modal__item-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="subscribe-form-title">
+        <div class="modal__square">
+          <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+          <div class="modal__square-img"></div>
+          <div class="modal__square-content">
+            <div class="modal__square-icon">✉</div>
+            <div class="modal__square-title">Get the latest news, tips and good insights to your inbox</div>
+            <form action="#" method="get">
+              <div class="input article__subscribe-input">
+                <input class="input__elem" type="text" name="email" placeholder="Email" required>
+              </div>
+              <button class="btn btn--wide btn--input" type="submit">Subscribe</button>
+              <div class="modal__square-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal" id="subscribe-form-text">
+        <div class="modal__square modal__square--text">
+          <button class="modal__close btn btn--light btn--cross" data-close-modal></button>
+          <div class="modal__square-img"></div>
+          <div class="modal__square-content">
+            <div class="modal__square-icon">✉</div>
+            <div class="modal__square-title">What will be your next move?</div>
+            <div class="modal__square-text">Sign up for crypto-trading tips & hints:</div>
+            <form action="#" method="get">
+              <div class="input article__subscribe-input">
+                <input class="input__elem" type="text" name="email" placeholder="Email" required>
+              </div>
+              <button class="btn btn--wide btn--input btn--accent" type="submit">Subscribe</button>
+              <div class="modal__square-agree">By pressing the “Subscribe button” you agree with our <a href="#!">Privacy Policy</a></div>
             </form>
           </div>
         </div>
