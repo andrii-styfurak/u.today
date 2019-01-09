@@ -113,14 +113,11 @@ block content
           input#email.input__elem(type="text" name="email" placeholder="john@sitename.com" required)
 
         .input.input--large-space
-          .select.select--form
-            .select__label Amount of publications
-            button(type="button").select__btn 3+ publication/month
-
-            .select__options
-              .select__option 3+ publication/month
-              .select__option 6+ publication/month
-              .select__option 9+ publication/month
+          .input__label Amount of publications
+          select.input__select(name="select")
+            option(selected) 3+ publication/month
+            option(value="") 6+ publication/month
+            option(value="") 9+ publication/month
 
         .input.input--btn-space
           .input__text Additional discount for amount of publications! More details on <a href="mailto:sales@u.today">sales@u.today</a>
