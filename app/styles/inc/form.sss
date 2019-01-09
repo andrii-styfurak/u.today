@@ -18,6 +18,7 @@
 
 .input
   margin-bottom: 1rem
+  position: relative
 
   &--large-space
     margin-bottom: .4rem @md 1.4rem
@@ -107,6 +108,41 @@
       resize: none
       display: block
       height: 48px
+
+  &__select
+    @extend .input__elem
+    cursor: pointer
+    text-transform: none
+    letter-spacing: normal
+    position: relative
+    display: block
+    width: 100%
+    min-height: 40px
+    appearance: none
+    background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
+    background-position: right center
+    background-repeat: no-repeat
+    background-size: 42px 24px
+    background-color: transparent
+
+    &--tiny
+      size: 74px 32px
+      min-width: 74px
+      min-height: 32px
+      text-transform: uppercase
+      padding: * .75rem
+      text: $pseudo-neutral-900 $text-caps none
+      line-height: 1.1
+      background-size: 33px 24px
+
+    &:valid
+      border-color: #CFD8DC
+
+    &:hover
+      border-color: $accent-1-medium
+
+    &:focus:hover
+      border-color: #90A4AE
 
   &__error
     text: $body-tiny
