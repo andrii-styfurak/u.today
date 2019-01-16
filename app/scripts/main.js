@@ -217,9 +217,11 @@
       }
     }
 
-    articleInfiniteScroll();
-    setTimeout(articleInfiniteScroll, 1000);
-    $(window).on("scroll", articleInfiniteScroll);
+    $(window).on("load", function () {
+      //articleInfiniteScroll();
+      setTimeout(articleInfiniteScroll, 1000);
+      $(window).on("scroll", articleInfiniteScroll);
+    });
   }
 
 })(jQuery);
