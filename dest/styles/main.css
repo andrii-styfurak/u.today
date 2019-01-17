@@ -2890,6 +2890,7 @@ blockquote em {
 .article__related-img {
   max-width: 88px;
   min-width: 88px;
+  min-height: 55px;
   margin-left: 1rem;
 }
 
@@ -5561,6 +5562,7 @@ transition {
   .article__related-img {
     max-width: 192px;
     min-width: 192px;
+    min-height: 120px;
   }
 
   .article__subscribe {
