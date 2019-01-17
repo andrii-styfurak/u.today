@@ -62,31 +62,13 @@
     &:before
       background-image: svg-load("icons/comment.svg" fill: $pseudo-neutral-200)
 
-    &:hover:before
-      background-image: svg-load("icons/comment.svg" fill: $accent-1-medium)
-
-    &:active:before
-      background-image: svg-load("icons/comment.svg" fill: $accent-1-dark)
-
   &--bookmark
     &:before
       background-image: svg-load("icons/bookmark.svg" fill: $pseudo-neutral-200)
 
-    &:hover:before
-      background-image: svg-load("icons/bookmark.svg" fill: $accent-1-medium)
-
-    &:active:before
-      background-image: svg-load("icons/bookmark.svg" fill: $accent-1-dark)
-
   &--share
     &:before
       background-image: svg-load("icons/share.svg" fill: $pseudo-neutral-200)
-
-    &:hover:before
-      background-image: svg-load("icons/share.svg" fill: $accent-1-medium)
-
-    &:active:before
-      background-image: svg-load("icons/share.svg" fill: $accent-1-dark)
 
   &--tiny
     margin-right: .7rem @sm 1rem
@@ -97,6 +79,12 @@
 
   &--single-icon:before
     margin-right: 0
+
+  &:hover:before
+    opacity: .9
+
+  &:active:before
+    opacity: .6
 
   &__img
     display: block

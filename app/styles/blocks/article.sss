@@ -5,6 +5,7 @@
 
   &__summary
     box: center
+    flex-wrap: wrap
     margin-bottom: 0.7rem @md 1.3rem
 
     &-device
@@ -73,11 +74,15 @@
       margin: @sm-down * -1rem
       margin-bottom: 1.5rem @md 2rem @xl 2.5rem
 
+      img
+        position: absolute 0 null null 0
+        @extend .img
+
   &__content
     margin: 2.2rem * 2.5rem @xl 3rem * 2.3rem
 
     > *:last-child
-      margin-bottom: 0 !important
+      margin-bottom: 0
 
   &__contents
     margin-bottom: 2.2rem @xl 2.6rem
@@ -132,6 +137,7 @@
     &-img
       @extend .img
       max-width: 88px @xl 192px
+      min-width: 88px @xl 192px
       margin-left: 1rem
 
   &__subscribe
@@ -251,30 +257,6 @@
 
     .btn
       margin-bottom: 2rem @xl 0
-
-  &-infinite-scroll
-    position: relative
-    z-index: 1
-
-    .article
-      overflow: hidden
-      max-height: 0
-      opacity: 0
-
-  &--scroll-show
-    max-height: 9999px !important
-    position: fixed
-    z-index: 5
-    top: 30vh
-    left: @sm-down 0
-    padding: @sm-down * 1rem
-    width: 100% @sm 448px @md 480px @xl 736px
-    opacity: 1 !important
-    transition: opacity .2s ease
-
-  &--full-show
-    position: relative
-    top: 0
 
 main:not(.scroll-end) > .article:after
   content: ""

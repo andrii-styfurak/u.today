@@ -104,6 +104,26 @@
     );
   });
 
+  //write style
+  gulp.task('postcssAmp', function () {
+    return (
+      gulp
+      .src(['app/styles/amp.sss'])
+      .pipe(sourcemaps.init())
+      .pipe(
+        postcss(processors, {
+          parser: sugarss
+        }).on('error', notify.onError())
+      )
+      .pipe(rename({
+        extname: '.css'
+      }))
+      //.pipe(sourcemaps.write('/'))
+      .pipe(uglifycss())
+      .pipe(gulp.dest('dest/styles/'))
+    );
+  });
+
   // write js
   gulp.task('scripts', function () {
     return gulp.src('app/scripts/**').pipe(gulp.dest('dest/scripts'));
@@ -148,6 +168,7 @@
       gulp.parallel(
         'assets',
         'postcss',
+        'postcssAmp',
         'views',
         'libs-css',
         'libs-js',
@@ -168,7 +189,8 @@
 
   //watching by all files in dest
   gulp.task('watch', function () {
-    gulp.watch('app/styles/**/*.*', gulp.series('postcss'));
+    gulp.watch(['app/styles/**/*.*', '!app/styles/amp.sss'], gulp.series('postcss'));
+    gulp.watch('app/styles/amp.sss', gulp.series('postcssAmp'));
     gulp.watch('app/scripts/**/*.*', gulp.series('scripts'));
     gulp.watch('app/assets/**/*.*', gulp.series('assets'));
     gulp.watch('app/assets/views/**/*.*', gulp.series('views'));
