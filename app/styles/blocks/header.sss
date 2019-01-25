@@ -178,7 +178,7 @@
   &__search
     position: absolute
     left: 0 @md 219px @xl 215px
-    right: 0 @md 199px @xl 100px
+    right: 0 @md 100px @xl 100px
     top: 12px @md 23px @xl 33px
     display: none
 
@@ -248,7 +248,7 @@
     justify-content: center
 
   &-cover
-    position: fixed 0 0 0 0
+    position: fixed 0 0 -82px 0
     z-index: 995
     background: $cover-color
     display: none
@@ -268,3 +268,6 @@
 
     &.show
       display: @md-down block
+
+.overflow-hidden
+  overflow: hidden

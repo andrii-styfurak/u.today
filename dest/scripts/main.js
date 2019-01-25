@@ -22,6 +22,7 @@
     $header.toggleClass("header--mobile-menu");
     $headerBurger.toggleClass("btn--cross");
     hideMobileSubMenu();
+    $("body").toggleClass("overflow-hidden");
     $mobileMenuCover.fadeToggle(280);
   }
 
@@ -205,14 +206,14 @@
 
       $articleContainer.height(articleRect.height)
 
-      if (articlePrevRect.height + articlePrevRect.top - viewHeight * 0.2 < 0) {
+      if (articlePrevRect.height + articlePrevRect.top - viewHeight * 0.3 < 0) {
         $(article).addClass("article--full-show")
 
         var articleDetach = $(article).detach();
         articlePrev.after(articleDetach[0]);
       }
 
-      if (articleRect.y - viewHeight * 1.2 < 0) {
+      if (articleRect.y - viewHeight * 1.3 < 0) {
         $(article).addClass("article--scroll-show")
       }
     }

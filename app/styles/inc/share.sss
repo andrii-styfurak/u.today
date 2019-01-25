@@ -58,8 +58,8 @@
     box: center middle
 
     & + &
-      margin-top: @sm 1rem
-      margin-left: @sm-down 1rem
+      margin-top: @md-l 1rem
+      margin-left: @md-l-down 1rem
 
     &:before
       content: ""
@@ -76,7 +76,7 @@
         background-image: svg-load("icons/social/facebook.svg", fill: $pseudo-neutral-900)
 
     &--tg
-      margin-top: @sm -4rem
+      margin-top: @md-l -4rem
 
       &:hover:before
         background-image: svg-load("icons/social/telegram.svg", fill: $tg-color)
@@ -106,12 +106,12 @@
 
   &-and-up
     position: fixed
-    left: auto @sm 1rem @xl calc(50% - 560px - 67px)
-    right: @sm-down 1rem
-    top: @sm 50%
+    left: auto @md-l 1rem @xl calc(50% - 560px - 67px)
+    right: @md-l-down 1rem
+    top: @md-l 50%
     bottom: 1rem
-    box: horizontal center middle @sm vertical top
-    z-index: 997
+    box: horizontal center middle @md-l vertical top
+    z-index: 97
 
   &-post
     position: absolute -9999px null null -9999px

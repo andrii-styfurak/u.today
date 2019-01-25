@@ -120,21 +120,25 @@
     min-height: 40px
     appearance: none
     background-image: svg-load("icons/triangle_down.svg", fill: $pseudo-neutral-900)
-    background-position: right center
+    background-position: calc(100% - 6px) center
     background-repeat: no-repeat
-    background-size: 42px 24px
+    background-size: 24px 24px
     background-color: transparent
+    box: center top
+
+    option
+      height: 36px
 
     &--tiny
-      size: 74px 32px
-      min-width: 74px
+      size: 75px 32px
+      min-width: 75px
       min-height: 32px
       text-transform: uppercase
       padding: * .75rem
       text: $pseudo-neutral-900 $text-caps none
       line-height: 1.1
-      background-size: 33px 24px
-
+      background-size: 24px 24px
+      background-position: 47px center
     &:valid
       border-color: #CFD8DC
 

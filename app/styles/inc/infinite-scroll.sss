@@ -1,4 +1,6 @@
 .article
+  background: #fff
+
   &-infinite-scroll
     position: relative
     z-index: 1
@@ -12,7 +14,7 @@
     max-height: 9999px !important
     position: fixed
     z-index: 5
-    top: 30vh
+    top: 36vh
     left: @sm-down 0
     padding: @sm-down * 1rem
     width: 100% @sm 448px @md 480px @xl 736px
@@ -22,3 +24,10 @@
   &--full-show
     position: relative
     top: 0
+
+.content-container
+  background: #fff
+
+.main-block > .article:first-child
+  margin-top: -2rem
+  padding-top: 2rem

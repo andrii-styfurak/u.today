@@ -942,17 +942,15 @@ h5 {
 }
 
 .something {
-  background: #fff;
+  background: #032e61;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .something--top {
-  height: 90px;
   position: relative;
   z-index: 996;
-  background: #CFD8DC;
 }
 
 .something--content {
@@ -1001,7 +999,6 @@ h5 {
   bottom: 0;
   left: 0;
   height: 48px;
-  background: #CFD8DC;
   z-index: 98;
 }
 
@@ -1363,16 +1360,23 @@ textarea.input__elem {
   -moz-appearance: none;
   appearance: none;
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='%23263238' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M7 10L12 15L17 10H7Z'/%3E %3C/svg%3E");
-  background-position: right center;
+  background-position: calc(100% - 6px) center;
   background-repeat: no-repeat;
-  background-size: 42px 24px;
+  background-size: 24px 24px;
   background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.input__select option {
+  height: 36px;
 }
 
 .input__select--tiny {
-  width: 74px;
+  width: 75px;
   height: 32px;
-  min-width: 74px;
+  min-width: 75px;
   min-height: 32px;
   text-transform: uppercase;
   padding-right: .75rem;
@@ -1385,7 +1389,8 @@ textarea.input__elem {
   text-transform: uppercase;
   text-decoration: none;
   line-height: 1.1;
-  background-size: 33px 24px;
+  background-size: 24px 24px;
+  background-position: 47px center;
 }
 
 .input__select:valid {
@@ -1512,9 +1517,9 @@ blockquote em {
 .humble--large {
   color: #263238;
   font-weight: 500;
-  font-size: 0.9375rem;
-  line-height: 2.1;
-  margin-right: 1.7rem;
+  font-size: 0.8125rem;
+  line-height: 1.9;
+  margin-right: 1rem;
 }
 
 .humble--bookmark,.humble--comments,.humble--link,.humble--share {
@@ -1999,7 +2004,7 @@ blockquote em {
   position: fixed;
   left: auto;
   bottom: 1rem;
-  z-index: 997;
+  z-index: 97;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2664,7 +2669,7 @@ blockquote em {
   position: fixed;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: -82px;
   left: 0;
   z-index: 995;
   background: rgba(38, 50, 56, .85);
@@ -2693,6 +2698,10 @@ blockquote em {
 }
 
 .mobile-menu-back.show {
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .article {
@@ -3059,8 +3068,8 @@ main:not(.scroll-end) > .article:after {
   display: block;
   position: absolute;
   bottom: 0;
-  left: -16px;
-  right: -16px;
+  left: 0;
+  right: 0;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   height: 100vh;
@@ -3068,6 +3077,8 @@ main:not(.scroll-end) > .article:after {
   opacity: 0;
   transition: .5s ease;
   pointer-events: none;
+  margin-left: -50vw;
+  margin-right: -50vw;
 }
 
 main > .article {
@@ -3079,6 +3090,10 @@ main > .article:nth-last-child(2) {
 
 main > .article:nth-last-child(2):after {
   opacity: 1;
+}
+
+.article {
+  background: #fff;
 }
 
 .article-infinite-scroll {
@@ -3096,7 +3111,7 @@ main > .article:nth-last-child(2):after {
   max-height: 9999px !important;
   position: fixed;
   z-index: 5;
-  top: 30vh;
+  top: 36vh;
   width: 100%;
   opacity: 1 !important;
   transition: opacity .2s ease;
@@ -3105,6 +3120,15 @@ main > .article:nth-last-child(2):after {
 .article--full-show {
   position: relative;
   top: 0;
+}
+
+.content-container {
+  background: #fff;
+}
+
+.main-block > .article:first-child,.main-category-block > .article:first-child,.main-news-block > .article:first-child {
+  margin-top: -2rem;
+  padding-top: 2rem;
 }
 
 .footer {
@@ -3858,7 +3882,7 @@ main > .article:nth-last-child(2):after {
 }
 
 .category-item h2 {
-  margin-bottom: 0;
+  margin-bottom: .5rem;
 }
 
 .category-item + .category-item {
@@ -4556,24 +4580,19 @@ transition {
     line-height: 1.4;
   }
 
+  .something--top {
+    height: 90px;
+  }
+
+  .humble--large {
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 2.1;
+    margin-right: 1.7rem;
+  }
+
   .humble--tiny {
     margin-right: 1rem;
-  }
-
-  .share__circle + .share__circle {
-    margin-top: 1rem;
-  }
-
-  .share__circle--tg {
-    margin-top: -4rem;
-  }
-
-  .share-and-up {
-    left: 1rem;
-    top: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
   }
 
   .header {
@@ -4599,11 +4618,6 @@ transition {
   .article__recommended-item {
     width: calc(45% - 1rem);
     min-width: calc(45% - 1rem);
-  }
-
-  main:not(.scroll-end) > .article:after {
-    left: 0;
-    right: 0;
   }
 
   .article--scroll-show {
@@ -4904,7 +4918,7 @@ transition {
 
   .header__search {
     left: 219px;
-    right: 199px;
+    right: 100px;
     top: 23px;
   }
 
@@ -5217,6 +5231,24 @@ transition {
 
   .price-index__body {
     max-height: 490px;
+  }
+}
+
+@media (min-width: 888px) {
+  .share__circle + .share__circle {
+    margin-top: 1rem;
+  }
+
+  .share__circle--tg {
+    margin-top: -4rem;
+  }
+
+  .share-and-up {
+    left: 1rem;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 
@@ -6463,14 +6495,6 @@ transition {
     margin-left: -1rem;
   }
 
-  .share__circle + .share__circle {
-    margin-left: 1rem;
-  }
-
-  .share-and-up {
-    right: 1rem;
-  }
-
   .currencies__container {
     padding-right: 0;
     padding-left: 0;
@@ -6549,5 +6573,15 @@ transition {
 
   figcaption {
     margin-left: 1rem;
+  }
+}
+
+@media (max-width: 887px) {
+  .share__circle + .share__circle {
+    margin-left: 1rem;
+  }
+
+  .share-and-up {
+    right: 1rem;
   }
 }
