@@ -3138,6 +3138,7 @@ main > .article:nth-last-child(2):after {
 .footer__container:before {
   content: "";
   display: block;
+  margin: 0 -1rem;
   border-bottom: 3px solid #263238;
 }
 
@@ -4622,6 +4623,10 @@ transition {
 
   .article--scroll-show {
     width: 448px;
+  }
+
+  .footer__container:before {
+    margin: 0;
   }
 
   .footer__subscribe-agree {

@@ -92,6 +92,9 @@ body
     background: $neutral-100
     border-color: $neutral-100
 
+    &:hover
+      border-color: $neutral-100
+
   &:hover
     border-color: $accent-1-medium
     text: $accent-1-medium
@@ -99,6 +102,25 @@ body
   &:active
     border-color: $accent-1-dark
     text: $accent-1-dark
+
+  &--large
+    background: $accent-1-medium
+    border-color: $accent-1-medium
+    text: #fff
+    width: 100%
+    max-width: 330px
+    height: 56px
+    line-height: 56px
+    display: flex
+    margin: * auto
+    &:hover
+      background: $accent-1-light
+      border-color: $accent-1-light
+      text: #fff
+    &:active
+      background: $accent-1-dark
+      border-color: $accent-1-dark
+      text: #fff
 
   &--rating-up,
   &--rating-down
@@ -116,6 +138,9 @@ body
       transform: rotate(90deg)
 
 body .footer
+  margin-top: 2rem
+  form a
+    color: $pseudo-neutral-400
   &__row
     flex-wrap: wrap
     padding-top: 1.6rem
@@ -223,8 +248,8 @@ body .footer
 
 .continue
   background: #fff
-  padding: 1rem .5rem 3rem
-  margin-top: -70px
+  padding: 1rem 0 0
+  margin: -70px -1px 0
   position: relative
   z-index: 9
   box: middle
@@ -234,22 +259,60 @@ body .footer
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%)
     position: absolute 0 0 null 0
     transform: translateY(-100%)
-  &__btn
-    background: $accent-1-medium
-    border-color: $accent-1-medium
-    text: #fff
-    width: 100%
-    max-width: 330px
-    height: 56px
-    &:hover
-      background: $accent-1-light
-      border-color: $accent-1-light
-      text: #fff
-    &:active
-      background: $accent-1-dark
-      border-color: $accent-1-dark
-      text: #fff
 
 .article__main-img
   width: 100%
   height: 100%
+
+.article__amp-summary
+  display: flex
+  margin-bottom: .8rem
+
+.article__amp-recommended
+  border-top: $border
+  padding-top: 1.2rem
+  margin-top: 1.5rem
+
+  &-title
+    text: $header-small
+    margin-bottom: 1.2rem
+
+  &-item
+    margin-bottom: 1.8rem
+
+    &:last-child
+      margin-bottom: 2.2rem
+
+    &-link
+      display: flex
+      align-items: flex-start
+      text-decoration: none
+      color: $pseudo-neutral-900
+
+      &:hover
+        color: $accent-1-medium
+
+    &-img
+      background: $pseudo-neutral-50
+      display: block
+      width: 96px
+      min-width: 96px
+      margin-right: 1rem
+      border: $border
+      border-radius: 2px
+      overflow: hidden
+
+    &-title
+      text: $body-small
+      margin-top: -3px
+
+.article__title--category
+  margin-top: 1.5rem
+
+.article__main-img-wrapper--category
+  margin-top: 1.5rem @md 1.7rem
+  margin-bottom: 1.5rem @md 1.5rem @xl 1.5rem
+
+.article__mark--category
+  text: $body-small
+  margin-bottom: 0
