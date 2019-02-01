@@ -167,7 +167,7 @@
   // Tabs
   //
 
-  $("[data-active-tab").on("click", function () {
+  $("[data-active-tab]").on("click", function () {
     var idTab = $(this).data("active-tab");
 
     $("[data-active-tab]").removeClass("tabs__item--active");
