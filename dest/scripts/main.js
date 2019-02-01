@@ -206,20 +206,21 @@
 
       $articleContainer.height(articleRect.height)
 
-      if (articlePrevRect.height + articlePrevRect.top - viewHeight * 0.3 < 0) {
+      if (articlePrevRect.height + articlePrevRect.top - viewHeight * 0.35 < 0) {
         $(article).addClass("article--full-show")
 
         var articleDetach = $(article).detach();
         articlePrev.after(articleDetach[0]);
       }
 
-      if (articleRect.y - viewHeight * 1.3 < 0) {
+      if (articleRect.top - viewHeight * 1.35 < 0) {
         $(article).addClass("article--scroll-show")
       }
     }
 
     $(window).on("load", function () {
-      //articleInfiniteScroll();
+      articleInfiniteScroll();
+      setTimeout(articleInfiniteScroll, 100);
       setTimeout(articleInfiniteScroll, 1000);
       $(window).on("scroll", articleInfiniteScroll);
     });
