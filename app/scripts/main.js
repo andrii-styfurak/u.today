@@ -186,10 +186,12 @@
   if ($articles.length) {
     var viewHeight = $(window).height();
     var $articleContainer = $(".article-infinite-scroll");
+    var $articleInContainer = $(".main-block > .article:first-child");
     var stop = false;
 
     function articleInfiniteScroll() {
       if (stop) return;
+      $(".article--scroll-show").width($articleInContainer.width());
 
       var article = $(".article-infinite-scroll .article:first")[0];
 
@@ -220,9 +222,11 @@
 
     $(window).on("load", function () {
       articleInfiniteScroll();
+      $(".article--scroll-show").width($articleInContainer.width())
       setTimeout(articleInfiniteScroll, 100);
       setTimeout(articleInfiniteScroll, 1000);
       $(window).on("scroll", articleInfiniteScroll);
+      $(window).on("resize", articleInfiniteScroll);
     });
   }
 

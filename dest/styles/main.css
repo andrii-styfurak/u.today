@@ -4627,10 +4627,6 @@ transition {
     min-width: calc(45% - 1rem);
   }
 
-  .article--scroll-show {
-    width: 416px;
-  }
-
   .footer__container:before {
     margin: 0;
   }
